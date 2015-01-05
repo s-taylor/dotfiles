@@ -3,8 +3,11 @@ export PATH=/usr/local/bin:$PATH
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-### Refresh .bash_profile
-alias refresh="source ~/.bash_profile"
+### Reload .bash_profile
+alias reload="source ~/.bash_profile"
+
+# grabs the latest .bash_profile file and reloads the prompt
+alias updatebashprofile="curl https://raw.github.com/s-taylor/dotfiles/master/.bash_profile > ~/.bash_profile && reload"
 
 ### Custom "ls"
 # G = inhibit display of group information
