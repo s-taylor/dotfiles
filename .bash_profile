@@ -9,6 +9,9 @@ alias reload="source ~/.bash_profile"
 # grabs the latest .bash_profile file and reloads the prompt
 alias updatebashprofile="curl https://raw.githubusercontent.com/s-taylor/dotfiles/master/.bash_profile > ~/.bash_profile && reload"
 
+# Launch PathFinder from current folder
+alias pf="open -a /Applications/Path\ Finder.app/ ."
+
 ### Custom "ls"
 # G = inhibit display of group information
 # F = append indicator (one of */=@|) to entries
