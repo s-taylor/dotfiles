@@ -18,6 +18,11 @@ alias updatebashprofile="curl https://raw.githubusercontent.com/s-taylor/dotfile
 # h = print sizes in human readable format (e.g., 1K 234M 2G)
 alias ls="ls -GFlash"
 
+### Additional cd aliases
+alias cd..='cd ../'                         # Go back 1 directory level (for fast typers)
+alias ..='cd ../'                           # Go back 1 directory level
+alias ...='cd ../../'                       # Go back 2 directory levels
+
 ### NPM install AU
 alias npmau="npm install --registryhttp://registry.npmjs.org.au"
 
