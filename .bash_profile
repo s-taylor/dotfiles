@@ -7,7 +7,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 alias reload="source ~/.bash_profile"
 
 # grabs the latest .bash_profile file and reloads the prompt
-alias updatebashprofile="curl https://raw.github.com/s-taylor/dotfiles/master/.bash_profile > ~/.bash_profile && reload"
+alias updatebashprofile="curl https://raw.githubusercontent.com/s-taylor/dotfiles/master/.bash_profile > ~/.bash_profile && reload"
 
 ### Custom "ls"
 # G = inhibit display of group information
