@@ -33,3 +33,8 @@ if has("syntax")
 
 " Fix Delete key OSX
 :set backspace=indent,eol,start
+
+" Required for Solarized colour scheme
+" syntax enable
+set background=dark
+colorscheme solarized
