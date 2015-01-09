@@ -6,8 +6,11 @@ export PATH="/usr/local/heroku/bin:$PATH"
 ### Reload .bash_profile
 alias reload="source ~/.bash_profile"
 
-# grabs the latest .bash_profile file and reloads the prompt
+# update .bash_profile from github and reload
 alias updatebashprofile="curl https://raw.githubusercontent.com/s-taylor/dotfiles/master/.bash_profile > ~/.bash_profile && reload"
+
+# update .vimrc from github
+alias updatevimrc="curl https://raw.githubusercontent.com/s-taylor/dotfiles/master/.vimrc > ~/.vimrc"
 
 # Launch PathFinder from current folder
 alias pf="open -a /Applications/Path\ Finder.app/ ."
