@@ -29,6 +29,9 @@ filetype plugin indent on    " required
 " Fix Delete key OSX
 :set backspace=indent,eol,start
 
+" Add line numbers to vim
+:set number
+
 " Required for Solarized colour scheme
 syntax enable
 colorscheme monokai
