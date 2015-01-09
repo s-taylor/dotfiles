@@ -15,8 +15,8 @@ Plugin 'pangloss/vim-javascript'
 " Jade syntax highlighting
 Plugin 'digitaltoad/vim-jade'
 
-" Solarized colour scheme
-Plugin 'altercation/vim-colors-solarized'
+" Monokai colour scheme
+Plugin 'sickill/vim-monokai'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -26,15 +26,9 @@ filetype plugin indent on    " required
 " Non-Vundle Stuffs
 "
 
-" Needed to default syntax highlighting to on
-if has("syntax")
-      syntax on
-  endif
-
 " Fix Delete key OSX
 :set backspace=indent,eol,start
 
 " Required for Solarized colour scheme
-" syntax enable
-set background=dark
-colorscheme solarized
+syntax enable
+colorscheme monokai
