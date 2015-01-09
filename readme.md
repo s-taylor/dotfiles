@@ -1,3 +1,9 @@
+#Update Vim
+
+1. Install Brew
+2. brew install mercurial
+3. brew install vim
+
 #Vim Config
 
 1. Install Git
