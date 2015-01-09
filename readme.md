@@ -1,3 +1,14 @@
+#Configure iTerm2
+
+##Set Alt + Arrow Key to skip words
+
+* iTerm > Preferences
+* Profiles
+* Keys
+* Find the key binding alt + arrow and double click
+* Action: send escape sequence
+* Value: f / b (for forward / backwards)
+
 #Update Vim
 
 1. Install Brew
