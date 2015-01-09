@@ -27,3 +27,6 @@ filetype plugin indent on    " required
 if has("syntax")
       syntax on
   endif
+
+" Fix Delete key OSX
+:set backspace=indent,eol,start
