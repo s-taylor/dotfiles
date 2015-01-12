@@ -29,6 +29,9 @@ alias cd..='cd ../'                         # Go back 1 directory level (for fas
 alias ..='cd ../'                           # Go back 1 directory level
 alias ...='cd ../../'                       # Go back 2 directory levels
 
+### Clear screen
+alias c='clear' 
+
 ### NPM install AU
 alias npmau="npm install --registryhttp://registry.npmjs.org.au"
 
