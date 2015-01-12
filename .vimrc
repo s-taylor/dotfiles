@@ -44,3 +44,9 @@ if has('mac')
 	set listchars=tab:▸\ ,eol:¬
 	set list
 endif
+
+" Display tabs as 2 space width
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set expandtab
