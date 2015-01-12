@@ -38,3 +38,9 @@ filetype plugin indent on    " required
 " Required for Solarized colour scheme
 syntax enable
 colorscheme monokai
+
+" Use the same symbols as TextMate for tabstops and EOLs
+if has('mac')
+	set listchars=tab:▸\ ,eol:¬
+	set list
+endif
