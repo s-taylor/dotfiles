@@ -50,3 +50,8 @@ gum () {
   echo "Unmerged commits on branch \"$(cb)\"...";
   git log $(cb)^..origin/$(cb) --oneline --decorate;
 }
+
+### Heroku - Add Remote - Input = Branch Name, App Name
+har () {
+  git remote add "$1" git@heroku.com:"$2".git;
+}
