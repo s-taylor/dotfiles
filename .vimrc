@@ -21,8 +21,11 @@ Plugin 'sickill/vim-monokai'
 " Ctrl + P - fuzzy file search
 Plugin 'kien/ctrlp.vim'
 
-"Editor config for vim
+" Editor config for vim
 Plugin 'editorconfig/editorconfig-vim'
+
+" Nerd Tree - File Browser
+Plugin 'scrooloose/nerdtree'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
