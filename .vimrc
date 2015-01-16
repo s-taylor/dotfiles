@@ -31,6 +31,22 @@ Plugin 'scrooloose/nerdtree'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+" Required for monokai colour scheme
+syntax enable
+colorscheme monokai
+
+" Configuration for NERDTree
+" Auto start NERDTree
+autocmd vimenter * NERDTree
+
+" Auto start NERDTree even when no file opened
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" Open NERDTree with Ctrl + n
+map <C-n> :NERDTreeToggle<CR>
+
+
 "
 " Non-Vundle Stuffs
 "
@@ -40,10 +56,6 @@ filetype plugin indent on    " required
 
 " Add line numbers to vim
 :set number
-
-" Required for monokai colour scheme
-syntax enable
-colorscheme monokai
 
 " Use the same symbols as TextMate for tabstops and EOLs
 if has('mac')
