@@ -10,7 +10,7 @@ call vundle#begin()
 Plugin 'gmarik/vundle'
 
 " Javascript syntax highlighting
-Plugin 'pangloss/vim-javascript'
+Plugin 'jelera/vim-javascript-syntax'
 
 " Jade syntax highlighting
 Plugin 'digitaltoad/vim-jade'
@@ -38,7 +38,7 @@ filetype plugin indent on    " required
 " Add line numbers to vim
 :set number
 
-" Required for Solarized colour scheme
+" Required for monokai colour scheme
 syntax enable
 colorscheme monokai
 
