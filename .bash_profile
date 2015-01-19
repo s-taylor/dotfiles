@@ -35,10 +35,6 @@ alias c='clear'
 ### NPM install AU
 alias npmau="npm install --registryhttp://registry.npmjs.org.au"
 
-### Git - Log
-# decorate = show current commit for head / branch
-alias gl="git log --graph --oneline --decorate"
-
 ### Git - Current Branch
 cb () { 
   branch="$(git symbolic-ref --short -q HEAD)"
