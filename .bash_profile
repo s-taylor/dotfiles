@@ -13,7 +13,7 @@ alias updatebashprofile="curl https://raw.githubusercontent.com/s-taylor/dotfile
 alias updatevimrc="curl https://raw.githubusercontent.com/s-taylor/dotfiles/master/.vimrc > ~/.vimrc"
 
 # update .gitconfig from github
-alias updategitconfi="https://raw.githubusercontent.com/s-taylor/dotfiles/master/.gitconfig"
+alias updategitconfig="https://raw.githubusercontent.com/s-taylor/dotfiles/master/.gitconfig > ~/.gitconfig"
 
 # Launch PathFinder from current folder
 alias pf="open -a /Applications/Path\ Finder.app/ ."
