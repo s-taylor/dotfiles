@@ -61,3 +61,6 @@ set expandtab
 map <leader>n :bn<cr>
 map <leader>p :bp<cr>
 map <leader>d :bd<cr>
+
+" Show command input (shows line count in visual mode)
+set showcmd
