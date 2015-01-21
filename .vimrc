@@ -37,10 +37,10 @@ colorscheme monokai
 "
 
 " Fix Delete key OSX
-:set backspace=indent,eol,start
+set backspace=indent,eol,start
 
 " Add line numbers to vim
-:set number
+set number
 
 " Use the same symbols as TextMate for tabstops and EOLs
 if has('mac')
