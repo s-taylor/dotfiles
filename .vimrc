@@ -24,6 +24,9 @@ Plugin 'kien/ctrlp.vim'
 " Editor config for vim
 Plugin 'editorconfig/editorconfig-vim'
 
+" Nerdtree File Browser
+Plugin 'scrooloose/nerdtree'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -32,9 +35,24 @@ filetype plugin indent on    " required
 syntax enable
 colorscheme monokai
 
-"
+" Nerdtree config
+
+" open a NERDTree automatically when vim starts up
+autocmd vimenter * NERDTree
+
+" open a NERDTree automatically when vim starts up if no files were specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" shortcut to open NERDTree
+map <C-n> :NERDTreeToggle<CR>
+
+" close vim if the only window left open is a NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" -----------------
 " Non-Vundle Stuffs
-"
+" -----------------
 
 " Fix Delete key OSX
 set backspace=indent,eol,start
