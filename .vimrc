@@ -82,7 +82,7 @@ set shiftwidth=2
 set expandtab
 
 " Remap leader key to ;
-:let mapleader = ";"
+:let mapleader = ","
 
 " Add shortcuts to next/previous/close buffer
 map <leader>n :bn<cr>
