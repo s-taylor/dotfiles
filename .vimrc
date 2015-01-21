@@ -27,6 +27,9 @@ Plugin 'editorconfig/editorconfig-vim'
 " Nerdtree File Browser
 Plugin 'scrooloose/nerdtree'
 
+" Smooth scrolling plugin
+Plugin 'terryma/vim-smooth-scroll'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -49,6 +52,12 @@ map <C-n> :NERDTreeToggle<CR>
 
 " close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" Smooth scroll config
+noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
+noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
+noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
+noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 
 " -----------------
 " Non-Vundle Stuffs
