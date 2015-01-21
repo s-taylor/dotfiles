@@ -53,3 +53,11 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
+
+" Remap leader key to ;
+:let mapleader = ";"
+
+" Add shortcuts to next/previous/close buffer
+map <leader>n :bn<cr>
+map <leader>p :bp<cr>
+map <leader>d :bd<cr>
