@@ -57,6 +57,15 @@ map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " -----------------
+" Keyboard shortcuts
+" -----------------
+
+" Insert a blank line below without entering insert mode
+nmap oo o<Esc>k
+" Insert a blank line above without entering insert mode
+nmap OO O<Esc>j
+
+" -----------------
 " Non-Vundle Stuffs
 " -----------------
 
