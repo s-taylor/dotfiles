@@ -21,6 +21,7 @@
 
 #Vim Config (requires git)
 
-2. git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-3. Save .vimrc to ~/
+1. git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+2. Save .vimrc to ~/
+3. Save colors/ to ~/.vim/colors
 4. Install Plugins - Open Vim > ":BundleInstall"
