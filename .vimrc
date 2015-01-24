@@ -15,9 +15,6 @@ Plugin 'jelera/vim-javascript-syntax'
 " Jade syntax highlighting
 Plugin 'digitaltoad/vim-jade'
 
-" Monokai colour scheme
-Plugin 'sickill/vim-monokai'
-
 " Ctrl + P - fuzzy file search
 Plugin 'kien/ctrlp.vim'
 
