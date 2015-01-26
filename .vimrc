@@ -65,6 +65,11 @@ nmap oo o<Esc>k
 " Insert a blank line above without entering insert mode
 nmap OO O<Esc>j
 
+" Add shortcuts to next/previous/close buffer
+map <leader>n :bn<cr>
+map <leader>p :bp<cr>
+map <leader>d :bd<cr>
+
 " -----------------
 " Non-Vundle Stuffs
 " -----------------
@@ -90,10 +95,6 @@ set expandtab
 " Remap leader key to ;
 :let mapleader = ";"
 
-" Add shortcuts to next/previous/close buffer
-map <leader>n :bn<cr>
-map <leader>p :bp<cr>
-map <leader>d :bd<cr>
 
 " Show command input (shows line count in visual mode)
 set showcmd
