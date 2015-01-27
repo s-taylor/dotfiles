@@ -37,11 +37,9 @@ Plugin 'tpope/vim-fugitive'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-" Required for monokai colour scheme
-syntax enable
-colorscheme monokai
-
+" --------------
 " Nerdtree config
+" --------------
 
 " open a NERDTree automatically when vim starts up
 autocmd vimenter * NERDTree
@@ -61,9 +59,9 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 " -----------------
 
 " Insert a blank line below without entering insert mode
-nmap oo o<Esc>k
+nmap oo o<Esc>
 " Insert a blank line above without entering insert mode
-nmap OO O<Esc>j
+nmap OO O<Esc>
 
 " Add shortcuts to next/previous/close buffer
 map <leader>n :bn<cr>
@@ -73,6 +71,9 @@ map <leader>d :bd<cr>
 " -----------------
 " Non-Vundle Stuffs
 " -----------------
+
+" Enable syntax highlighting
+syntax enable
 
 " Fix Delete key OSX
 set backspace=indent,eol,start
