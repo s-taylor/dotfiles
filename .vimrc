@@ -62,9 +62,9 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 " -----------------
 
 " Insert a blank line below without entering insert mode
-nmap oo o<Esc>
+nmap <leader>o o<Esc>
 " Insert a blank line above without entering insert mode
-nmap OO O<Esc>
+nmap <leader>O O<Esc>
 
 " Add shortcuts to next/previous/close buffer
 map <leader>n :bn<cr>
