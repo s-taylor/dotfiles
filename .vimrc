@@ -33,6 +33,9 @@ Plugin 'bling/vim-airline'
 " fugitive (git for Vim)
 Plugin 'tpope/vim-fugitive'
 
+" Add Ack for searching
+Plugin 'mileszs/ack.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
