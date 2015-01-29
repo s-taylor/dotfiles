@@ -47,7 +47,7 @@ cb () {
 ### Git - Unmerged Commits on Current Branch
 gum () { 
   echo "Unmerged commits on branch \"$(cb)\"...";
-  git log $(cb)^..origin/$(cb) --oneline --decorate;
+  git log $(cb)..origin/$(cb) --oneline --decorate;
 }
 
 ### Heroku - Add Remote - Input = Branch Name, App Name
