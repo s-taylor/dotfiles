@@ -79,9 +79,10 @@ nmap <leader>o o<Esc>
 nmap <leader>O O<Esc>
 
 " Add shortcuts to next/previous/close buffer
-map <leader>n :bn<cr>
-map <leader>p :bp<cr>
-map <leader>d :bd<cr>
+nmap <leader>l :bn<cr>
+nmap <leader>h :bp<cr>
+" map <leader>d :bd<cr>
+nmap <leader>q :bp <BAR> bd #<CR>
 
 " -----------------
 " Non-Vundle Stuffs
