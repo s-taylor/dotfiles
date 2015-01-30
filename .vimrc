@@ -70,6 +70,8 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 " -----------------
 " Keyboard shortcuts
 " -----------------
+" Remap leader key to ;
+:let mapleader = ";"
 
 " Insert a blank line below without entering insert mode
 nmap <leader>o o<Esc>
@@ -105,10 +107,6 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
-
-" Remap leader key to ;
-:let mapleader = ";"
-
 
 " Show command input (shows line count in visual mode)
 set showcmd
