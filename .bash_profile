@@ -1,4 +1,6 @@
-export PATH=/usr/local/bin:$PATH
+# /usr/local/bin - brew installs / node modules
+# ~/bin - custom shell scripts (i.e. git-open)
+export PATH=/usr/local/bin:~/bin:$PATH
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
