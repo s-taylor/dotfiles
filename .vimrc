@@ -81,8 +81,21 @@ nmap <leader>O O<Esc>
 " Add shortcuts to next/previous/close buffer
 nmap <leader>l :bn<cr>
 nmap <leader>h :bp<cr>
-" map <leader>d :bd<cr>
 nmap <leader>q :bp <BAR> bd #<CR>
+
+" ------------
+" Backup Files
+" ------------
+" folder: ~/.vim/tmp must be created!!!
+
+" tell vim to keep a backup file
+set backup
+
+" tell vim where to put its backup files
+set backupdir=~/.vim/tmp//
+
+" tell vim where to put swap files
+set dir=~/.vim/tmp//
 
 " -----------------
 " Non-Vundle Stuffs
