@@ -89,9 +89,9 @@ nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
-" ------------------
+" ------------
 " Bubble lines
-" ------------------
+" ------------
 " Single lines
 nmap <C-Up> ddkP
 nmap <C-Down> ddp
