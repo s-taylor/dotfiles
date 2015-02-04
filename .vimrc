@@ -83,6 +83,23 @@ nmap <leader>l :bn<cr>
 nmap <leader>h :bp<cr>
 nmap <leader>q :bp <BAR> bd #<CR>
 
+" easier window navigation
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
+
+" ------------------
+" Bubble lines
+" ------------------
+" Single lines
+nmap <C-Up> ddkP
+nmap <C-Down> ddp
+
+" Multiple lines
+vmap <C-Up> xkP`[V`]
+vmap <C-Down> xp`[V`]
+
 " ------------
 " Backup Files
 " ------------
