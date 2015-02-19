@@ -24,6 +24,9 @@ Plugin 'kchmck/vim-coffee-script'
 " Ctrl + P - fuzzy file search
 Plugin 'kien/ctrlp.vim'
 
+" Indent Guidelines ( <leader>ig )
+Plugin 'nathanaelkane/vim-indent-guides'
+
 " Editor config for vim
 Plugin 'editorconfig/editorconfig-vim'
 
