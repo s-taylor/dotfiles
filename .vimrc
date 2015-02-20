@@ -134,6 +134,9 @@ set dir=~/.vim/tmp//
 " Enable syntax highlighting
 syntax enable
 
+" Set colorscheme default
+colorscheme Mustang
+
 " Fix Delete key OSX
 set backspace=indent,eol,start
 
