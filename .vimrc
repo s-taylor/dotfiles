@@ -75,6 +75,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 " --------------
 " Airline config
 " --------------
+" always show airline (even without window split)
+set laststatus=2
 
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1
