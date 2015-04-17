@@ -84,6 +84,13 @@ let g:airline#extensions#tabline#enabled = 1
 " " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
 
+
+" --------------
+" CTRL + P
+" --------------
+" ignore certail files/folders with ctrlp
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
 " -----------------
 " Keyboard shortcuts
 " -----------------
