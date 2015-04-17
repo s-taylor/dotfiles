@@ -42,8 +42,14 @@ Plugin 'bling/vim-airline'
 " fugitive (git for Vim)
 Plugin 'tpope/vim-fugitive'
 
+" Git Gutter
+Plugin 'airblade/vim-gitgutter'
+
 " Add Ack for searching
 Plugin 'mileszs/ack.vim'
+
+" Delimit Mate (auto close brackets)
+Plugin 'Raimondi/delimitMate'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -54,11 +60,11 @@ filetype plugin indent on    " required
 " --------------
 
 " open a NERDTree automatically when vim starts up
-autocmd vimenter * NERDTree
+"autocmd vimenter * NERDTree
 
 " open a NERDTree automatically when vim starts up if no files were specified
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+"autocmd StdinReadPre * let s:std_in=1
+"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " shortcut to open NERDTree
 map <C-n> :NERDTreeToggle<CR>
