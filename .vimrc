@@ -150,7 +150,8 @@ set dir=~/.vim/tmp//
 syntax enable
 
 " Set colorscheme default
-colorscheme Mustang
+set background=dark
+colorscheme solarized
 
 " Fix Delete key OSX
 set backspace=indent,eol,start
