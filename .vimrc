@@ -56,6 +56,11 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 " --------------
+" Remap leader key to ;
+" --------------
+:let mapleader = ";"
+
+" --------------
 " Nerdtree config
 " --------------
 
@@ -84,18 +89,23 @@ let g:airline#extensions#tabline#enabled = 1
 " " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
 
-
 " --------------
 " CTRL + P
 " --------------
 " ignore certail files/folders with ctrlp
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
+" --------------
+" Git Gutter
+" --------------
+" remap default key bindings so these don't interfere with buffer previous
+nmap <Leader>gs <Plug>GitGutterStageHunk
+nmap <Leader>gr <Plug>GitGutterRevertHunk
+nmap <Leader>gp <Plug>GitGutterPreviewHunk
+
 " -----------------
 " Keyboard shortcuts
 " -----------------
-" Remap leader key to ;
-:let mapleader = ";"
 
 " Insert a blank line below without entering insert mode
 nmap <leader>o o<Esc>
