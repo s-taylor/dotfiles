@@ -77,6 +77,10 @@ map <C-n> :NERDTreeToggle<CR>
 " close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
+" prevent buffer next and previous when focused on Nerdtree
+autocmd FileType nerdtree noremap <buffer> <leader>l <nop>
+autocmd FileType nerdtree noremap <buffer> <leader>h <nop>
+
 " --------------
 " Airline config
 " --------------
