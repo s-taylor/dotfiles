@@ -82,6 +82,7 @@ autocmd FileType nerdtree noremap <buffer> <leader>l <nop>
 autocmd FileType nerdtree noremap <buffer> <leader>h <nop>
 
 " prevent deletion of Nerdtree (should always use control + n)
+autocmd FileType nerdtree noremap <buffer> <leader>q <nop>
 autocmd FileType nerdtree cnoreabbrev <buffer> bd <nop>
 " --------------
 " Airline config
