@@ -40,6 +40,9 @@ alias c='clear'
 ### NPM install AU
 alias npmau="npm install --registryhttp://registry.npmjs.org.au"
 
+### Show SSH Config
+alias sshconf="less ~/.ssh/config"
+
 ### Git - Current Branch
 cb () { 
   branch="$(git symbolic-ref --short -q HEAD)"
