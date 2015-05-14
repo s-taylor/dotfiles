@@ -5,6 +5,11 @@ export PATH=/usr/local/bin:~/bin:$PATH
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
+### Add Git Branch Name Auto Completion
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
+
 ### Reload .bash_profile
 alias reload="source ~/.bash_profile"
 
