@@ -84,6 +84,7 @@ autocmd FileType nerdtree noremap <buffer> <leader>h <nop>
 " prevent deletion of Nerdtree (should always use control + n)
 autocmd FileType nerdtree noremap <buffer> <leader>q <nop>
 autocmd FileType nerdtree cnoreabbrev <buffer> bd <nop>
+
 " --------------
 " Airline config
 " --------------
@@ -97,9 +98,15 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 
 " --------------
+" Ack config
+" --------------
+" enable Ag (the silver searcher)
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
+" --------------
 " CTRL + P
 " --------------
-" ignore certail files/folders with ctrlp
+" ignore certain files/folders with ctrlp
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 " --------------
