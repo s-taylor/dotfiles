@@ -106,7 +106,7 @@ if executable('ag')
 	let g:ackprg = 'ag --nogroup --nocolor --column'
 endif
 
-autocmd FileType qf noremap <buffer> <leader>q <nop>
+autocmd FileType qf noremap <buffer> <leader>q <C-w>q
 autocmd FileType qf noremap <buffer> <leader>l <nop>
 autocmd FileType qf noremap <buffer> <leader>h <nop>
 
@@ -143,6 +143,7 @@ nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
+nmap <C-q> <C-w>q
 
 " Copy + Paste using OSX Clipboard
 vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
