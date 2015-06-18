@@ -100,8 +100,11 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 " --------------
 " Ack config
 " --------------
-" enable Ag (the silver searcher)
-let g:ackprg = 'ag --nogroup --nocolor --column'
+" enable Ag (the silver searcher) when available
+" https://github.com/ggreer/the_silver_searcher
+if executable('ag')
+	let g:ackprg = 'ag --nogroup --nocolor --column'
+endif
 
 " --------------
 " CTRL + P
