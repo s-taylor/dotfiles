@@ -55,6 +55,9 @@ Plugin 'Raimondi/delimitMate'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+" This is required for control + q shortcuts to work
+silent !stty -ixon > /dev/null 2>/dev/null
+
 " --------------
 " Remap leader key to ;
 " --------------
@@ -143,7 +146,7 @@ nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
-nnoremap <C-q> <C-w>q
+nmap <C-q> <C-w>q
 
 " Copy + Paste using OSX Clipboard
 vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
