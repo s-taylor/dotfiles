@@ -106,6 +106,10 @@ if executable('ag')
 	let g:ackprg = 'ag --nogroup --nocolor --column'
 endif
 
+autocmd FileType qf noremap <buffer> <leader>q <nop>
+autocmd FileType qf noremap <buffer> <leader>l <nop>
+autocmd FileType qf noremap <buffer> <leader>h <nop>
+
 " --------------
 " CTRL + P
 " --------------
