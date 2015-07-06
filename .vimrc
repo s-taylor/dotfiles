@@ -112,6 +112,7 @@ endif
 autocmd FileType qf noremap <buffer> <leader>q <C-w>q
 autocmd FileType qf noremap <buffer> <leader>l <nop>
 autocmd FileType qf noremap <buffer> <leader>h <nop>
+autocmd FileType qf set nobuflisted
 
 " --------------
 " CTRL + P
