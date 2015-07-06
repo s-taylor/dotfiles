@@ -110,7 +110,6 @@ if executable('ag')
 endif
 
 autocmd FileType qf noremap <buffer> <leader>q <C-w>q
-autocmd FileType qf noremap <buffer> <C-Up> <C-w>q
 autocmd FileType qf noremap <buffer> <leader>l <nop>
 autocmd FileType qf noremap <buffer> <leader>h <nop>
 
