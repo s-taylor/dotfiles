@@ -112,6 +112,7 @@ endif
 autocmd FileType qf noremap <buffer> <leader>q <C-w>q
 autocmd FileType qf noremap <buffer> <leader>l <nop>
 autocmd FileType qf noremap <buffer> <leader>h <nop>
+" Hide the quickfind buffer so buffer next/previous don't switch to it
 autocmd FileType qf set nobuflisted
 
 " --------------
