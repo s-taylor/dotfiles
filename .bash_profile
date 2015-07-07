@@ -6,6 +6,7 @@ export PATH=/usr/local/bin:~/bin:$PATH
 export PATH="/usr/local/heroku/bin:$PATH"
 
 ### Add Git Branch Name Auto Completion
+# copy .git-completion.bash to ~/
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
