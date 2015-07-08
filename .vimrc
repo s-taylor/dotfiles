@@ -106,7 +106,7 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 " enable Ag (the silver searcher) when available
 " https://github.com/ggreer/the_silver_searcher
 if executable('ag')
-	let g:ackprg = 'ag --nogroup --nocolor --column --ignore=*.min.js'
+	let g:ackprg = 'ag --nogroup --nocolor --column --ignore=*min.js'
 endif
 
 autocmd FileType qf noremap <buffer> <leader>q <C-w>q
