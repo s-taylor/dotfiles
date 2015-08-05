@@ -144,6 +144,9 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+" user jscs for javascript
+let g:syntastic_javascript_checkers = ['jscs']
+
 " -----------------
 " Keyboard shortcuts
 " -----------------
