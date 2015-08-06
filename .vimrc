@@ -135,6 +135,7 @@ nmap <Leader>gp <Plug>GitGutterPreviewHunk
 " --------------
 " Syntastic
 " --------------
+" to use jscs you need to npm install -g jscs
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
