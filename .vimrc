@@ -147,6 +147,7 @@ let g:syntastic_check_on_wq = 0
 
 " user jscs for javascript
 let g:syntastic_javascript_checkers = ['jscs']
+let g:syntastic_javascript_jscs_args = "--esnext"
 
 " -----------------
 " Keyboard shortcuts
