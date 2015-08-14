@@ -236,6 +236,9 @@ set hidden
 " Resize splits when the window is resized
 au VimResized * exe "normal! \<c-w>="
 
+" Add an 81 charater length indicator
+set colorcolumn=81
+
 "testing stuff from - http://nvie.com/posts/how-i-boosted-my-vim/
 set nowrap        " don't wrap lines
 set autoindent    " always set autoindenting on
