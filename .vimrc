@@ -176,6 +176,12 @@ nmap <C-q> <C-w>q
 " Copy + Paste using OSX Clipboard
 vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
 nmap <C-v> :call setreg("\"",system("pbpaste"))<CR>p
+
+" Delete to 'black hole' register
+vmap x "_d"
+
+" Replace text with clipboard
+vmap r "_dP"
 "
 " ------------
 " Bubble lines
