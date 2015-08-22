@@ -145,9 +145,12 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-" user jscs for javascript
-let g:syntastic_javascript_checkers = ['jscs']
+" user jscs for javascript if .jscsrc file exists, else use jshint
+autocmd FileType javascript let b:syntastic_checkers = findfile('.jscsrc', '.;') != '' ? ['jscs'] : ['jshint']
+
+" enable es6 syntax for jscs
 let g:syntastic_javascript_jscs_args = "--esnext"
+
 
 " -----------------
 " Keyboard shortcuts
