@@ -12,3 +12,7 @@ cp .gitconfig ~/
 rm ~/.bash_profile
 cp .bash_profile ~/
 source ~/.bash_profile
+
+#update gitconfig
+rm ~/.tmux.conf
+cp .tmux.conf ~/

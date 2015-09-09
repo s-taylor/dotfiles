@@ -1,6 +1,6 @@
-#Configure iTerm2
+# Configure iTerm2
 
-##Set Alt + Arrow Key to skip words
+## Set Alt + Arrow Key to skip words
 
 * iTerm > Preferences
 * Profiles
@@ -9,17 +9,28 @@
 * Action: send escape sequence
 * Value: f / b (for forward / backwards)
 
-#Update Vim (requires homebrew)
+## Launch tmux when opening
+
+* iTerm > Preferences
+* Profiles
+* Sent text at start
+* tmux attach -t base || tmux new -s base
+
+---
+
+# Homebrew
+
+## Update Vim (requires homebrew)
 
 1. Install Brew
 2. brew install mercurial
 3. brew install vim
 
-#Update Git (requires homebrew)
+## Update Git (requires homebrew)
 
 1. brew install git
 
-#Vim Config (requires git)
+# Setup Vim
 
 1. git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 2. Save this .vimrc to ~/

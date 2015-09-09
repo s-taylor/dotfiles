@@ -54,6 +54,9 @@ Plugin 'Raimondi/delimitMate'
 " Syntastic - syntax checker
 Plugin 'scrooloose/syntastic'
 
+" Tmux navigator
+Plugin 'christoomey/vim-tmux-navigator'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -167,10 +170,6 @@ nmap <leader>h :bp<cr>
 nmap <leader>q :bp <BAR> bd #<CR>
 
 " easier window navigation
-nmap <C-h> <C-w>h
-nmap <C-j> <C-w>j
-nmap <C-k> <C-w>k
-nmap <C-l> <C-w>l
 nmap <C-q> <C-w>q
 
 " Copy + Paste using OSX Clipboard
