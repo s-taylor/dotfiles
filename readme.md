@@ -30,6 +30,13 @@
 
 1. brew install git
 
+# Install Tmux
+
+1. brew install tmux
+2. brew install reattach-to-user-namespace
+
+see [https://superuser.com/questions/397076/tmux-exits-with-exited-on-mac-os-x](https://superuser.com/questions/397076/tmux-exits-with-exited-on-mac-os-x)
+
 # Setup Vim
 
 1. git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
