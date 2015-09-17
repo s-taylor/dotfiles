@@ -30,12 +30,18 @@
 
 1. brew install git
 
-# Install Tmux
+## Install Tmux
 
 1. brew install tmux
 2. brew install reattach-to-user-namespace
 
 see [https://superuser.com/questions/397076/tmux-exits-with-exited-on-mac-os-x](https://superuser.com/questions/397076/tmux-exits-with-exited-on-mac-os-x)
+
+---
+
+# Install Tmux Plugin Manager
+
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # Setup Vim
 
