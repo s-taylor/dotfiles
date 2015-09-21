@@ -64,6 +64,15 @@ filetype plugin indent on    " required
 " This is required for control + q shortcuts to work
 silent !stty -ixon > /dev/null 2>/dev/null
 
+" Enable Ctrl + Arrow Keys in Vim when using Tmux
+" https://superuser.com/questions/401926/how-to-get-shiftarrows-and-ctrlarrows-working-in-vim-in-tmux
+if &term =~ '^screen'
+    execute "set <xUp>=\e[1;*A"
+    execute "set <xDown>=\e[1;*B"
+    execute "set <xRight>=\e[1;*C"
+    execute "set <xLeft>=\e[1;*D"
+endif
+
 " --------------
 " Remap leader key to ;
 " --------------
