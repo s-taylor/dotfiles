@@ -43,6 +43,9 @@ see [https://superuser.com/questions/397076/tmux-exits-with-exited-on-mac-os-x](
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
+# Install Tmux Plugins
+control+a > I
+
 # Setup Vim
 
 1. git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
