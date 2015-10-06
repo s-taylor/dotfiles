@@ -186,8 +186,7 @@ nmap <C-q> <C-w>q
 "nmap <C-v> :call setreg("\"",system("pbpaste"))<CR>p
 
 " Default to using System Clipboard
-set clipboard=unnamedplus
-
+set clipboard^=unnamed,unnamedplus
 
 " Delete to 'black hole' register
 vmap x "_d"
