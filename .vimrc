@@ -82,6 +82,12 @@ endif
 :let mapleader = ";"
 
 " --------------
+" Solarized
+" --------------
+"use F5 to toggle between solarized light and dark
+call togglebg#map("<F5>")
+
+" --------------
 " Nerdtree config
 " --------------
 
