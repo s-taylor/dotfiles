@@ -157,9 +157,9 @@ nmap <Leader>gp <Plug>GitGutterPreviewHunk
 " Syntastic
 " --------------
 " to use jscs you need to npm install -g jscs
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 " do not show syntastic error list on buffer open (open with :Errors)
