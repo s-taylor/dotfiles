@@ -211,6 +211,9 @@ vmap x "_d"
 " Replace text with clipboard
 vmap r "_dP"
 "
+" Reload .vimrc
+nmap <leader>r :so $MYVIMRC<CR>
+
 " ------------
 " Bubble lines
 " ------------
