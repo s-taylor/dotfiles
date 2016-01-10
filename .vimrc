@@ -145,9 +145,6 @@ autocmd FileType qf set nobuflisted
 " ignore certain files/folders with ctrlp
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
-" default to filename searching
-let g:ctrlp_by_filename = 1
-
 " default to regex search
 let g:ctrlp_regexp = 1
 
