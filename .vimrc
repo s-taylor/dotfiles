@@ -60,6 +60,9 @@ Plugin 'christoomey/vim-tmux-navigator'
 " Solarized color scheme
 Plugin 'altercation/vim-colors-solarized'
 
+" Vim Multiple Cursors
+Plugin 'terryma/vim-multiple-cursors'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -183,6 +186,18 @@ autocmd FileType javascript let b:syntastic_checkers = findfile('.jscsrc', '.;')
 
 " enable es6 syntax for jscs
 let g:syntastic_javascript_jscs_args = "--esnext"
+
+" --------------
+" Vim Multiple Cursors
+" --------------
+" disable default keymappings
+let g:multi_cursor_use_default_mapping=0
+
+" enable select next with ctrl + s
+let g:multi_cursor_next_key='<C-s>'
+
+" exit multi cursor mode
+let g:multi_cursor_quit_key='<Esc>'
 
 " -----------------
 " Keyboard shortcuts
