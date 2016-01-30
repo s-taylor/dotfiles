@@ -224,10 +224,10 @@ nmap <C-q> <C-w>q
 set clipboard^=unnamed,unnamedplus
 
 " Delete to 'black hole' register
-vmap x "_d"
+vmap x "_d
 
 " Replace text with clipboard
-vmap r "_dP"
+vmap r "_dP
 "
 " Reload .vimrc
 nmap <leader>r :so $MYVIMRC<CR>
