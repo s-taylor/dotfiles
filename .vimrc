@@ -223,7 +223,7 @@ set clipboard^=unnamed,unnamedplus
 vmap x "_d
 
 " Replace text with clipboard
-vmap r "_dP
+vmap p "_dP
 "
 " Reload .vimrc
 nmap <leader>r :so $MYVIMRC<CR>
