@@ -22,7 +22,7 @@ Plugin 'groenewege/vim-less'
 Plugin 'kchmck/vim-coffee-script'
 
 " Ctrl + P - fuzzy file search
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " Indent Guidelines ( <leader>ig )
 Plugin 'nathanaelkane/vim-indent-guides'
@@ -138,8 +138,15 @@ autocmd FileType qf set nobuflisted
 " --------------
 " CTRL + P
 " --------------
-" ignore certain files/folders with ctrlp
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+"define default keymapping and mode
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlPMRU'
+
+" set mru files to use relative directory
+let g:ctrlp_mruf_relative = 1
+
+"exclude files in .gitignore
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 " default to regex search
 let g:ctrlp_regexp = 1
