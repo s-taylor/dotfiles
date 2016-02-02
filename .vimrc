@@ -209,9 +209,9 @@ nmap <leader>o o<Esc>
 nmap <leader>O O<Esc>
 
 " Add shortcuts to next/previous/close buffer
-nmap <leader>l :bn<cr>
-nmap <leader>h :bp<cr>
-nmap <leader>q :bp <BAR> bd #<CR>
+nmap <Tab> :bn<cr>
+nmap <S-Tab> :bp<cr>
+nmap q<Tab> :bp <BAR> bd #<CR>
 
 " easier window navigation
 nmap <C-q> <C-w>q
