@@ -38,6 +38,7 @@ Plugin 'scrooloose/nerdcommenter'
 
 " Airline
 Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " fugitive (git for Vim)
 Plugin 'tpope/vim-fugitive'
