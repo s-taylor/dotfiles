@@ -216,10 +216,6 @@ nmap <leader>q :bp <BAR> bd #<CR>
 " easier window navigation
 nmap <C-q> <C-w>q
 
-" Copy + Paste using OSX Clipboard
-"vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
-"nmap <C-v> :call setreg("\"",system("pbpaste"))<CR>p
-
 " Default to using System Clipboard
 set clipboard^=unnamed,unnamedplus
 
