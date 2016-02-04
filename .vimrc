@@ -211,10 +211,7 @@ nmap <leader>O O<Esc>
 " Add shortcuts to next/previous/close buffer
 nmap <Tab> :bn<cr>
 nmap <S-Tab> :bp<cr>
-nmap q<Tab> :bp <BAR> bd #<CR>
-
-" easier window navigation
-nmap <C-q> <C-w>q
+nmap <C-q> :bp <BAR> bd #<CR>
 
 " Default to using System Clipboard
 set clipboard^=unnamed,unnamedplus
