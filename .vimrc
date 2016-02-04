@@ -141,7 +141,6 @@ autocmd FileType qf set nobuflisted
 " --------------
 "define default keymapping and mode
 let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlPMRU'
 
 " set mru files to use relative directory
 let g:ctrlp_mruf_relative = 1
