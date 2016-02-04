@@ -213,6 +213,9 @@ nmap <Tab> :bn<cr>
 nmap <S-Tab> :bp<cr>
 nmap <C-q> :bp <BAR> bd #<CR>
 
+" Close window
+nmap <C-x> <C-w>q
+
 " Default to using System Clipboard
 set clipboard^=unnamed,unnamedplus
 
