@@ -7,7 +7,7 @@ call vundle#begin()
 " This is the Vundle package, which can be found on GitHub.
 " For GitHub repos, you specify plugins using the
 " 'user/repository' format
-Plugin 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
 " Javascript syntax highlighting
 Plugin 'jelera/vim-javascript-syntax'
