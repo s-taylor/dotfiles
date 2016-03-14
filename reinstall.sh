@@ -21,3 +21,7 @@ source ~/.bash_profile #reload bash_profile
 rm ~/.tmux.conf
 cp .tmux.conf ~/
 tmux source-file ~/.tmux.conf #reload tmux config
+
+#update tern-config (for YouCompleteMe Vim plugin)
+rm ~/.tern-config
+cp .tern-config ~/

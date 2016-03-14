@@ -68,3 +68,6 @@ control+a > I
 
 --tern-completer is for javascript support see https://github.com/Valloric/YouCompleteMe
 
+You must also configure a .tern-project file in each directory or ~/.tern-config
+Refer https://github.com/Valloric/YouCompleteMe#configuring-tern-for-node-support
+
