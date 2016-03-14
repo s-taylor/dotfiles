@@ -1,4 +1,4 @@
-snippet cl "console.log(...)" b
+snippet cl "console.log" b
 console.log("$1", $1)$0
 endsnippet
 
@@ -18,6 +18,24 @@ endsnippet
 
 snippet for "for (...) {...}" b
 for (var i = 0; ${1:myArray}.length < i; i++) {
+	${VISUAL}$0
+}
+endsnippet
+
+snippet m "object method (prototype)"
+${1:ClassName}.prototype.${2:methodName} = function(${3:arguements}) {
+	${VISUAL}$0
+}
+endsnippet
+
+snippet fn "function"
+function ${1:functionName}(${2:arguements}) {
+	${VISUAL}$0
+}
+endsnippet
+
+snippet => "arrow function (multiline)"
+const ${1:name} = (${2:arguments}) => {
 	${VISUAL}$0
 }
 endsnippet
