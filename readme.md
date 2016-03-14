@@ -39,6 +39,8 @@ see [https://superuser.com/questions/397076/tmux-exits-with-exited-on-mac-os-x](
 
 ---
 
+# Tmux
+
 # Install Tmux Plugin Manager
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -46,9 +48,23 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 # Install Tmux Plugins
 control+a > I
 
-# Setup Vim
+---
+
+# Vim
+
+## Setup
 
 1. git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 2. Save this .vimrc to ~/
 3. create the folder /.vim/tmp (to store vim swap and backup files)
-4. Install Plugins - Open Vim > ":BundleInstall"
+4. Install Plugins - Open Vim > ":PluginInstall"
+
+## YouCompleteMe
+
+1. Install package via Vundle
+2. brew install cmake
+3. cd ~/.vim/bundle/YouCompleteMe
+4. ./install.py --tern-completer 
+
+--tern-completer is for javascript support see https://github.com/Valloric/YouCompleteMe
+
