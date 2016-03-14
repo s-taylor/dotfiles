@@ -22,11 +22,9 @@ for (var i = 0; ${1:myArray}.length < i; i++) {
 }
 endsnippet
 
-snippet m "object method (prototype)"
-${1:ClassName}.prototype.${2:methodName} = function(${3:arguements}) {
-	${VISUAL}$0
-}
-endsnippet
+#############
+# FUNCTIONS #
+#############
 
 snippet f "function"
 function ${1:functionName}(${2:arguements}) {
@@ -52,7 +50,11 @@ const ${1:name} = (${2:arguements}) => {
 }
 endsnippet
 
-snippet obj "object"
+###########
+# OBJECTS #
+###########
+
+snippet o "object"
 var ${1:objectName} = {
 	${VISUAL}$0
 }
@@ -67,3 +69,10 @@ endsnippet
 snippet :, "object key and value"
 ${1:key}: ${2:value}$0
 endsnippet
+
+snippet m "object method (prototype)"
+${1:ClassName}.prototype.${2:methodName} = function(${3:arguements}) {
+	${VISUAL}$0
+}
+endsnippet
+
