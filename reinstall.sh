@@ -8,12 +8,16 @@ cp .vimrc ~/
 rm ~/.gitconfig
 cp .gitconfig ~/
 
+#update agignore
+rm ~/.agignore
+cp .agignore ~/
+
 #update bashprofile
 rm ~/.bash_profile
 cp .bash_profile ~/
 source ~/.bash_profile #reload bash_profile
 
-#update gitconfig
+#update tmux
 rm ~/.tmux.conf
 cp .tmux.conf ~/
 tmux source-file ~/.tmux.conf #reload tmux config
