@@ -28,14 +28,42 @@ ${1:ClassName}.prototype.${2:methodName} = function(${3:arguements}) {
 }
 endsnippet
 
-snippet fn "function"
+snippet f "function"
 function ${1:functionName}(${2:arguements}) {
 	${VISUAL}$0
 }
 endsnippet
 
-snippet => "arrow function (multiline)"
-const ${1:name} = (${2:arguments}) => {
+snippet vf "function assigned to var"
+var ${2:function_name} = function(${3:arguements}) {
+	${VISUAL}$0
+};
+endsnippet
+
+snippet af "anonymous Function" i
+function(${1:arguements}) {
 	${VISUAL}$0
 }
+endsnippet
+
+snippet => "arrow function (multiline)"
+const ${1:name} = (${2:arguements}) => {
+	${VISUAL}$0
+}
+endsnippet
+
+snippet obj "object"
+var ${1:objectName} = {
+	${VISUAL}$0
+}
+endsnippet
+
+snippet :f "object method"
+${1:method_name}: function(${3:attribute}) {
+	${VISUAL}$0
+}
+endsnippet
+
+snippet :, "object key and value"
+${1:key}: ${2:value}$0
 endsnippet
