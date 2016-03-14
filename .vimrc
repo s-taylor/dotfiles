@@ -67,6 +67,9 @@ Plugin 'terryma/vim-multiple-cursors'
 " YouCompleteMe
 Plugin 'Valloric/YouCompleteMe'
 
+" UltiSnip
+Plugin 'SirVer/ultisnips'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -201,6 +204,15 @@ let g:multi_cursor_next_key='<C-s>'
 
 " exit multi cursor mode
 let g:multi_cursor_quit_key='<Esc>'
+
+
+" --------------
+" Ultisnip
+" --------------
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger='<c-s>'
+let g:UltiSnipsJumpForwardTrigger='<c-j>'
+let g:UltiSnipsJumpBackwardTrigger='<c-k>'
 
 " -----------------
 " Keyboard shortcuts

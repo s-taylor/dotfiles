@@ -71,3 +71,5 @@ control+a > I
 You must also configure a .tern-project file in each directory or ~/.tern-config
 Refer https://github.com/Valloric/YouCompleteMe#configuring-tern-for-node-support
 
+Snippets are saved in the dotfiles repo, so you should create a symlink for this
+ln -s /PATH/dotfiles/UltiSnips/ /Users/Nizmox/.vim/
