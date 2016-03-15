@@ -18,7 +18,7 @@ endsnippet
 
 snippet for "for (...) {...}" b
 for (var i = 0; ${1:myArray}.length < i; i++) {
-	${VISUAL}$0
+	$0
 }
 endsnippet
 
@@ -26,13 +26,13 @@ endsnippet
 # FUNCTIONS #
 #############
 
-snippet f "function"
+snippet fn "function" b
 function ${1:functionName}(${2:arguements}) {
 	${VISUAL}$0
 }
 endsnippet
 
-snippet vf "function assigned to var"
+snippet vf "function assigned to var" b
 var ${2:function_name} = function(${3:arguements}) {
 	${VISUAL}$0
 }
@@ -54,9 +54,9 @@ endsnippet
 # OBJECTS #
 ###########
 
-snippet o "object"
+snippet ob "object"
 var ${1:objectName} = {
-	${VISUAL}$0
+	$0
 }
 endsnippet
 
@@ -74,4 +74,20 @@ snippet m "object method (prototype)"
 ${1:ClassName}.prototype.${2:methodName} = function(${3:arguements}) {
 	${VISUAL}$0
 }
+endsnippet
+
+#########
+# MOCHA #
+#########
+
+snippet de "describe block"
+describe("${1}", function() {
+	${VISUAL}$0
+})
+endsnippet
+
+snippet it "it block"
+it("${1}", function${2:*}() {
+	${VISUAL}$0
+})
 endsnippet
