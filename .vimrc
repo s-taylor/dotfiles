@@ -199,8 +199,8 @@ let g:syntastic_javascript_jscs_args = "--esnext"
 " disable default keymappings
 let g:multi_cursor_use_default_mapping=0
 
-" enable select next with ctrl + s
-let g:multi_cursor_next_key='<C-s>'
+" enable select next with ctrl + m
+let g:multi_cursor_next_key='<C-m>'
 
 " exit multi cursor mode
 let g:multi_cursor_quit_key='<Esc>'
@@ -210,9 +210,9 @@ let g:multi_cursor_quit_key='<Esc>'
 " Ultisnip
 " --------------
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger='<c-s>'
-let g:UltiSnipsJumpForwardTrigger='<c-j>'
-let g:UltiSnipsJumpBackwardTrigger='<c-k>'
+let g:UltiSnipsExpandTrigger='<C-s>'
+let g:UltiSnipsJumpForwardTrigger='<C-j>'
+let g:UltiSnipsJumpBackwardTrigger='<C-k>'
 
 " -----------------
 " Keyboard shortcuts
