@@ -251,8 +251,8 @@ nmap <C-Up> ddkP
 nmap <C-Down> ddp
 
 " Multiple lines
-vmap <C-Up> xkP`[V`]
-vmap <C-Down> xp`[V`]
+vnoremap <C-Up> xkP`[V`]
+vnoremap <C-Down> xp`[V`]
 
 " ------------
 " Backup Files
