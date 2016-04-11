@@ -108,9 +108,9 @@ map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " prevent buffer next, previous and delete when focused on Nerdtree
-autocmd FileType nerdtree noremap <buffer> <Tab> :bn<cr>
-autocmd FileType nerdtree noremap <buffer> <S-Tab> :bp<cr>
-autocmd FileType nerdtree noremap <buffer> <C-q> :bp <BAR> bd #<CR>
+autocmd FileType nerdtree noremap <buffer> <Tab> <nop>
+autocmd FileType nerdtree noremap <buffer> <S-Tab> <nop>
+autocmd FileType nerdtree noremap <buffer> <C-q> <nop>
 " --------------
 " Airline config
 " --------------
@@ -132,9 +132,9 @@ if executable('ag')
 	let g:ackprg = 'ag --nogroup --nocolor --column --ignore=*min.js'
 endif
 
-autocmd FileType qf noremap <buffer> <Tab> :bn<cr>
-autocmd FileType qf noremap <buffer> <S-Tab> :bp<cr>
-autocmd FileType qf noremap <buffer> <C-q> :bp <BAR> bd #<CR>
+autocmd FileType qf noremap <buffer> <Tab> <nop>
+autocmd FileType qf noremap <buffer> <S-Tab> <nop>
+autocmd FileType qf noremap <buffer> <C-q> <nop>
 " Hide the quickfind buffer so buffer next/previous don't switch to it
 autocmd FileType qf set nobuflisted
 
