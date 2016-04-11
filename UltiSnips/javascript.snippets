@@ -1,5 +1,5 @@
 snippet cl "console.log" b
-console.log("$1", $1)$0
+console.log("$1", $1);$0
 endsnippet
 
 snippet re "require" b
@@ -13,7 +13,7 @@ def formatVariableName(path):
 	else:
 		return re.sub(r'[_\-]', '', lastPart.title())
 snip.rv = formatVariableName(t[1])
-` = require("${1}")$0
+` = require("${1}");$0
 endsnippet
 
 snippet for "for (...) {...}" b
@@ -35,7 +35,7 @@ endsnippet
 snippet vf "function assigned to var"
 var ${2:function_name} = function(${3:arguements}) {
 	${VISUAL}$0
-};
+}
 endsnippet
 
 snippet af "anonymous Function" i
@@ -75,4 +75,3 @@ ${1:ClassName}.prototype.${2:methodName} = function(${3:arguements}) {
 	${VISUAL}$0
 }
 endsnippet
-
