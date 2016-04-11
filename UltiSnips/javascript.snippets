@@ -6,7 +6,7 @@ snippet re "require" b
 var `!p
 def formatVariableName(path):
 	lastPart = path.split('/')[-1]
-	if lastPart == 'underscore':
+	if lastPart == 'underscore' or lastPart == 'lodash':
 		return '_'
 	elif lastPart == 'jquery':
 		return '$'
