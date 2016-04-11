@@ -107,14 +107,10 @@ map <C-n> :NERDTreeToggle<CR>
 " close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-" prevent buffer next and previous when focused on Nerdtree
-autocmd FileType nerdtree noremap <buffer> <leader>l <nop>
-autocmd FileType nerdtree noremap <buffer> <leader>h <nop>
-
-" prevent deletion of Nerdtree (should always use control + n)
-autocmd FileType nerdtree noremap <buffer> <leader>q <nop>
-autocmd FileType nerdtree cnoreabbrev <buffer> bd <nop>
-
+" prevent buffer next, previous and delete when focused on Nerdtree
+autocmd FileType nerdtree noremap <buffer> <Tab> :bn<cr>
+autocmd FileType nerdtree noremap <buffer> <S-Tab> :bp<cr>
+autocmd FileType nerdtree noremap <buffer> <C-q> :bp <BAR> bd #<CR>
 " --------------
 " Airline config
 " --------------
@@ -136,9 +132,9 @@ if executable('ag')
 	let g:ackprg = 'ag --nogroup --nocolor --column --ignore=*min.js'
 endif
 
-autocmd FileType qf noremap <buffer> <leader>q <C-w>q
-autocmd FileType qf noremap <buffer> <leader>l <nop>
-autocmd FileType qf noremap <buffer> <leader>h <nop>
+autocmd FileType qf noremap <buffer> <Tab> :bn<cr>
+autocmd FileType qf noremap <buffer> <S-Tab> :bp<cr>
+autocmd FileType qf noremap <buffer> <C-q> :bp <BAR> bd #<CR>
 " Hide the quickfind buffer so buffer next/previous don't switch to it
 autocmd FileType qf set nobuflisted
 
