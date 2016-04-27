@@ -89,7 +89,7 @@ endif
 " --------------
 " Remap leader key to ;
 " --------------
-":let mapleader = ";"
+let mapleader = "\<Space>"
 
 " --------------
 " Solarized
