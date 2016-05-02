@@ -5,6 +5,10 @@ export PATH=/usr/local/bin:~/bin:$PATH
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
+### Add NVM path
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+
 ### Add Git Branch Name Auto Completion
 # copy .git-completion.bash to ~/
 if [ -f ~/.git-completion.bash ]; then
