@@ -214,6 +214,9 @@ let g:UltiSnipsJumpBackwardTrigger='<C-k>'
 " Keyboard shortcuts
 " -----------------
 
+" Map Esc to jj in insert mode
+:imap jj <Esc>
+
 " Insert a blank line below without entering insert mode
 nmap <leader>o o<Esc>
 " Insert a blank line above without entering insert mode
