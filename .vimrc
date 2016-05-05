@@ -195,12 +195,11 @@ let g:syntastic_javascript_jscs_args = "--esnext"
 " disable default keymappings
 let g:multi_cursor_use_default_mapping=0
 
-" enable select next with ctrl + m
-"let g:multi_cursor_next_key='<C-m>'
+" enable select next with ctrl + c
+let g:multi_cursor_next_key='<C-c>'
 
 " exit multi cursor mode
 let g:multi_cursor_quit_key='<Esc>'
-
 
 " --------------
 " Ultisnip
