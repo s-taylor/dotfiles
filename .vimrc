@@ -132,6 +132,9 @@ if executable('ag')
 	let g:ackprg = 'ag --nogroup --nocolor --column --ignore=*min.js'
 endif
 
+" shortcut to open Ack search
+nnoremap <Leader>f :Ack ""<Left>
+
 autocmd FileType qf noremap <buffer> <Tab> <nop>
 autocmd FileType qf noremap <buffer> <S-Tab> <nop>
 autocmd FileType qf noremap <buffer> <C-q> <nop>
@@ -142,7 +145,7 @@ autocmd FileType qf set nobuflisted
 " CTRL + P
 " --------------
 "define default keymapping and mode
-let g:ctrlp_map = '<c-p>'
+nnoremap <Leader>p :CtrlP<CR>
 
 " set mru files to use relative directory
 let g:ctrlp_mruf_relative = 1
@@ -220,6 +223,9 @@ let g:UltiSnipsJumpBackwardTrigger='<C-k>'
 nmap <leader>o o<Esc>
 " Insert a blank line above without entering insert mode
 nmap <leader>O O<Esc>
+
+" Save file
+nmap <leader>w :w<CR>
 
 " Add shortcuts to next/previous/close buffer
 nmap <Tab> :bn<cr>
