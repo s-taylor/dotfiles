@@ -54,6 +54,7 @@ Plugin 'Raimondi/delimitMate'
 
 " Syntastic - syntax checker
 Plugin 'scrooloose/syntastic'
+Plugin 'mtscout6/syntastic-local-eslint.vim'
 
 " Tmux navigator
 Plugin 'christoomey/vim-tmux-navigator'
@@ -186,11 +187,9 @@ nmap <leader>s :Errors<CR>
 let g:syntastic_style_error_symbol = "✗"
 let g:syntastic_style_warning_symbol = "⚠"
 
-" user jscs for javascript if .jscsrc file exists, else use jshint
-autocmd FileType javascript let b:syntastic_checkers = findfile('.jscsrc', '.;') != '' ? ['jscs'] : ['jshint']
-
-" enable es6 syntax for jscs
-let g:syntastic_javascript_jscs_args = "--esnext"
+" user eslint for javascript if .eslintrc file exists
+let g:syntastic_javascript_checkers = []
+autocmd FileType javascript let b:syntastic_checkers = findfile('.eslintrc.json', '.;') !=# '' ? ['eslint'] : []
 
 " --------------
 " Vim Multiple Cursors
