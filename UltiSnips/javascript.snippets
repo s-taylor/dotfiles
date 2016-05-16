@@ -9,12 +9,16 @@ def formatVariableName(path):
 		return re.sub(r'[_\-]', '', lastPart.title())
 endglobal
 
-snippet cl "console.log" b
+snippet cl "console.log('var', var)" b
 console.log("$1", $1);$0
 endsnippet
 
+snippet cm "console.log(message)" b
+console.log("$1");$0
+endsnippet
+
 snippet re "require" b
-var `!p
+const `!p
 snip.rv = formatVariableName(t[1])
 ` = require("${1}");$0
 endsnippet
@@ -42,7 +46,7 @@ function ${1:functionName}(${2:arguements}) {
 endsnippet
 
 snippet vf "function assigned to var" b
-var ${2:function_name} = function(${3:arguements}) {
+const ${2:function_name} = function(${3:arguements}) {
 	${VISUAL}$0
 }
 endsnippet
@@ -64,7 +68,7 @@ endsnippet
 ###########
 
 snippet ob "object"
-var ${1:objectName} = {
+const ${1:objectName} = {
 	$0
 }
 endsnippet
