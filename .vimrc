@@ -294,10 +294,11 @@ if has('mac')
 	set list
 endif
 
-" Display tabs as 2 space width
+" Tabs are 2 spaces
 set tabstop=2
-set softtabstop=2
 set shiftwidth=2
+set softtabstop=2
+set expandtab
 
 " Show command input (shows line count in visual mode)
 set showcmd
