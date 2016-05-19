@@ -1,12 +1,12 @@
 global !p
 def formatVariableName(path):
-	lastPart = path.split('/')[-1]
-	if lastPart == 'underscore' or lastPart == 'lodash':
-		return '_'
-	elif lastPart == 'jquery':
-		return '$'
-	else:
-		return re.sub(r'[_\-]', '', lastPart.title())
+  lastPart = path.split('/')[-1]
+  if lastPart == 'underscore' or lastPart == 'lodash':
+    return '_'
+  elif lastPart == 'jquery':
+    return '$'
+  else:
+    return re.sub(r'[_\-]', '', lastPart.title())
 endglobal
 
 snippet cl "console.log('var', var)" b
@@ -31,7 +31,7 @@ endsnippet
 
 snippet for "for (...) {...}" b
 for (var i = 0; ${1:myArray}.length < i; i++) {
-	$0
+  $0
 }
 endsnippet
 
@@ -41,25 +41,25 @@ endsnippet
 
 snippet fn "function" b
 function ${1:functionName}(${2:arguements}) {
-	${VISUAL}$0
+  ${VISUAL}$0
 }
 endsnippet
 
 snippet vf "function assigned to var" b
 const ${2:function_name} = function(${3:arguements}) {
-	${VISUAL}$0
+  ${VISUAL}$0
 }
 endsnippet
 
 snippet af "anonymous function" i
 function(${1:arguements}) {
-	${VISUAL}$0
+  ${VISUAL}$0
 }
 endsnippet
 
 snippet => "arrow function (multiline)"
 const ${1:name} = (${2:arguements}) => {
-	${VISUAL}$0
+  ${VISUAL}$0
 }
 endsnippet
 
@@ -69,13 +69,13 @@ endsnippet
 
 snippet ob "object"
 const ${1:objectName} = {
-	$0
+  $0
 }
 endsnippet
 
 snippet :f "object method"
 ${1:method_name}: function(${3:attribute}) {
-	${VISUAL}$0
+  ${VISUAL}$0
 }
 endsnippet
 
@@ -89,7 +89,7 @@ endsnippet
 
 snippet m "object method (prototype)"
 ${1:ClassName}.prototype.${2:methodName} = function(${3:arguements}) {
-	${VISUAL}$0
+  ${VISUAL}$0
 }
 endsnippet
 
@@ -98,15 +98,15 @@ endsnippet
 #########
 
 snippet de "describe block"
-describe("${1}", function() {
-	${VISUAL}$0
-})
+describe('${1}', () => {
+  ${VISUAL}$0
+});
 endsnippet
 
 snippet it "it block"
-it('${1}', function${2:*}() {
-	${VISUAL}$0
-})
+it('${1}', () => {
+  ${VISUAL}$0
+});
 endsnippet
 
 ############
