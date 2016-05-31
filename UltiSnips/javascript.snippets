@@ -113,13 +113,25 @@ endsnippet
 # PROMISES #
 ############
 
+snippet pr "promise"
+new Promise((resolve, reject) => {
+  $0
+});
+endsnippet
+
 snippet th "then"
-.then((res) => {
-  console.log('res:', res);
-  return res;
+.then((${1:result}) => {
+  $0
+})
+endsnippet
+
+snippet pt "passthrough (.then)"
+.then((result) => {
+  console.log('result:', result);
+  return result;$0
 })
 endsnippet
 
 snippet ct "catch"
-.catch((e) => console.log('ERROR:', e))
+.catch((e) => console.log('ERROR:', e));$0
 endsnippet
