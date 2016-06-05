@@ -8,6 +8,10 @@ cp .vimrc ~/
 rm ~/.gitconfig
 cp .gitconfig ~/
 
+#update gitignore
+rm ~/.gitignore
+cp .gitignore ~/
+
 #update agignore
 rm ~/.agignore
 cp .agignore ~/
