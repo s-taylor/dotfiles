@@ -40,3 +40,19 @@
       return err;
     });$0
     """
+
+  'mocha describe block':
+    'prefix': 'de'
+    'body': """
+    describe('${1}', () => {
+      $0
+    });
+    """
+
+  'mocha it block':
+    'prefix': 'it'
+    'body': """
+    it('${1}', () => {
+      $0
+    });
+    """
