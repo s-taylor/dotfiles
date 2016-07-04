@@ -64,7 +64,7 @@ control+a > I
 1. Install package via Vundle
 2. brew install cmake
 3. cd ~/.vim/bundle/YouCompleteMe
-4. ./install.py --tern-completer 
+4. ./install.py --tern-completer
 
 --tern-completer is for javascript support see https://github.com/Valloric/YouCompleteMe
 
@@ -73,3 +73,12 @@ Refer https://github.com/Valloric/YouCompleteMe#configuring-tern-for-node-suppor
 
 Snippets are saved in the dotfiles repo, so you should create a symlink for this
 ln -s /PATH/dotfiles/UltiSnips/ /Users/Nizmox/.vim/
+
+---
+
+# Atom
+
+## Creat snippets symlink
+
+1. /Users/simontaylor/.atom
+2. ln -s ~/Projects/personal/dotfiles/snippets.cson ./
