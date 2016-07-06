@@ -18,9 +18,6 @@ Plugin 'digitaltoad/vim-jade'
 " Less syntax highlighting
 Plugin 'groenewege/vim-less'
 
-" Coffeescript syntax highlighting
-Plugin 'kchmck/vim-coffee-script'
-
 " Ctrl + P - fuzzy file search
 Plugin 'ctrlpvim/ctrlp.vim'
 
