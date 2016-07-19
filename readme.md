@@ -78,7 +78,7 @@ ln -s /PATH/dotfiles/UltiSnips/ /Users/Nizmox/.vim/
 
 # Atom
 
-## Creat snippets symlink
+## Create snippets symlink
 
 1. /Users/simontaylor/.atom
 2. ln -s ~/Projects/personal/dotfiles/snippets.cson ./
