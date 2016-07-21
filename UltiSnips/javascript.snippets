@@ -120,18 +120,18 @@ new Promise((resolve, reject) => {
 endsnippet
 
 snippet th "then"
-.then((${1:result}) => {
+.then(${1:result} => {
   $0
 })
 endsnippet
 
 snippet pt "passthrough (.then)"
-.then((result) => {
+.then(result => {
   console.log('result:', result);
   return result;$0
 })
 endsnippet
 
 snippet ct "catch"
-.catch((e) => console.log('ERROR:', e));$0
+.catch(err => console.log('ERROR:', err));$0
 endsnippet
