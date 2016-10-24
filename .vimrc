@@ -12,12 +12,6 @@ Plugin 'VundleVim/Vundle.vim'
 " Javascript syntax highlighting
 Plugin 'jelera/vim-javascript-syntax'
 
-" Jade syntax highlighting
-Plugin 'digitaltoad/vim-jade'
-
-" Less syntax highlighting
-Plugin 'groenewege/vim-less'
-
 " Ctrl + P - fuzzy file search
 Plugin 'ctrlpvim/ctrlp.vim'
 
