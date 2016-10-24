@@ -15,9 +15,6 @@ if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
 
-### Setup Docker
-eval $(docker-machine env default)
-
 ### Reload .bash_profile
 alias reload="source ~/.bash_profile"
 
