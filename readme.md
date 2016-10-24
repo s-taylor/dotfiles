@@ -39,6 +39,13 @@ see [https://superuser.com/questions/397076/tmux-exits-with-exited-on-mac-os-x](
 
 ---
 
+# Node / NVM
+
+* Install nvm, [see here](https://github.com/creationix/nvm).
+* Tmux forgets your current nvm version when opening new sessions, set this with the command: `nvm alias default [VERSION]`
+
+---
+
 # Git Setup
 
 ## Symlink config files
