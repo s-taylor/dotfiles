@@ -9,13 +9,6 @@
 * Action: send escape sequence
 * Value: f / b (for forward / backwards)
 
-## Launch tmux when opening
-
-* iTerm > Preferences
-* Profiles
-* Sent text at start
-* tmux attach -t base || tmux new -s base
-
 ---
 
 # Homebrew
