@@ -39,23 +39,41 @@ see [https://superuser.com/questions/397076/tmux-exits-with-exited-on-mac-os-x](
 
 ---
 
-# Tmux
+# Git Setup
 
-# Install Tmux Plugin Manager
+## Symlink config files
 
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+* `ln -s [DOTFILES_PATH]/.gitignore ~/.gitignore`
+* `ln -s [DOTFILES_PATH]/.gitconfig ~/.gitconfig`
 
-# Install Tmux Plugins
-control+a > I
+
+## Link to github
+
+* Generate an ssh key, [see here](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
+* Add this to your github account, [see here](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
 
 ---
 
-# Vim
+# Tmux Setup
+
+## Install Tmux Plugin Manager
+
+* git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+* symlink the tmux.conf file `ln -s [DOTFILES_PATH]/.tmux.conf ~/.tmux.conf`
+
+## Install Tmux Plugins
+
+* Run `tmux`
+* Use shortcut `control + a` + `I` (note: Capital Letter)
+
+---
+
+# Vim Seup
 
 ## Setup
 
 1. git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-2. Save this .vimrc to ~/
+2. * symlink the .vimrc file `ln -s [DOTFILES_PATH]/.vimrc ~/.vimrc`
 3. create the folder /.vim/tmp (to store vim swap and backup files)
 4. Install Plugins - Open Vim > ":PluginInstall"
 
@@ -72,7 +90,7 @@ You must also configure a .tern-project file in each directory or ~/.tern-config
 Refer https://github.com/Valloric/YouCompleteMe#configuring-tern-for-node-support
 
 Snippets are saved in the dotfiles repo, so you should create a symlink for this
-ln -s /PATH/dotfiles/UltiSnips/ /Users/Nizmox/.vim/
+`ln -s [DOTFILES_PATH]/UltiSnips/ ~/.vim/`
 
 ---
 
