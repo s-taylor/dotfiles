@@ -90,7 +90,7 @@ You must also configure a .tern-project file in each directory or ~/.tern-config
 Refer https://github.com/Valloric/YouCompleteMe#configuring-tern-for-node-support
 
 Snippets are saved in the dotfiles repo, so you should create a symlink for this
-`ln -s [DOTFILES_PATH]/UltiSnips/ ~/.vim/`
+`ln -s [DOTFILES_PATH]/UltiSnips ~/.vim/UltiSnips`
 
 ---
 
@@ -99,4 +99,4 @@ Snippets are saved in the dotfiles repo, so you should create a symlink for this
 ## Create snippets symlink
 
 1. `cd /Users/[USERNAME]/.atom`
-2. `ln -s ~/Projects/personal/dotfiles/snippets.cson ./`
+2. `ln -s [DOTFILES_PATH]/snippets.cson ./`
