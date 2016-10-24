@@ -68,21 +68,21 @@ see [https://superuser.com/questions/397076/tmux-exits-with-exited-on-mac-os-x](
 
 ---
 
-# Vim Seup
+# Vim Setup
 
 ## Setup
 
 1. git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-2. * symlink the .vimrc file `ln -s [DOTFILES_PATH]/.vimrc ~/.vimrc`
+2. symlink the .vimrc file `ln -s [DOTFILES_PATH]/.vimrc ~/.vimrc`
 3. create the folder /.vim/tmp (to store vim swap and backup files)
 4. Install Plugins - Open Vim > ":PluginInstall"
 
 ## YouCompleteMe
 
 1. Install package via Vundle
-2. brew install cmake
-3. cd ~/.vim/bundle/YouCompleteMe
-4. ./install.py --tern-completer
+2. `brew install cmake`
+3. `cd ~/.vim/bundle/YouCompleteMe`
+4. `./install.py --tern-completer`
 
 --tern-completer is for javascript support see https://github.com/Valloric/YouCompleteMe
 
@@ -98,5 +98,5 @@ Snippets are saved in the dotfiles repo, so you should create a symlink for this
 
 ## Create snippets symlink
 
-1. /Users/simontaylor/.atom
-2. ln -s ~/Projects/personal/dotfiles/snippets.cson ./
+1. `cd /Users/[USERNAME]/.atom`
+2. `ln -s ~/Projects/personal/dotfiles/snippets.cson ./`
