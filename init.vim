@@ -81,6 +81,11 @@ if &term =~ '^screen'
     execute "set <xLeft>=\e[1;*D"
 endif
 
+" Link python executables
+" https://github.com/neovim/neovim/issues/4535
+let g:python2_host_prog = '/usr/local/bin/python'
+let g:python3_host_prog = '/usr/local/bin/python3'
+
 " --------------
 " Remap leader key to ;
 " --------------
