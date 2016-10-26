@@ -100,3 +100,33 @@ Snippets are saved in the dotfiles repo, so you should create a symlink for this
 
 1. `cd /Users/[USERNAME]/.atom`
 2. `ln -s [DOTFILES_PATH]/snippets.cson ./`
+
+---
+
+# Neovim
+
+## Install
+
+* `brew install neovim/neovim/neovim`
+
+## Setup Config
+
+* `mkdir -p ${XDG_CONFIG_HOME:=$HOME/.config}`
+* `ln -s ~/.vim $XDG_CONFIG_HOME/nvim`
+
+Currently using a separate config file for neovim
+
+* `ln -s [DOTFILES_PATH]/init.vim $XDG_CONFIG_HOME/nvim/init.vim`
+
+## Allow Python 2/3 Plugins
+
+* `sudo pip2 install --upgrade neovim`
+* `brew install python3`
+* `sudo pip3 install --upgrade neovim`
+
+Refer [here](https://neovim.io/doc/user/provider.html#provider-python)
+
+## Confirm all is OK
+
+* `nvim`
+* `:CheckHealth`
