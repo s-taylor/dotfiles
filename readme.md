@@ -126,6 +126,10 @@ Currently using a separate config file for neovim
 
 Refer [here](https://neovim.io/doc/user/provider.html#provider-python)
 
+## Keyboard ctrl + h doesn't work
+
+Refer [here](https://github.com/neovim/neovim/wiki/FAQ#my-ctrl-h-mapping-doesnt-work)
+
 ## Confirm all is OK
 
 * `nvim`
