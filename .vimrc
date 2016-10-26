@@ -183,7 +183,7 @@ let g:syntastic_style_warning_symbol = "⚠"
 
 " user eslint for javascript if .eslintrc file exists
 let g:syntastic_javascript_checkers = []
-autocmd FileType javascript let b:syntastic_checkers = findfile('.eslintrc.json', '.;') !=# '' ? ['eslint'] : []
+autocmd FileType javascript let b:syntastic_checkers = findfile('.eslintrc.js', '.;') !=# '' ? ['eslint'] : []
 
 " --------------
 " Vim Multiple Cursors
