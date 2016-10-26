@@ -9,6 +9,9 @@ call vundle#begin()
 " 'user/repository' format
 Plugin 'VundleVim/Vundle.vim'
 
+" Neomake, asynchronous programs
+Plugin 'neomake/neomake'
+
 " Javascript syntax highlighting
 Plugin 'jelera/vim-javascript-syntax'
 
@@ -92,6 +95,14 @@ let g:python3_host_prog = '/usr/local/bin/python3'
 let mapleader = "\<Space>"
 
 " --------------
+" Neomake
+" --------------
+autocmd! BufWritePost,BufEnter * Neomake
+
+" use neomake for eslint
+let g:neomake_javascript_enabled_makers = ['eslint']
+
+" --------------
 " Solarized
 " --------------
 "use F5 to toggle between solarized light and dark
@@ -111,6 +122,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 autocmd FileType nerdtree noremap <buffer> <Tab> <nop>
 autocmd FileType nerdtree noremap <buffer> <S-Tab> <nop>
 autocmd FileType nerdtree noremap <buffer> <C-q> <nop>
+
 " --------------
 " Airline config
 " --------------
@@ -185,10 +197,6 @@ nmap <leader>s :Errors<CR>
 "customise syntastic symbols
 let g:syntastic_style_error_symbol = "✗"
 let g:syntastic_style_warning_symbol = "⚠"
-
-" user eslint for javascript if .eslintrc file exists
-let g:syntastic_javascript_checkers = []
-autocmd FileType javascript let b:syntastic_checkers = findfile('.eslintrc.js', '.;') !=# '' ? ['eslint'] : []
 
 " --------------
 " Vim Multiple Cursors
