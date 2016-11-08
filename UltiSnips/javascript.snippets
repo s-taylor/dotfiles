@@ -40,25 +40,25 @@ endsnippet
 #############
 
 snippet fn "function" b
-function ${1:functionName}(${2:arguements}) {
+function ${1:functionName}(${2:parameters}}) {
   ${VISUAL}$0
 }
 endsnippet
 
 snippet vf "function assigned to var" b
-const ${2:function_name} = function(${3:arguements}) {
+const ${2:functionName} = function(${3:parameters}) {
   ${VISUAL}$0
 }
 endsnippet
 
 snippet af "anonymous function" i
-function(${1:arguements}) {
+function(${1:parameters}}) {
   ${VISUAL}$0
 }
 endsnippet
 
 snippet => "arrow function (multiline)"
-const ${1:name} = (${2:arguements}) => {
+const ${1:constName} = (${2:parameters}}) => {
   ${VISUAL}$0
 }
 endsnippet
@@ -74,7 +74,7 @@ const ${1:objectName} = {
 endsnippet
 
 snippet :f "object method"
-${1:method_name}: function(${3:attribute}) {
+${1:methodName}: function(${3:attribute}) {
   ${VISUAL}$0
 }
 endsnippet
@@ -88,7 +88,7 @@ ${1:key}: ${2:value},$0
 endsnippet
 
 snippet m "object method (prototype)"
-${1:ClassName}.prototype.${2:methodName} = function(${3:arguements}) {
+${1:ClassName}.prototype.${2:methodName} = function(${3:parameters}) {
   ${VISUAL}$0
 }
 endsnippet
@@ -98,13 +98,13 @@ endsnippet
 #########
 
 snippet de "describe block"
-describe('${1}', () => {
+describe('${1:description}', () => {
   ${VISUAL}$0
 });
 endsnippet
 
 snippet it "it block"
-it('${1}', () => {
+it('${1:statement}', () => {
   ${VISUAL}$0
 });
 endsnippet
