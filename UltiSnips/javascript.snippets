@@ -165,9 +165,11 @@ export default $1;
 endsnippet
 
 snippet component "React Component"
+import React, { PropTypes } from 'react';
+
 const ${1:componentName} = ({ children }) => 
   <p>{children}</p>
 
-$1.propTypes = { children: React.PropTypes.string };
+$1.propTypes = { children: PropTypes.string };
 $1.defaultProps = { children: 'Hello World!' };
 endsnippet
