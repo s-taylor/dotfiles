@@ -148,7 +148,7 @@ if executable('ag')
 endif
 
 " shortcut to open Ack search
-nnoremap <Leader>f :Ack ""<Left>
+nnoremap <Leader>a :Ack ""<Left>
 
 autocmd FileType qf noremap <buffer> <Tab> <nop>
 autocmd FileType qf noremap <buffer> <S-Tab> <nop>
@@ -195,7 +195,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 " open syntastic error list with Control + s
-nmap <leader>s :Errors<CR>
+nmap <leader>e :Errors<CR>
 
 "customise syntastic symbols
 let g:syntastic_style_error_symbol = "✗"
@@ -261,6 +261,9 @@ vmap p "_dP
 "
 " Reload .vimrc
 nmap <leader>r :so $MYVIMRC<CR>
+
+" Find and Replace shortcut
+nnoremap <Leader>f :%s///gc<Left><Left><Left><Left>
 
 " ------------
 " Bubble lines
