@@ -232,17 +232,22 @@ vnoremap x "_d
 vnoremap p "_dP
 "
 " Reload .vimrc
+nnoremap <leader>1 :so $MYVIMRC<CR>
 nnoremap <leader>! :so $MYVIMRC<CR>
-
-" Find and Replace shortcut
-nnoremap <Leader>f :%s/
-nnoremap <leader>r :%s/<C-r><C-w>//gc<Left><Left><Left>
 
 " Change find word to not jump to next by default
 nnoremap * *N
 
 " Find selected text in visual moade
 vnoremap * y/<C-R>"<CR>N
+
+" Find and Replace shortcut
+nnoremap <Leader>f :%s/
+"
+" Replace shortcut
+nnoremap <leader>r :%s/<C-r><C-w>//gc<Left><Left><Left>
+" repeat using <fullstop> and you can skip using <n>
+" nnoremap <leader>r *Ncgn 
 
 " ------------
 " Backup Files
