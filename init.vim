@@ -47,9 +47,6 @@ Plug 'christoomey/vim-tmux-navigator'
 " Solarized color scheme
 Plug 'altercation/vim-colors-solarized'
 
-" Vim Multiple Cursors
-Plug 'terryma/vim-multiple-cursors'
-
 " YouCompleteMe (with post install hook to compile for JS)
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
 
@@ -190,20 +187,6 @@ nmap <leader>e :Errors<CR>
 "customise syntastic symbols
 let g:syntastic_style_error_symbol = "✗"
 let g:syntastic_style_warning_symbol = "⚠"
-
-" --------------
-" Vim Multiple Cursors
-" --------------
-" disable default keymappings
-let g:multi_cursor_use_default_mapping=0
-
-" enable select next with ctrl + c
-let g:multi_cursor_next_key='<C-c>'
-let g:multi_cursor_skip_key='<C-x>'
-let g:multi_cursor_prev_key='<C-z>'
-
-" exit multi cursor mode
-let g:multi_cursor_quit_key='<Esc>'
 
 " --------------
 " Ultisnip
