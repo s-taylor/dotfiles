@@ -232,10 +232,11 @@ vnoremap x "_d
 vnoremap p "_dP
 "
 " Reload .vimrc
-nnoremap <leader>r :so $MYVIMRC<CR>
+nnoremap <leader>! :so $MYVIMRC<CR>
 
 " Find and Replace shortcut
-nnoremap <Leader>f :%s///gc<Left><Left><Left><Left>
+nnoremap <Leader>f :%s/
+nnoremap <leader>r :%s/<C-r><C-w>//gc<Left><Left><Left>
 
 " Change find word to not jump to next by default
 nnoremap * *N
