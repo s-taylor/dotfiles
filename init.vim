@@ -240,16 +240,6 @@ nmap <leader>r :so $MYVIMRC<CR>
 " Find and Replace shortcut
 nnoremap <Leader>f :%s///gc<Left><Left><Left><Left>
 
-" ------------
-" Bubble lines
-" ------------
-" Single lines
-nmap <C-Up> ddkP
-nmap <C-Down> ddp
-
-" Multiple lines
-vnoremap <C-Up> xkP`[V`]
-vnoremap <C-Down> xp`[V`]
 
 " ------------
 " Backup Files
