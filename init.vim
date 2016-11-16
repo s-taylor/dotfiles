@@ -240,6 +240,8 @@ nmap <leader>r :so $MYVIMRC<CR>
 " Find and Replace shortcut
 nnoremap <Leader>f :%s///gc<Left><Left><Left><Left>
 
+" Find selected text in visual moade
+vnoremap * y/<C-R>"<CR>N
 
 " ------------
 " Backup Files
