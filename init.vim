@@ -276,8 +276,8 @@ set number
 
 " Use the same symbols as TextMate for tabstops and EOLs
 if has('mac')
-	set listchars=tab:▸\ ,eol:¬
-	set list
+  set listchars=tab:▸\ ,eol:¬
+  set list
 endif
 
 " Tabs are 2 spaces
