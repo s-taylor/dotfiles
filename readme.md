@@ -15,7 +15,7 @@
 
 ## Update Vim (requires homebrew)
 
-1. Install Brew
+1. [Install Brew](http://brew.sh/)
 2. brew install mercurial
 3. brew install vim
 
