@@ -161,10 +161,8 @@ let g:ctrlp_regexp = 1
 " --------------
 " Git Gutter
 " --------------
-" remap default key bindings so these don't interfere with buffer previous
-nmap <Leader>gs <Plug>GitGutterStageHunk
-nmap <Leader>gr <Plug>GitGutterRevertHunk
-nmap <Leader>gp <Plug>GitGutterPreviewHunk
+" unmap these bindings
+let g:gitgutter_map_keys = 0
 
 " --------------
 " Syntastic
@@ -235,19 +233,14 @@ vnoremap p "_dP
 nnoremap <leader>1 :so $MYVIMRC<CR>
 nnoremap <leader>! :so $MYVIMRC<CR>
 
-" Change find word to not jump to next by default
-nnoremap * *N
-
 " Find selected text in visual moade
-vnoremap * y/<C-R>"<CR>N
+vnoremap <leader>h y/<C-R>"<CR>N
 
-" Find and Replace shortcut
-nnoremap <Leader>f :%s/
-"
+" Highlight shortcut (case insensitive)
+nnoremap <leader>h /\c<C-r><C-w><CR>
+
 " Replace shortcut
-nnoremap <leader>r :%s/<C-r><C-w>//gc<Left><Left><Left>
-" repeat using <fullstop> and you can skip using <n>
-" nnoremap <leader>r *Ncgn 
+nnoremap <leader>f :%s/<C-r><C-w>//gc<Left><Left><Left>
 
 " ------------
 " Backup Files
