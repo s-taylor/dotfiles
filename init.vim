@@ -1,79 +1,69 @@
-set nocompatible
-filetype off
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" This is the Vundle package, which can be found on GitHub.
-" For GitHub repos, you specify plugins using the
-" 'user/repository' format
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin('~/.vim/plugged')
 
 " Neomake, asynchronous programs
-Plugin 'neomake/neomake'
+Plug 'neomake/neomake'
 
 " Javascript syntax highlighting
-Plugin 'jelera/vim-javascript-syntax'
+Plug 'jelera/vim-javascript-syntax'
 
 " Ctrl + P - fuzzy file search
-Plugin 'ctrlpvim/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 
 " Indent Guidelines ( <leader>ig )
-Plugin 'nathanaelkane/vim-indent-guides'
+Plug 'nathanaelkane/vim-indent-guides'
 
 " Editor config for vim
-Plugin 'editorconfig/editorconfig-vim'
+Plug 'editorconfig/editorconfig-vim'
 
 " Nerdtree File Browser
-Plugin 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree'
 
 " Nerd Commenter
-Plugin 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdcommenter'
 
 " Airline
-Plugin 'bling/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " fugitive (git for Vim)
-Plugin 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 
 " Git Gutter
-Plugin 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
 
 " Add Ack for searching
-Plugin 'mileszs/ack.vim'
+Plug 'mileszs/ack.vim'
 
 " Delimit Mate (auto close brackets)
-Plugin 'Raimondi/delimitMate'
+Plug 'Raimondi/delimitMate'
 
 " Syntastic - syntax checker
-Plugin 'scrooloose/syntastic'
-Plugin 'mtscout6/syntastic-local-eslint.vim'
+Plug 'scrooloose/syntastic'
+Plug 'mtscout6/syntastic-local-eslint.vim'
 
 " Tmux navigator
-Plugin 'christoomey/vim-tmux-navigator'
+Plug 'christoomey/vim-tmux-navigator'
 
 " Solarized color scheme
-Plugin 'altercation/vim-colors-solarized'
+Plug 'altercation/vim-colors-solarized'
 
 " Vim Multiple Cursors
-Plugin 'terryma/vim-multiple-cursors'
+Plug 'terryma/vim-multiple-cursors'
 
 " YouCompleteMe
-Plugin 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe'
 
 " UltiSnip
-Plugin 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips'
 
 " BufOnly
-Plugin 'schickling/vim-bufonly'
+Plug 'schickling/vim-bufonly'
 
 " CSS colors
-Plugin 'ap/vim-css-color'
+Plug 'ap/vim-css-color'
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+" Add plugins to &runtimepath
+call plug#end()
 
 " This is required for control + q shortcuts to work
 silent !stty -ixon > /dev/null 2>/dev/null
