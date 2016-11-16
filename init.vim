@@ -207,35 +207,32 @@ nnoremap <leader>b :BufOnly<CR>
 " -----------------
 
 " Map Esc to jj in insert mode
-:imap jj <Esc>
+inoremap jj <Esc>
 
 " Insert a blank line below without entering insert mode
-nmap <leader>o o<Esc>
+nnoremap <leader>o o<Esc>
 " Insert a blank line above without entering insert mode
-nmap <leader>O O<Esc>
+nnoremap <leader>O O<Esc>
 
 " Save file
-nmap <leader>w :w<CR>
+nnoremap <leader>w :w<CR>
 
 " Add shortcuts to next/previous/close buffer
-nmap <Tab> :bn<cr>
-nmap <S-Tab> :bp<cr>
-nmap <C-q> :bp <BAR> bd #<CR>
+nnoremap <Tab> :bn<cr>
+nnoremap <S-Tab> :bp<cr>
+nnoremap <C-q> :bp <BAR> bd #<CR>
 
 " Close window
-nmap <C-x> <C-w>q
-
-" Default to using System Clipboard
-set clipboard^=unnamed,unnamedplus
+nnoremap <C-x> <C-w>q
 
 " Delete to 'black hole' register
-vmap x "_d
+vnoremap x "_d
 
 " Replace text with clipboard
-vmap p "_dP
+vnoremap p "_dP
 "
 " Reload .vimrc
-nmap <leader>r :so $MYVIMRC<CR>
+nnoremap <leader>r :so $MYVIMRC<CR>
 
 " Find and Replace shortcut
 nnoremap <Leader>f :%s///gc<Left><Left><Left><Left>
@@ -270,6 +267,9 @@ syntax enable
 " Set colorscheme default
 set background=dark
 colorscheme solarized
+
+" Default to using System Clipboard
+set clipboard^=unnamed,unnamedplus
 
 " Fix Delete key OSX
 set backspace=indent,eol,start
