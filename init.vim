@@ -50,7 +50,7 @@ Plug 'altercation/vim-colors-solarized'
 " Vim Multiple Cursors
 Plug 'terryma/vim-multiple-cursors'
 
-" YouCompleteMe
+" YouCompleteMe (with post install hook to compile for JS)
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
 
 " UltiSnip
