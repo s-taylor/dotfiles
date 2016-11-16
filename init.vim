@@ -51,7 +51,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'terryma/vim-multiple-cursors'
 
 " YouCompleteMe
-Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
 
 " UltiSnip
 Plug 'SirVer/ultisnips'
