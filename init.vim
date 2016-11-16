@@ -240,6 +240,9 @@ nmap <leader>r :so $MYVIMRC<CR>
 " Find and Replace shortcut
 nnoremap <Leader>f :%s///gc<Left><Left><Left><Left>
 
+" Change find word to not jump to next by default
+nnoremap * *N
+
 " Find selected text in visual moade
 vnoremap * y/<C-R>"<CR>N
 
