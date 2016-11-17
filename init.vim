@@ -233,11 +233,12 @@ vnoremap p "_dP
 nnoremap <leader>1 :so $MYVIMRC<CR>
 nnoremap <leader>! :so $MYVIMRC<CR>
 
-" Find selected text in visual moade
-vnoremap <leader>h y/<C-R>"<CR>N
+" Find selected word (But don't skip to next)
+nnoremap * *N
 
-" Highlight shortcut (case insensitive)
-nnoremap <leader>h /\c<C-r><C-w><CR>
+" Find selected text in visual moade
+" copy text to "y" registers then perform find for "y"
+vnoremap * "fy:/<C-R>f<CR>N
 
 " Replace shortcut
 nnoremap <leader>f :%s/<C-r><C-w>//gc<Left><Left><Left>
