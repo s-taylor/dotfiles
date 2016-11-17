@@ -242,6 +242,10 @@ nnoremap <leader>h /\c<C-r><C-w><CR>
 " Replace shortcut
 nnoremap <leader>f :%s/<C-r><C-w>//gc<Left><Left><Left>
 
+" Split Window
+nnoremap \ :vsplit<CR>
+nnoremap - :split<CR>
+
 " ------------
 " Backup Files
 " ------------
