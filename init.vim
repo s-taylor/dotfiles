@@ -236,16 +236,20 @@ nnoremap <leader>! :so $MYVIMRC<CR>
 " Find selected word (But don't skip to next)
 nnoremap * *N
 
-" Find selected text in visual moade
-" copy text to "y" registers then perform find for "y"
-vnoremap * "fy:/<C-R>f<CR>N
-
-" Replace shortcut
-nnoremap <leader>f :%s/<C-r><C-w>//gc<Left><Left><Left>
+" Replace word under cursor
+" <C-R><C-W> pastes the word under the current cursor
+nnoremap <leader>f :%s/<C-R><C-W>/<C-R><C-W>/gc<Left><Left><Left>
 
 " Split Window
 nnoremap \ :vsplit<CR>
 nnoremap - :split<CR>
+
+" Find selected text in visual moade
+" copy text to "y" registers then perform find for "y"
+vnoremap * "fy:/<C-R>f<CR>N
+
+" Replace selected text
+vnoremap <leader>f "fy:%s/<C-R>f/<C-R>f/gc<Left><Left><Left>
 
 " ------------
 " Backup Files
