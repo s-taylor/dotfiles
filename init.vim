@@ -6,6 +6,9 @@ Plug 'neomake/neomake'
 " Javascript syntax highlighting
 Plug 'jelera/vim-javascript-syntax'
 
+" Pug (formerly Jade) syntax highlighting
+Plug 'https://github.com/digitaltoad/vim-pug'
+
 " Ctrl + P - fuzzy file search
 Plug 'ctrlpvim/ctrlp.vim'
 
