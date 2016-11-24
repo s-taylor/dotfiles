@@ -37,10 +37,6 @@ Plug 'mileszs/ack.vim'
 " Delimit Mate (auto close brackets)
 Plug 'Raimondi/delimitMate'
 
-" Syntastic - syntax checker
-Plug 'scrooloose/syntastic'
-Plug 'mtscout6/syntastic-local-eslint.vim'
-
 " Tmux navigator
 Plug 'christoomey/vim-tmux-navigator'
 
@@ -163,28 +159,6 @@ let g:ctrlp_regexp = 1
 " --------------
 " unmap these bindings
 let g:gitgutter_map_keys = 0
-
-" --------------
-" Syntastic
-" --------------
-" to use jscs you need to npm install -g jscs
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-" do not show syntastic error list on buffer open (open with :Errors)
-" auto close the syntastic error list when no errors exist
-let g:syntastic_auto_loc_list = 2
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-" open syntastic error list with Control + s
-nmap <leader>e :Errors<CR>
-
-"customise syntastic symbols
-let g:syntastic_style_error_symbol = "✗"
-let g:syntastic_style_warning_symbol = "⚠"
 
 " --------------
 " Ultisnip
