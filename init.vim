@@ -34,8 +34,8 @@ Plug 'tpope/vim-fugitive'
 " Git Gutter
 Plug 'airblade/vim-gitgutter'
 
-" Add Ack for searching
-Plug 'mileszs/ack.vim'
+" Add vim-grepper for searching
+Plug 'mhinz/vim-grepper'
 
 " Delimit Mate (auto close brackets)
 Plug 'Raimondi/delimitMate'
@@ -123,24 +123,6 @@ let g:airline#extensions#tabline#enabled = 1
 "
 " " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
-
-" --------------
-" Ack config
-" --------------
-" enable Ag (the silver searcher) when available
-" https://github.com/ggreer/the_silver_searcher
-if executable('ag')
-	let g:ackprg = 'ag --nogroup --nocolor --column --ignore=*min.js'
-endif
-
-" shortcut to open Ack search
-nnoremap <Leader>a :Ack ""<Left>
-
-autocmd FileType qf noremap <buffer> <Tab> <nop>
-autocmd FileType qf noremap <buffer> <S-Tab> <nop>
-autocmd FileType qf noremap <buffer> <C-q> <nop>
-" Hide the quickfind buffer so buffer next/previous don't switch to it
-autocmd FileType qf set nobuflisted
 
 " --------------
 " CTRL + P
