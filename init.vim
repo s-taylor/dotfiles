@@ -125,6 +125,12 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 
 " --------------
+" Grepper config
+" --------------
+" shortcut to open Ag search
+nnoremap <leader>g :Grepper -tool ag -highlight<cr>
+
+" --------------
 " CTRL + P
 " --------------
 "define default keymapping and mode
