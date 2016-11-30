@@ -44,7 +44,7 @@ Plug 'Raimondi/delimitMate'
 Plug 'christoomey/vim-tmux-navigator'
 
 " Solarized color scheme
-Plug 'altercation/vim-colors-solarized'
+Plug 'iCyMind/NeoSolarized'
 
 " YouCompleteMe (with post install hook to compile for JS)
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
@@ -90,12 +90,6 @@ autocmd! BufWritePost,BufEnter * Neomake
 
 " use neomake for eslint
 let g:neomake_javascript_enabled_makers = ['eslint']
-
-" --------------
-" Solarized
-" --------------
-"use F5 to toggle between solarized light and dark
-call togglebg#map("<F5>")
 
 " --------------
 " Nerdtree config
@@ -244,7 +238,7 @@ syntax enable
 
 " Set colorscheme default
 set background=dark
-colorscheme solarized
+colorscheme NeoSolarized
 
 " Default to using System Clipboard
 set clipboard^=unnamed,unnamedplus
