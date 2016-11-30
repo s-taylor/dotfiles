@@ -131,6 +131,7 @@ Refer [here](https://neovim.io/doc/user/provider.html#provider-python)
 ## Keyboard ctrl + h doesn't work
 
 Refer [here](https://github.com/neovim/neovim/wiki/FAQ#my-ctrl-h-mapping-doesnt-work)
+And [here](https://github.com/neovim/neovim/issues/2048)
 
 ## Confirm all is OK
 
