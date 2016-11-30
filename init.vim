@@ -234,6 +234,11 @@ set dir=~/.vim/tmp//
 " Non-Vundle Stuffs
 " -----------------
 
+" Enable true colour in vim
+if has("termguicolors")
+  set termguicolors
+endif
+
 " Enable syntax highlighting
 syntax enable
 
