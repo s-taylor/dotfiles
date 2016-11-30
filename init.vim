@@ -225,20 +225,23 @@ set backupdir=~/.vim/tmp//
 set dir=~/.vim/tmp//
 
 " -----------------
-" Non-Vundle Stuffs
+" Config
 " -----------------
-
 " Enable true colour in vim
 if has("termguicolors")
   set termguicolors
 endif
 
-" Enable syntax highlighting
-syntax enable
+" Resolve issue with <C-h>
+" see https://github.com/neovim/neovim/issues/2048
+if has('nvim')
+  nmap <BS> <C-W>h
+endif
 
 " Set colorscheme default
 set background=dark
 colorscheme NeoSolarized
+
 
 " Default to using System Clipboard
 set clipboard^=unnamed,unnamedplus
@@ -246,14 +249,23 @@ set clipboard^=unnamed,unnamedplus
 " Fix Delete key OSX
 set backspace=indent,eol,start
 
-" Add line numbers to vim
-set number
+" Enable syntax highlighting
+syntax enable
 
 " Use the same symbols as TextMate for tabstops and EOLs
 if has('mac')
   set listchars=tab:▸\ ,eol:¬
   set list
 endif
+
+" Resize splits when the window is resized
+au VimResized * exe "normal! \<c-w>="
+
+" -----------------
+" Preferences
+" -----------------
+" Add line numbers to vim
+set number
 
 " Tabs are 2 spaces
 set tabstop=2
@@ -267,26 +279,22 @@ set showcmd
 " Don't close buffer when editing another file (:e <file>)
 set hidden
 
-" Resize splits when the window is resized
-au VimResized * exe "normal! \<c-w>="
-
 " Add an 121 charater length indicator
 set colorcolumn=121
 
 "testing stuff from - http://nvie.com/posts/how-i-boosted-my-vim/
-set nowrap        " don't wrap lines
-set autoindent    " always set autoindenting on
-set copyindent    " copy the previous indentation on autoindenting
-set showmatch     " set show matching parenthesis
-set ignorecase    " ignore case when searching
-set smartcase     " ignore case if search pattern is all lowercase, case-sensitive otherwise
-set smarttab      " insert tabs on the start of a line according to shiftwidth, not tabstop
-set hlsearch      " highlight search terms
-set incsearch     " show search matches as you type
-
-set history=1000         " remember more commands and search history
-set undolevels=1000      " use many muchos levels of undo
+set nowrap          " don't wrap lines
+set autoindent      " always set autoindenting on
+set copyindent      " copy the previous indentation on autoindenting
+set showmatch       " set show matching parenthesis
+set ignorecase      " ignore case when searching
+set smartcase       " ignore case if search pattern is all lowercase, case-sensitive otherwise
+set smarttab        " insert tabs on the start of a line according to shiftwidth, not tabstop
+set hlsearch        " highlight search terms
+set incsearch       " show search matches as you type
+set history=1000    " remember more commands and search history
+set undolevels=1000 " use many muchos levels of undo
 set wildignore=*.swp,*.bak,*.pyc,*.class
-set title                " change the terminal's title
-set visualbell           " don't beep
-set noerrorbells         " don't beep
+set title           " change the terminal's title
+set visualbell      " don't beep
+set noerrorbells    " don't beep
