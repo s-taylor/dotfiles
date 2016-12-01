@@ -213,16 +213,10 @@ vnoremap <leader>f "fy:%s/<C-R>f/<C-R>f/gc<Left><Left><Left>
 " ------------
 " Backup Files
 " ------------
-" folder: ~/.vim/tmp must be created!!!
-
-" tell vim to keep a backup file
-set backup
-
-" tell vim where to put its backup files
-set backupdir=~/.vim/tmp//
-
-" tell vim where to put swap files
-set dir=~/.vim/tmp//
+" No backups
+set nobackup
+set noswapfile
+set nowb
 
 " -----------------
 " Config
