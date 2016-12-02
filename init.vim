@@ -58,6 +58,9 @@ Plug 'schickling/vim-bufonly'
 " CSS colors
 Plug 'ap/vim-css-color'
 
+" Bbye (Buffer Bye)
+Plug 'moll/vim-bbye'
+
 " Add plugins to &runtimepath
 call plug#end()
 
@@ -177,7 +180,7 @@ nnoremap <leader>w :w<CR>
 " Add shortcuts to next/previous/close buffer
 nnoremap <Tab> :bn<cr>
 nnoremap <S-Tab> :bp<cr>
-nnoremap <C-q> :bp <BAR> bd #<CR>
+nnoremap <C-q> :Bdelete<CR>
 
 " Close window
 nnoremap <C-x> <C-w>q
