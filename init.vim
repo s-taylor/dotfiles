@@ -52,9 +52,6 @@ Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
 " UltiSnip
 Plug 'SirVer/ultisnips'
 
-" BufOnly
-Plug 'schickling/vim-bufonly'
-
 " CSS colors
 Plug 'ap/vim-css-color'
 
@@ -155,12 +152,6 @@ let g:gitgutter_map_keys = 0
 let g:UltiSnipsExpandTrigger='<C-s>'
 let g:UltiSnipsJumpForwardTrigger='<C-j>'
 let g:UltiSnipsJumpBackwardTrigger='<C-k>'
-
-" --------------
-" BufOnly
-" --------------
-" Shortcut to execute
-nnoremap <leader>b :BufOnly<CR>
 
 " -----------------
 " Keyboard shortcuts
