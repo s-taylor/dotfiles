@@ -104,7 +104,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " prevent buffer next, previous and delete when focused on Nerdtree
 autocmd FileType nerdtree noremap <buffer> <Tab> <nop>
 autocmd FileType nerdtree noremap <buffer> <S-Tab> <nop>
-autocmd FileType nerdtree noremap <buffer> <C-q> <nop>
+autocmd FileType nerdtree noremap <buffer> <C-q> :NERDTreeToggle<CR>
 
 " --------------
 " Airline config
