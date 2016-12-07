@@ -157,9 +157,6 @@ let g:UltiSnipsJumpBackwardTrigger='<C-k>'
 " Keyboard shortcuts
 " -----------------
 
-" Map Esc to jj in insert mode
-inoremap jj <Esc>
-
 " Insert a blank line below without entering insert mode
 nnoremap <leader>o o<Esc>
 " Insert a blank line above without entering insert mode
@@ -199,6 +196,21 @@ vnoremap * "fy:/<C-R>f<CR>N
 
 " Replace selected text
 vnoremap <leader>f "fy:%sno/<C-R>f/<C-R>f/gc<Left><Left><Left>
+
+" provide hjkl movements in Command-line mode via the <Alt> modifier key
+cnoremap <A-h> <Left>
+cnoremap <A-j> <Down>
+cnoremap <A-k> <Up>
+cnoremap <A-l> <Right>
+
+" Map Esc to jj in insert mode
+inoremap jj <Esc>
+
+" provide hjkl movements in Insert mode via the <Alt> modifier key
+inoremap <M-h> <C-o>h
+inoremap <M-j> <C-o>j
+inoremap <M-k> <C-o>k
+inoremap <M-l> <C-o>l
 
 " ------------
 " Backup Files

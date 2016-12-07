@@ -9,6 +9,12 @@
 * Action: send escape sequence
 * Value: f / b (for forward / backwards)
 
+## Fix Alt Key in Vim
+* iTerm > Prefernces 
+* Profiles
+* Keys
+* Left option key acts as `+Esc`
+
 ---
 
 # Homebrew
