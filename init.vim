@@ -102,9 +102,9 @@ map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " prevent buffer next, previous and delete when focused on Nerdtree
-autocmd FileType nerdtree noremap <buffer> <Tab> <nop>
-autocmd FileType nerdtree noremap <buffer> <S-Tab> <nop>
-autocmd FileType nerdtree noremap <buffer> <C-q> :NERDTreeToggle<CR>
+autocmd FileType nerdtree nnoremap <buffer> <Tab> <nop>
+autocmd FileType nerdtree nnoremap <buffer> <S-Tab> <nop>
+autocmd FileType nerdtree nnoremap <buffer> <C-q> :NERDTreeToggle<CR>
 
 " --------------
 " Airline config
@@ -123,6 +123,11 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 " --------------
 " shortcut to open Ag search
 nnoremap <leader>g :Grepper -tool ag -highlight<cr>
+
+" prevent buffer next, previous and delete when focused on quickfix (search results)
+autocmd FileType qf nnoremap <buffer> <Tab> <nop>
+autocmd FileType qf nnoremap <buffer> <S-Tab> <nop>
+autocmd FileType qf nnoremap <buffer> <C-q> <C-w>q
 
 " --------------
 " CTRL + P
