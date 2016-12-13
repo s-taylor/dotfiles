@@ -10,7 +10,7 @@
 * Value: f / b (for forward / backwards)
 
 ## Fix Alt Key in Vim
-* iTerm > Prefernces 
+* iTerm > Preferences
 * Profiles
 * Keys
 * Left option key acts as `+Esc`
@@ -78,20 +78,6 @@ Setup Neovim first!
 3. Create the folder /.vim/tmp (to store vim swap and backup files)
 4. Install Plugins - Open Vim > ":PluginInstall"
 
-## YouCompleteMe
-
-1. Install package via Vundle
-2. `brew install cmake`
-3. `cd ~/.vim/plugged/YouCompleteMe`
-4. `./install.py --tern-completer`
-
---tern-completer is for javascript support see https://github.com/Valloric/YouCompleteMe
-
-You must also configure a .tern-project file in each directory or ~/.tern-config
-Refer https://github.com/Valloric/YouCompleteMe#configuring-tern-for-node-support
-
-Snippets are saved in the dotfiles repo, so you should create a symlink for this
-`ln -s [DOTFILES_PATH]/UltiSnips ~/.vim/UltiSnips`
 
 ---
 
@@ -136,6 +122,23 @@ And [here](https://github.com/neovim/neovim/issues/2048)
 
 * `nvim`
 * `:CheckHealth`
+
+
+## YouCompleteMe
+
+**NOTE:** This is probably now redundant since Plug performs the compile step?
+
+1. `brew install cmake`
+2. `cd ~/.vim/plugged/YouCompleteMe`
+3. `./install.py --tern-completer`
+
+--tern-completer is for javascript support see https://github.com/Valloric/YouCompleteMe
+
+You must also configure a .tern-project file in each directory or ~/.tern-config
+Refer https://github.com/Valloric/YouCompleteMe#configuring-tern-for-node-support
+
+Snippets are saved in the dotfiles repo, so you should create a symlink for this
+`ln -s [DOTFILES_PATH]/UltiSnips ~/.vim/UltiSnips`
 
 ---
 
