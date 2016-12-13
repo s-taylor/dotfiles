@@ -43,8 +43,8 @@ Plug 'Raimondi/delimitMate'
 " Tmux navigator
 Plug 'christoomey/vim-tmux-navigator'
 
-" Solarized color scheme
-Plug 'iCyMind/NeoSolarized'
+" gruvbox color scheme
+Plug 'morhetz/gruvbox'
 
 " YouCompleteMe (with post install hook to compile for JS)
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
@@ -235,9 +235,8 @@ if has('nvim')
 endif
 
 " Set colorscheme default
+colorscheme gruvbox
 set background=dark
-colorscheme NeoSolarized
-
 
 " Default to using System Clipboard
 set clipboard^=unnamed,unnamedplus
