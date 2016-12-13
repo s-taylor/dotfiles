@@ -198,10 +198,10 @@ vnoremap * "fy:/<C-R>f<CR>N
 vnoremap <leader>f "fy:%sno/<C-R>f/<C-R>f/gc<Left><Left><Left>
 
 " provide hjkl movements in Command-line mode via the <Alt> modifier key
-cnoremap <A-h> <Left>
-cnoremap <A-j> <Down>
-cnoremap <A-k> <Up>
-cnoremap <A-l> <Right>
+cnoremap <M-h> <Left>
+cnoremap <M-j> <Down>
+cnoremap <M-k> <Up>
+cnoremap <M-l> <Right>
 
 " Map Esc to jj in insert mode
 inoremap jj <Esc>
