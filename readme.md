@@ -38,13 +38,6 @@ see [https://superuser.com/questions/397076/tmux-exits-with-exited-on-mac-os-x](
 
 ---
 
-# Node / NVM
-
-* Install nvm, [see here](https://github.com/creationix/nvm).
-* Tmux forgets your current nvm version when opening new sessions, set this with the command: `nvm alias default [VERSION]`
-
----
-
 # Git Setup
 
 ## Symlink config files
@@ -80,7 +73,7 @@ Setup Neovim first!
 
 ## Setup
 
-1. Install [vim-plug](https://github.com/junegunn/vim-plug) 
+1. Install [vim-plug](https://github.com/junegunn/vim-plug)
 2. Symlink the .vimrc file `ln -s [DOTFILES_PATH]/.vimrc ~/.vimrc`
 3. Create the folder /.vim/tmp (to store vim swap and backup files)
 4. Install Plugins - Open Vim > ":PluginInstall"
@@ -102,32 +95,28 @@ Snippets are saved in the dotfiles repo, so you should create a symlink for this
 
 ---
 
-# Atom
-
-## Create snippets symlink
-
-1. `cd /Users/[USERNAME]/.atom`
-2. `ln -s [DOTFILES_PATH]/snippets.cson ./`
-
----
-
 # Neovim
 
 ## Install
 
 * `brew install neovim/neovim/neovim`
 
+## Install Vim Plug
+
+Refer [here](https://github.com/junegunn/vim-plug)
+
 ## Setup Config
 
-* `mkdir -p ${XDG_CONFIG_HOME:=$HOME/.config}`
-* `ln -s ~/.vim $XDG_CONFIG_HOME/nvim`
-
-Currently using a separate config file for neovim
-
-* `ln -s [DOTFILES_PATH]/init.vim $XDG_CONFIG_HOME/nvim/init.vim`
+```
+mkdir ~/.config/
+mkdir ~/.config/nvim
+ln -s [DOTFILES]/init.vim ~/.config/nvim/init.vim
+ln -s [DOTFILES]/UltiSnips ~/.config/nvim/UltiSnips
+```
 
 ## Allow Python 2/3 Plugins
 
+* `pip install --upgrade pip`
 * `sudo pip2 install --upgrade neovim`
 * `brew install python3`
 * `sudo pip3 install --upgrade neovim`
@@ -139,7 +128,26 @@ Refer [here](https://neovim.io/doc/user/provider.html#provider-python)
 Refer [here](https://github.com/neovim/neovim/wiki/FAQ#my-ctrl-h-mapping-doesnt-work)
 And [here](https://github.com/neovim/neovim/issues/2048)
 
+## Install Ruby Gem
+
+`gem install neovim`
+
 ## Confirm all is OK
 
 * `nvim`
 * `:CheckHealth`
+
+---
+
+# Node / NVM
+
+* Install nvm, [see here](https://github.com/creationix/nvm).
+* Tmux forgets your current nvm version when opening new sessions, set this with the command: `nvm alias default [VERSION]`
+---
+
+# Atom
+
+## Create snippets symlink
+
+1. `cd /Users/[USERNAME]/.atom`
+2. `ln -s [DOTFILES_PATH]/snippets.cson ./`

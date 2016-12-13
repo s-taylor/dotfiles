@@ -7,5 +7,8 @@ ln -s $PWD/.gitignore ~/.gitignore
 ln -s $PWD/.tern-config ~/.tern-config
 ln -s $PWD/.tmux.conf ~/.tmux.conf
 
-ln -s $PWD/.init.vim ~/.vim/.init.vim
-ln -s $PWD/UltiSnips ~/.vim/UltiSnips
+# Symlink for Neovim
+mkdir ~/.config/
+mkdir ~/.config/nvim
+ln -s $PWD/init.vim ~/.config/nvim/init.vim
+ln -s $PWD/UltiSnips ~/.config/nvim/UltiSnips
