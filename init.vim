@@ -105,6 +105,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 autocmd FileType nerdtree nnoremap <buffer> <Tab> <nop>
 autocmd FileType nerdtree nnoremap <buffer> <S-Tab> <nop>
 autocmd FileType nerdtree nnoremap <buffer> <C-q> :NERDTreeToggle<CR>
+autocmd FileType nerdtree nnoremap <buffer> <C-p> <nop>
+autocmd FileType nerdtree nnoremap <buffer> <Leader>p <nop>
 
 " --------------
 " Airline config
