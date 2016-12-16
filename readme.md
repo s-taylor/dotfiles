@@ -1,14 +1,5 @@
 # Configure iTerm2
 
-## Set Alt + Arrow Key to skip words
-
-* iTerm > Preferences
-* Profiles
-* Keys
-* Find the key binding alt + arrow and double click
-* Action: send escape sequence
-* Value: f / b (for forward / backwards)
-
 ## Fix Alt Key in Vim
 * iTerm > Preferences
 * Profiles
@@ -23,7 +14,7 @@
 
 1. [Install Brew](http://brew.sh/)
 2. brew install mercurial
-3. brew install vim
+3. brew install the_silver_searcher 
 
 ## Update Git (requires homebrew)
 
