@@ -131,6 +131,12 @@ autocmd FileType qf nnoremap <buffer> <Tab> <nop>
 autocmd FileType qf nnoremap <buffer> <S-Tab> <nop>
 autocmd FileType qf nnoremap <buffer> <C-q> <C-w>q
 
+" ignore quickfix buffer on buffer next / previous
+augroup qf
+    autocmd!
+    autocmd FileType qf set nobuflisted
+augroup END
+
 " --------------
 " CTRL + P
 " --------------
