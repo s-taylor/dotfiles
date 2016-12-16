@@ -137,6 +137,7 @@ Snippets are saved in the dotfiles repo, so you should create a symlink for this
 
 * Install nvm, [see here](https://github.com/creationix/nvm).
 * Tmux forgets your current nvm version when opening new sessions, set this with the command: `nvm alias default [VERSION]`
+
 ---
 
 # Atom
