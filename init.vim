@@ -187,7 +187,7 @@ nnoremap <C-q> :Bdelete<CR>
 nnoremap <C-x> <C-w>q
 
 " Delete to 'black hole' register
-nnoremap x "_d
+nnoremap x "_x
 vnoremap x "_d
 
 " Replace text with clipboard
