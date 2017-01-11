@@ -226,6 +226,9 @@ inoremap <M-j> <C-o>j
 inoremap <M-k> <C-o>k
 inoremap <M-l> <C-o>l
 
+" toggle between relative and absolute line numbers
+nnoremap <leader>r :set rnu!<CR>
+
 " ------------
 " Backup Files
 " ------------
@@ -275,6 +278,9 @@ au VimResized * exe "normal! \<c-w>="
 " -----------------
 " Add line numbers to vim
 set number
+
+" Set line numbers to relative
+set rnu
 
 " Tabs are 2 spaces
 set tabstop=2
