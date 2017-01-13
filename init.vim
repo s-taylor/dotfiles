@@ -117,8 +117,11 @@ set laststatus=2
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1
 "
-" " Show just the filename
+" Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
+
+" Close after opening a file
+let NERDTreeQuitOnOpen = 1
 
 " --------------
 " Grepper config
