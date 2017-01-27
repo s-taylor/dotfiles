@@ -58,6 +58,9 @@ Plug 'ap/vim-css-color'
 " Bbye (Buffer Bye)
 Plug 'moll/vim-bbye'
 
+" vim-node
+Plug 'moll/vim-node'
+
 " Add plugins to &runtimepath
 call plug#end()
 
