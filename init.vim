@@ -211,8 +211,8 @@ nnoremap \ :vsplit<CR>
 nnoremap - :split<CR>
 
 " Find selected text in visual moade
-" copy text to "y" registers then perform find for "y"
-vnoremap * "fy:/<C-R>f<CR>N
+" copy text to the "y" register, then perform find for "y", jump back one result so cursor does not move
+vnoremap * "fy/<C-R>f<CR>N
 
 " Replace selected text
 vnoremap <leader>f "fy:%sno/<C-R>f/<C-R>f/gc<Left><Left><Left>
