@@ -17,6 +17,10 @@ snippet cm "console.log(message)" b
 console.log('$1');$0
 endsnippet
 
+snippet ca "console.log(args)"
+console.log('args', Array.prototype.slice.call(arguments));
+endsnippet
+
 snippet re "require" b
 const `!p
 snip.rv = formatVariableName(t[1])
