@@ -61,6 +61,9 @@ Plug 'moll/vim-bbye'
 " vim-node
 Plug 'moll/vim-node'
 
+" Surround
+Plug 'tpope/vim-surround'
+
 " Add plugins to &runtimepath
 call plug#end()
 
