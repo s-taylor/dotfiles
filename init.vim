@@ -9,8 +9,8 @@ Plug 'jelera/vim-javascript-syntax'
 " Pug (formerly Jade) syntax highlighting
 Plug 'https://github.com/digitaltoad/vim-pug'
 
-" Ctrl + P - fuzzy file search
-Plug 'ctrlpvim/ctrlp.vim'
+" FZF - fuzzy file search
+Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 
 " Indent Guidelines ( <leader>ig )
 Plug 'nathanaelkane/vim-indent-guides'
@@ -33,9 +33,6 @@ Plug 'tpope/vim-fugitive'
 
 " Git Gutter
 Plug 'airblade/vim-gitgutter'
-
-" Add vim-grepper for searching
-Plug 'mhinz/vim-grepper'
 
 " Delimit Mate (auto close brackets)
 Plug 'Raimondi/delimitMate'
@@ -130,36 +127,10 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 let NERDTreeQuitOnOpen = 1
 
 " --------------
-" Grepper config
+" Fuzzy Finder
 " --------------
-" shortcut to open Ag search
-nnoremap <leader>g :Grepper -tool ag -highlight<cr>
-
-" prevent buffer next, previous and delete when focused on quickfix (search results)
-autocmd FileType qf nnoremap <buffer> <Tab> <nop>
-autocmd FileType qf nnoremap <buffer> <S-Tab> <nop>
-autocmd FileType qf nnoremap <buffer> <C-q> <C-w>q
-
-" ignore quickfix buffer on buffer next / previous
-augroup qf
-    autocmd!
-    autocmd FileType qf set nobuflisted
-augroup END
-
-" --------------
-" CTRL + P
-" --------------
-"define default keymapping and mode
-nnoremap <Leader>p :CtrlP<CR>
-
-" set mru files to use relative directory
-let g:ctrlp_mruf_relative = 1
-
-"exclude files in .gitignore
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-
-" default to regex search
-let g:ctrlp_regexp = 1
+" File search
+nnoremap <Leader>p :Files<CR>
 
 " --------------
 " Git Gutter
