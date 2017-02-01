@@ -127,10 +127,11 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 let NERDTreeQuitOnOpen = 1
 
 " --------------
-" Fuzzy Finder
+" Fuzzy Finder (FZF)
 " --------------
 " File search
 nnoremap <Leader>p :Files<CR>
+nnoremap <Leader>b :Buffers<CR>
 
 " --------------
 " Git Gutter
