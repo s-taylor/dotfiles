@@ -1,10 +1,20 @@
 # Configure iTerm2
 
 ## Fix Alt Key in Vim
+
 * iTerm > Preferences
 * Profiles
 * Keys
 * Left option key acts as `+Esc`
+
+## Set Font
+
+1. Copy `/fonts/Monaco for Powerline.ttf` to `~/Library/Fonts`
+* iTerm > Preferences
+* Profiles
+* Text
+* Change Font
+* Set Family to "Monaco for Powerline"
 
 ---
 

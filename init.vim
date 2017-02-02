@@ -104,6 +104,9 @@ map <C-n> :NERDTreeToggle<CR>
 " close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+" Close after opening a file
+let NERDTreeQuitOnOpen = 1
+
 " prevent buffer next, previous and delete when focused on Nerdtree
 autocmd FileType nerdtree nnoremap <buffer> <Tab> <nop>
 autocmd FileType nerdtree nnoremap <buffer> <S-Tab> <nop>
@@ -123,8 +126,8 @@ let g:airline#extensions#tabline#enabled = 1
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
 
-" Close after opening a file
-let NERDTreeQuitOnOpen = 1
+" Use powerline fonts
+let g:airline_powerline_fonts = 1
 
 " --------------
 " Fuzzy Finder (FZF)
