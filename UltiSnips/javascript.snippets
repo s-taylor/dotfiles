@@ -13,6 +13,10 @@ snippet cl "console.log('var', var)" b
 console.log('$1', $1);$0
 endsnippet
 
+snippet cy "console.log('<yank>', <yank>)"
+console.log('${1:`!v @"`}', $1);$0
+endsnippet
+
 snippet cm "console.log(message)" b
 console.log('$1');$0
 endsnippet
