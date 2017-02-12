@@ -152,8 +152,8 @@ snippet class "React Class"
 import React, { Component, PropTypes } from 'react';
 
 class ${1:ComponentName} extends Component {
-  constructor(...args) {
-    super(...args);
+  constructor(props) {
+    super(props);
   }
 
   render() {
@@ -162,7 +162,7 @@ class ${1:ComponentName} extends Component {
 }
 
 $1.propTypes = {
-  children: React.PropTypes.string
+  children: PropTypes.string
 };
 
 $1.defaultProps = {
