@@ -7,7 +7,7 @@ Plug 'neomake/neomake'
 Plug 'jelera/vim-javascript-syntax'
 
 " Pug (formerly Jade) syntax highlighting
-Plug 'https://github.com/digitaltoad/vim-pug'
+Plug 'digitaltoad/vim-pug'
 
 " FZF - fuzzy file search
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
