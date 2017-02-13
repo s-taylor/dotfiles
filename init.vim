@@ -9,11 +9,9 @@ Plug 'jelera/vim-javascript-syntax'
 " Pug (formerly Jade) syntax highlighting
 Plug 'digitaltoad/vim-pug'
 
-" FZF - fuzzy file search
-Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
-
-" Indent Guidelines ( <leader>ig )
-Plug 'nathanaelkane/vim-indent-guides'
+" Vim Markdown
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 
 " Editor config for vim
 Plug 'editorconfig/editorconfig-vim'
@@ -60,6 +58,9 @@ Plug 'moll/vim-node'
 
 " Surround
 Plug 'tpope/vim-surround'
+
+" FZF - fuzzy file search
+Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -155,6 +156,13 @@ let g:gitgutter_map_keys = 0
 let g:UltiSnipsExpandTrigger='<C-s>'
 let g:UltiSnipsJumpForwardTrigger='<C-j>'
 let g:UltiSnipsJumpBackwardTrigger='<C-k>'
+
+" --------------
+" Vim Markdown
+" --------------
+
+" Disable folding
+let g:vim_markdown_folding_disabled = 1
 
 " -----------------
 " Keyboard shortcuts
