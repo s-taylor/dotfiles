@@ -1,0 +1,9 @@
+#!/bin/bash
+
+mas install 923920635 # Current
+mas install 407963104 # Pixelmator
+mas install 918858936 # Airmail 3
+mas install 775737590 # iA Writer
+mas install 824183456 # Affinity
+mas install 926036361 # LastPass
+

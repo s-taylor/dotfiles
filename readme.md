@@ -38,7 +38,20 @@
 see [https://superuser.com/questions/397076/tmux-exits-with-exited-on-mac-os-x](https://superuser.com/questions/397076/tmux-exits-with-exited-on-mac-os-x)
 
 ## Install Fuzzy Finder
+
 1. brew install fzf
+
+---
+
+# Mac App Store
+
+## Install
+
+1. brew install mas
+
+## Install Apps
+
+1. mas_install (see bin/mas_install)
 
 ---
 
