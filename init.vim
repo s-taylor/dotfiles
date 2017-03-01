@@ -139,9 +139,11 @@ let g:airline_powerline_fonts = 1
 " --------------
 " Fuzzy Finder (FZF)
 " --------------
-" File search
-nnoremap <Leader>p :Files<CR>
+" File search (excluding git ignore)
+nnoremap <Leader>p :GFiles<CR>
+nnoremap <C-p> :GFiles<CR>
 nnoremap <Leader>b :Buffers<CR>
+nnoremap <Leader>f :Ag 
 
 " --------------
 " Git Gutter
