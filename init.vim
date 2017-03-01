@@ -313,3 +313,6 @@ set wildignore=*.swp,*.bak,*.pyc,*.class
 set title           " change the terminal's title
 set visualbell      " don't beep
 set noerrorbells    " don't beep
+
+" enable line wrapping for markdown only
+autocmd FileType markdown setlocal wrap
