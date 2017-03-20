@@ -4,7 +4,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'neomake/neomake'
 
 " Javascript syntax highlighting
-Plug 'jelera/vim-javascript-syntax'
+Plug 'othree/yajs.vim'
 
 " Pug (formerly Jade) syntax highlighting
 Plug 'digitaltoad/vim-pug'
