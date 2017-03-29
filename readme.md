@@ -1,3 +1,13 @@
+# System Preferences
+
+## Change Caps Lock to Control
+
+1. System Preferences > Keyboard
+1. Modifier Keys... button
+1. Change 'Caps Lock' to 'Control'
+
+---
+
 # Configure iTerm2
 
 ## Fix Alt Key in Vim
@@ -20,26 +30,8 @@
 
 # Homebrew
 
-## Update Vim (requires homebrew)
-
 1. [Install Brew](http://brew.sh/)
-1. brew install mercurial
-1. brew install the_silver_searcher 
-
-## Update Git (requires homebrew)
-
-1. brew install git
-
-## Install Tmux
-
-1. brew install tmux
-1. brew install reattach-to-user-namespace
-
-see [https://superuser.com/questions/397076/tmux-exits-with-exited-on-mac-os-x](https://superuser.com/questions/397076/tmux-exits-with-exited-on-mac-os-x)
-
-## Install Fuzzy Finder
-
-1. brew install fzf
+1. run `install` script
 
 ---
 
@@ -48,25 +40,30 @@ see [https://superuser.com/questions/397076/tmux-exits-with-exited-on-mac-os-x](
 ## Install
 
 1. brew install mas
+1. run `mas_install` script
 
-## Install Apps
+---
 
-1. mas_install (see bin/mas_install)
+# Prezto
+
+1. go to https://github.com/s-taylor/prezto
+1. follow installation instructions
 
 ---
 
 # Git Setup
 
-## Symlink config files
-
-1. `ln -s [DOTFILES_PATH]/.gitignore ~/.gitignore`
-1. `ln -s [DOTFILES_PATH]/.gitconfig ~/.gitconfig`
-
-
-## Link to github
-
 1. Generate an ssh key, [see here](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
 1. Add this to your github account, [see here](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
+
+---
+
+# Symlink files
+
+1. create `~/Projects/personal` folder and cd into it
+1. git clone https://github.com/s-taylor/dotfiles
+1. cd dotfiles
+1. run `symlink` script (MUST BE RUN FROM DOTFILES ROOT, NOT `.bin`! DUE TO `PWD`)
 
 ---
 
@@ -84,42 +81,15 @@ see [https://superuser.com/questions/397076/tmux-exits-with-exited-on-mac-os-x](
 
 ---
 
-# Vim Setup
-
-Setup Neovim first!
+# Neovim Setup
 
 ## Setup
 
 1. Install [vim-plug](https://github.com/junegunn/vim-plug)
-1. Symlink the .vimrc file `ln -s [DOTFILES_PATH]/.vimrc ~/.vimrc`
-1. Create the folder /.vim/tmp (to store vim swap and backup files)
-1. Install Plugins - Open Vim > ":PluginInstall"
-
-
----
-
-# Neovim
-
-## Install
-
-1. `brew install neovim/neovim/neovim`
-
-## Install Vim Plug
-
-Refer [here](https://github.com/junegunn/vim-plug)
-
-## Setup Config
-
-```
-mkdir ~/.config/
-mkdir ~/.config/nvim
-ln -s [DOTFILES]/init.vim ~/.config/nvim/init.vim
-ln -s [DOTFILES]/UltiSnips ~/.config/nvim/UltiSnips
-```
+1. Install Plugins - Open Vim > ":PlugInstall"
 
 ## Allow Python 2/3 Plugins
 
-1. `pip install --upgrade pip`
 1. `sudo pip2 install --upgrade neovim`
 1. `brew install python3`
 1. `sudo pip3 install --upgrade neovim`
@@ -127,6 +97,12 @@ ln -s [DOTFILES]/UltiSnips ~/.config/nvim/UltiSnips
 Refer [here](https://neovim.io/doc/user/provider.html#provider-python)
 
 ## Keyboard ctrl + h doesn't work
+
+Run the commands
+```
+infocmp $TERM | sed 's/kbs=^[hH]/kbs=\\177/' > $TERM.ti
+$TERM.ti
+```
 
 Refer [here](https://github.com/neovim/neovim/wiki/FAQ#my-ctrl-h-mapping-doesnt-work)
 And [here](https://github.com/neovim/neovim/issues/2048)
@@ -143,7 +119,7 @@ And [here](https://github.com/neovim/neovim/issues/2048)
 
 ## YouCompleteMe
 
-**NOTE:** This is probably now redundant since Plug performs the compile step?
+**NOTE:** This is only necessary if PlugInstall post install hook fails
 
 1. `brew install cmake`
 1. `cd ~/.vim/plugged/YouCompleteMe`
@@ -164,6 +140,20 @@ Snippets are saved in the dotfiles repo, so you should create a symlink for this
 1. Install nvm, [see here](https://github.com/creationix/nvm).
 1. Tmux forgets your current nvm version when opening new sessions, set this with the command: `nvm alias default [VERSION]`
 
+## Install Modules
+
+1. npm install -g yarn
+1. npm install -g eslint
+1. npm install -g np
+
+---
+
+# Manual Install (not on App Store)
+
+1. Atom
+1. Slack
+1. Tower 2
+
 ---
 
 # Atom
@@ -172,3 +162,5 @@ Snippets are saved in the dotfiles repo, so you should create a symlink for this
 
 1. `cd /Users/[USERNAME]/.atom`
 1. `ln -s [DOTFILES_PATH]/snippets.cson ./`
+
+---
