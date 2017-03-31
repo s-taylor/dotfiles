@@ -11,7 +11,6 @@ Plug 'digitaltoad/vim-pug'
 
 " Vim Markdown
 Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
 
 " Editor config for vim
 Plug 'editorconfig/editorconfig-vim'
@@ -158,13 +157,6 @@ let g:gitgutter_map_keys = 0
 let g:UltiSnipsExpandTrigger='<C-s>'
 let g:UltiSnipsJumpForwardTrigger='<C-j>'
 let g:UltiSnipsJumpBackwardTrigger='<C-k>'
-
-" --------------
-" Vim Markdown
-" --------------
-
-" Disable folding
-let g:vim_markdown_folding_disabled = 1
 
 " -----------------
 " Keyboard shortcuts
@@ -313,6 +305,3 @@ set wildignore=*.swp,*.bak,*.pyc,*.class
 set title           " change the terminal's title
 set visualbell      " don't beep
 set noerrorbells    " don't beep
-
-" enable line wrapping for markdown only
-autocmd FileType markdown setlocal wrap
