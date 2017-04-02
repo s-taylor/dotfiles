@@ -145,14 +145,18 @@ Snippets are saved in the dotfiles repo, so you should create a symlink for this
 1. npm install -g yarn
 1. npm install -g eslint
 1. npm install -g np
+1. npm install -g git-open
 
 ---
 
 # Manual Install (not on App Store)
 
 1. Atom
-1. Slack
 1. Tower 2
+1. Dash
+1. Sketch
+1. Slack
+1. Spotify
 
 ---
 
