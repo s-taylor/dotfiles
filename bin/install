@@ -1,5 +1,7 @@
 #!/bin/bash
 
+brew update
+
 # update zsh
 brew install zsh
 
@@ -16,6 +18,9 @@ brew install reattach-to-user-namespace
 # install neovim
 brew tap neovim/neovim
 brew install neovim
+
+# install yarn
+brew install yarn
 
 # install silver searcher (Ag)
 brew install mercurial
