@@ -216,3 +216,16 @@ $1.defaultProps = { children: 'Hello World!' };
 
 export default $1;
 endsnippet
+
+###########
+# ES LINT #
+###########
+snippet disable "eslint disable rule on line" b
+// eslint-disable-next-line ${1:Rule}$0
+endsnippet
+
+snippet disableblock "eslint disable rule block" b
+/* eslint-disable ${1:Rule} */
+  $0
+/* eslint-enable $1 */
+endsnippet
