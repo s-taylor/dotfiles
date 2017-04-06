@@ -135,13 +135,16 @@ endsnippet
 
 snippet pt "passthrough (.then)"
 .then(result => {
-  console.log('result:', result);
-  return result;$0
-})
+  console.log('.then', result);
+  return result;
+})$0
 endsnippet
 
 snippet ct "catch"
-.catch(err => console.log('ERROR:', err));$0
+.catch(err => {
+	console.log('.catch:', err);
+	throw err;
+})$0
 endsnippet
 
 
