@@ -253,7 +253,7 @@ syntax enable
 
 " Use the same symbols as TextMate for tabstops and EOLs
 if has('mac')
-  set listchars=tab:▸\ ,eol:¬
+  set listchars=tab:▸\ ,eol:¬,trail:·
   set list
 endif
 
