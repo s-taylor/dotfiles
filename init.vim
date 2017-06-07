@@ -94,8 +94,14 @@ let mapleader = "\<Space>"
 " --------------
 autocmd! BufWritePost,BufEnter * Neomake
 
+let g:neomake_javascript_enabled_makers = []
+let g:neomake_jsx_enabled_makers = []
+
 " use neomake for eslint
-let g:neomake_javascript_enabled_makers = ['eslint']
+if executable('eslint')
+  let g:neomake_javascript_enabled_makers += ['eslint']
+  let g:neomake_jsx_enabled_makers += ['eslint']
+endif
 
 " --------------
 " Nerdtree config
