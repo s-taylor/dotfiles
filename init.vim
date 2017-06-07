@@ -81,6 +81,9 @@ endif
 let g:python2_host_prog = '/usr/local/bin/python'
 let g:python3_host_prog = '/usr/local/bin/python3'
 
+" fix YouCompleteMe python path issue
+let g:ycm_path_to_python_interpreter = '/usr/local/bin/python'
+
 " --------------
 " Remap leader key to ;
 " --------------
