@@ -1,7 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
-" Neomake, asynchronous programs
-Plug 'neomake/neomake'
+" Ale, Asynchronous lint engine
+Plug 'w0rp/ale'
 
 " Javascript syntax highlighting
 Plug 'othree/yajs.vim'
@@ -88,20 +88,6 @@ let g:ycm_path_to_python_interpreter = '/usr/local/bin/python'
 " Remap leader key to ;
 " --------------
 let mapleader = "\<Space>"
-
-" --------------
-" Neomake
-" --------------
-autocmd! BufWritePost,BufEnter * Neomake
-
-let g:neomake_javascript_enabled_makers = []
-let g:neomake_jsx_enabled_makers = []
-
-" use neomake for eslint
-if executable('eslint')
-  let g:neomake_javascript_enabled_makers += ['eslint']
-  let g:neomake_jsx_enabled_makers += ['eslint']
-endif
 
 " --------------
 " Nerdtree config
