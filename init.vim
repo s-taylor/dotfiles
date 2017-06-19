@@ -90,6 +90,14 @@ let g:ycm_path_to_python_interpreter = '/usr/local/bin/python'
 let mapleader = "\<Space>"
 
 " --------------
+" Ale
+" --------------
+let g:ale_sign_error = '✘'
+let g:ale_sign_warning = '⚠'
+highlight link ALEErrorSign GruvboxRedSign
+highlight link ALEWarningSign GruvboxYellowSign
+
+" --------------
 " Nerdtree config
 " --------------
 
