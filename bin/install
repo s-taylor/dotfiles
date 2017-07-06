@@ -38,6 +38,9 @@ brew install cmake
 # install go
 brew install go --cross-compile-common
 
+# install mercurial and bazaar (for Go)
+brew install hg bzr
+
 # install node version manager (nvm)
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash
 
