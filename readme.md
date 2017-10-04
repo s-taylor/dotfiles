@@ -142,10 +142,9 @@ Snippets are saved in the dotfiles repo, so you should create a symlink for this
 
 ## Install Modules
 
-1. npm install -g yarn
-1. npm install -g eslint
-1. npm install -g np
-1. npm install -g git-open
+1. yarn global add eslint
+1. yarn global add np
+1. yarn global add git-open
 
 ---
 
