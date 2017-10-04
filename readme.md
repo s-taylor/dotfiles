@@ -133,6 +133,9 @@ Refer https://github.com/Valloric/YouCompleteMe#configuring-tern-for-node-suppor
 Snippets are saved in the dotfiles repo, so you should create a symlink for this
 `ln -s [DOTFILES_PATH]/UltiSnips ~/.vim/UltiSnips`
 
+Getting this error `YouCompleteme unavailable : no module named future` ?
+[Github Issue Link](https://github.com/Valloric/YouCompleteMe/issues/2271)
+
 ---
 
 # Node / NVM
