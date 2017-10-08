@@ -293,6 +293,9 @@ set hidden
 " Add an 121 charater length indicator
 set colorcolumn=121
 
+" Add mouse support in neovim
+set mouse=a
+
 "testing stuff from - http://nvie.com/posts/how-i-boosted-my-vim/
 set nowrap          " don't wrap lines
 set autoindent      " always set autoindenting on
