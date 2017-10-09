@@ -225,14 +225,6 @@ inoremap <M-l> <C-o>l
 " toggle between relative and absolute line numbers
 nnoremap <leader>r :set rnu!<CR>
 
-" ------------
-" Backup Files
-" ------------
-" No backups
-set nobackup
-set noswapfile
-set nowb
-
 " -----------------
 " Config
 " -----------------
@@ -272,6 +264,11 @@ au VimResized * exe "normal! \<c-w>="
 " -----------------
 " Preferences
 " -----------------
+" No backups
+set nobackup
+set noswapfile
+set nowb
+
 " Add line numbers to vim
 set number
 
