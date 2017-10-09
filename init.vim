@@ -288,9 +288,6 @@ set showcmd
 " Don't close buffer when editing another file (:e <file>)
 set hidden
 
-" Add an 121 charater length indicator
-set colorcolumn=121
-
 " Add mouse support in neovim
 set mouse=a
 
