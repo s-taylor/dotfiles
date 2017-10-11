@@ -113,9 +113,8 @@ And [here](https://github.com/neovim/neovim/issues/2048)
 
 ## Confirm all is OK
 
-1. `nvim`
-1. `:CheckHealth`
-
+1. nvim -u NORC
+1. :CheckHealth
 
 ## YouCompleteMe
 
