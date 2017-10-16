@@ -27,6 +27,7 @@ Plug 'vim-airline/vim-airline-themes'
 
 " fugitive (git for Vim)
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb' " Required to facilitate :Gbrowse
 
 " Git Gutter
 Plug 'airblade/vim-gitgutter'
