@@ -97,6 +97,9 @@ let g:ale_sign_warning = '⚠'
 highlight link ALEErrorSign GruvboxRedSign
 highlight link ALEWarningSign GruvboxYellowSign
 
+" Don't lint on text change
+let g:ale_lint_on_text_changed = 'never'
+
 " --------------
 " Nerdtree config
 " --------------
