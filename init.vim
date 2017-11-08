@@ -4,7 +4,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'w0rp/ale'
 
 " Javascript syntax highlighting
-Plug 'othree/yajs.vim'
+Plug 'othree/yajs.vim', { 'tag': '1.6' }
 
 " Pug (formerly Jade) syntax highlighting
 Plug 'digitaltoad/vim-pug'
@@ -97,8 +97,8 @@ let g:ale_sign_warning = '⚠'
 highlight link ALEErrorSign GruvboxRedSign
 highlight link ALEWarningSign GruvboxYellowSign
 
-" Don't lint on text change
-let g:ale_lint_on_text_changed = 'never'
+" Don't lint on text change (only lint on save)
+"let g:ale_lint_on_text_changed = 'never'
 
 " --------------
 " Nerdtree config
