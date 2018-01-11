@@ -6,9 +6,6 @@ Plug 'w0rp/ale'
 " Javascript syntax highlighting
 Plug 'othree/yajs.vim', { 'tag': '1.6' }
 
-" Pug (formerly Jade) syntax highlighting
-Plug 'digitaltoad/vim-pug'
-
 " Vim Markdown
 Plug 'godlygeek/tabular'
 
