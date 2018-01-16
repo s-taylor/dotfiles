@@ -208,6 +208,11 @@ nnoremap * *N
 nnoremap \ :vsplit<CR>
 nnoremap - :split<CR>
 
+" Copy relative path to clipboard
+nnoremap <leader>yr :let @+=expand('%')<CR>
+" Copy full path to clipboard
+nnoremap <leader>yp :let @+=expand('%:p')<CR>
+
 " Find selected text in visual moade
 " copy text to the "y" register, then perform find for "y", jump back one result so cursor does not move
 vnoremap * "fy/<C-R>f<CR>N
