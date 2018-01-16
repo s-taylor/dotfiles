@@ -5,6 +5,7 @@ Plug 'w0rp/ale'
 
 " Javascript syntax highlighting
 Plug 'othree/yajs.vim', { 'tag': '1.6' }
+Plug 'HerringtonDarkholme/yats.vim'
 
 " Vim Markdown
 Plug 'godlygeek/tabular'
@@ -85,6 +86,14 @@ let g:ycm_path_to_python_interpreter = '/usr/bin/python'
 " Remap leader key to ;
 " --------------
 let mapleader = "\<Space>"
+
+" --------------
+" YATS (typescript syntax)
+" --------------
+" Set .tsx files to typescript filetype (YATS doesn't officially support .tsx)
+augroup filetypedetect
+    au BufRead,BufNewFile *.tsx set filetype=typescript
+augroup END
 
 " --------------
 " Ale
