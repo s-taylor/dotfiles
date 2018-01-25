@@ -4,24 +4,28 @@ call plug#begin('~/.vim/plugged')
 Plug 'w0rp/ale'
 
 " Javascript syntax highlighting
-Plug 'othree/yajs.vim', { 'tag': '1.6' }
-Plug 'HerringtonDarkholme/yats.vim'
+Plug 'othree/yajs.vim', { 'tag': '1.6', 'for': 'javascript' }
+
+" Typescript
+Plug 'HerringtonDarkholme/yats.vim', { 'for': 'typescript' }
+Plug 'Shougo/vimproc.vim', { 'for': 'typescript', 'do': 'make -f make_mac.mak' } "required by tsuquyomi
+"Plug 'Quramy/tsuquyomi', { 'for': 'typescript' }
 
 " Vim Markdown
-Plug 'godlygeek/tabular'
+Plug 'godlygeek/tabular', { 'for': 'markdown' }
 
 " Editor config for vim
 Plug 'editorconfig/editorconfig-vim'
 
 " Nerdtree File Browser
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 
 " Nerd Commenter
 Plug 'scrooloose/nerdcommenter'
 
-" Airline
-Plug 'bling/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" Lightline
+Plug 'itchyny/lightline.vim'
+Plug 'mgee/lightline-bufferline'
 
 " fugitive (git for Vim)
 Plug 'tpope/vim-fugitive'
@@ -52,7 +56,7 @@ Plug 'ap/vim-css-color'
 Plug 'moll/vim-bbye'
 
 " vim-node
-Plug 'moll/vim-node'
+Plug 'moll/vim-node', { 'for': 'javascript' }
 
 " Surround
 Plug 'tpope/vim-surround'
@@ -104,7 +108,7 @@ highlight link ALEErrorSign GruvboxRedSign
 highlight link ALEWarningSign GruvboxYellowSign
 
 " Don't lint on text change (only lint on save)
-"let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_text_changed = 'never'
 
 " --------------
 " Nerdtree config
@@ -132,20 +136,51 @@ augroup nerdtree_bindings
   autocmd FileType nerdtree nnoremap <buffer> <C-q> :NERDTreeToggle<CR>
 augroup END
 
-" --------------
-" Airline config
-" --------------
-" always show airline (even without window split)
-set laststatus=2
+" ---------
+" Lightline
+" ---------
+let g:lightline = {
+  \   'colorscheme': 'gruvbox',
+  \   'active': {
+  \     'left':[ [ 'mode', 'paste' ],
+  \              [ 'gitbranch', 'readonly', 'filename', 'modified' ]
+  \     ]
+  \   },
+  \   'component': {
+  \     'lineinfo': ' %3l:%-2v',
+  \   },
+  \   'component_function': {
+  \     'gitbranch': 'fugitive#head',
+  \   }
+  \ }
+let g:lightline.separator = {
+  \   'left': '', 'right': ''
+  \}
+let g:lightline.subseparator = {
+  \   'left': '', 'right': '' 
+  \}
 
-" Enable the list of buffers
-let g:airline#extensions#tabline#enabled = 1
-"
-" Show just the filename
-let g:airline#extensions#tabline#fnamemod = ':t'
+" ----------------------
+" Lightline - bufferline
+" ----------------------
+set showtabline=2  " Show tabline
+let g:lightline#bufferline#show_number  = 2 " Show ordinal numbers
 
-" Use powerline fonts
-let g:airline_powerline_fonts = 1
+let g:lightline.tabline = { 'left': [ ['buffers'] ], 'right': [ ['close'] ] }
+let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
+let g:lightline.component_type   = {'buffers': 'tabsel'}
+
+" jump to buffer using ordinal numbers
+nmap <Leader>1 <Plug>lightline#bufferline#go(1)
+nmap <Leader>2 <Plug>lightline#bufferline#go(2)
+nmap <Leader>3 <Plug>lightline#bufferline#go(3)
+nmap <Leader>4 <Plug>lightline#bufferline#go(4)
+nmap <Leader>5 <Plug>lightline#bufferline#go(5)
+nmap <Leader>6 <Plug>lightline#bufferline#go(6)
+nmap <Leader>7 <Plug>lightline#bufferline#go(7)
+nmap <Leader>8 <Plug>lightline#bufferline#go(8)
+nmap <Leader>9 <Plug>lightline#bufferline#go(9)
+nmap <Leader>0 <Plug>lightline#bufferline#go(10)
 
 " --------------
 " Fuzzy Finder (FZF)
@@ -170,6 +205,11 @@ let g:UltiSnipsExpandTrigger='<C-s>'
 let g:UltiSnipsJumpForwardTrigger='<C-j>'
 let g:UltiSnipsJumpBackwardTrigger='<C-k>'
 
+" --------
+" vim-bbye
+" --------
+nnoremap <C-q> :Bdelete<CR>
+
 " -----------------
 " Keyboard shortcuts
 " -----------------
@@ -185,7 +225,7 @@ nnoremap <leader>w :w<CR>
 " Add shortcuts to next/previous/close buffer
 nnoremap <Tab> :bn<cr>
 nnoremap <S-Tab> :bp<cr>
-nnoremap <C-q> :Bdelete<CR>
+"nnoremap <C-q> :bd<CR>
 
 " Close window
 nnoremap <C-x> <C-w>q
@@ -198,7 +238,6 @@ vnoremap x "_d
 vnoremap p "_dP
 "
 " Reload .vimrc
-nnoremap <leader>1 :so $MYVIMRC<CR>
 nnoremap <leader>! :so $MYVIMRC<CR>
 
 " Find selected word (But don't skip to next)
