@@ -9,7 +9,6 @@ Plug 'othree/yajs.vim', { 'tag': '1.6', 'for': 'javascript' }
 " Typescript
 Plug 'HerringtonDarkholme/yats.vim', { 'for': 'typescript' }
 Plug 'Shougo/vimproc.vim', { 'for': 'typescript', 'do': 'make -f make_mac.mak' } "required by tsuquyomi
-"Plug 'Quramy/tsuquyomi', { 'for': 'typescript' }
 
 " Vim Markdown
 Plug 'godlygeek/tabular', { 'for': 'markdown' }
@@ -44,7 +43,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'morhetz/gruvbox'
 
 " YouCompleteMe (with post install hook to compile for JS)
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --all' }
 
 " UltiSnip
 Plug 'SirVer/ultisnips'
