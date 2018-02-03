@@ -138,6 +138,8 @@ augroup END
 " ---------
 " Lightline
 " ---------
+set noshowmode " Hide --INSERT-- since Lightline shows mode
+
 let g:lightline = {
   \   'colorscheme': 'gruvbox',
   \   'active': {
@@ -167,7 +169,6 @@ let g:lightline.subseparator = {
 " ----------------------
 " Lightline - bufferline
 " ----------------------
-set noshowmode " Hide --INSERT-- since Lightline shows mode
 set showtabline=2 " Show tabline
 let g:lightline#bufferline#show_number = 2 " Show ordinal numbers
 
