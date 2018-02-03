@@ -142,7 +142,12 @@ let g:lightline = {
   \   'colorscheme': 'gruvbox',
   \   'active': {
   \     'left':[ [ 'mode', 'paste' ],
-  \              [ 'gitbranch', 'readonly', 'filename', 'modified' ]
+  \              [ 'gitbranch' ], 
+  \              [ 'readonly', 'relativepath', 'modified' ]
+  \     ],
+  \     'right': [ [ 'lineinfo' ],
+  \                [ 'percent' ],
+  \                [ 'filetype' ]
   \     ]
   \   },
   \   'component': {
@@ -162,8 +167,9 @@ let g:lightline.subseparator = {
 " ----------------------
 " Lightline - bufferline
 " ----------------------
-set showtabline=2  " Show tabline
-let g:lightline#bufferline#show_number  = 2 " Show ordinal numbers
+set noshowmode " Hide --INSERT-- since Lightline shows mode
+set showtabline=2 " Show tabline
+let g:lightline#bufferline#show_number = 2 " Show ordinal numbers
 
 let g:lightline.tabline = { 'left': [ ['buffers'] ], 'right': [ ['close'] ] }
 let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
