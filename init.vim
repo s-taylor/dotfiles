@@ -154,7 +154,6 @@ let g:lightline = {
   \              [ 'readonly', 'relativepath', 'modified' ]
   \     ],
   \     'right': [ [ 'lineinfo' ],
-  \                [ 'percent' ],
   \                [ 'filetype' ]
   \     ]
   \   },
