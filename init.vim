@@ -107,7 +107,13 @@ highlight link ALEErrorSign GruvboxRedSign
 highlight link ALEWarningSign GruvboxYellowSign
 
 " Don't lint on text change (only lint on save)
-let g:ale_lint_on_text_changed = 'never'
+"let g:ale_lint_on_text_changed = 'never'
+
+let g:ale_fixers = {
+\   'javascript': ['eslint']
+\}
+
+let g:ale_fix_on_save = 1
 
 " --------------
 " Nerdtree config
