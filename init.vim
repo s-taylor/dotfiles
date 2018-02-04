@@ -154,9 +154,7 @@ let g:lightline = {
   \              [ 'gitbranch' ], 
   \              [ 'readonly', 'relativepath', 'modified' ]
   \     ],
-  \     'right': [ [ 'lineinfo' ],
-  \                [ 'filetype' ]
-  \     ]
+  \     'right': [ [ 'filetype' ] ]
   \   },
   \   'component': {
   \     'lineinfo': ' %3l:%-2v',
