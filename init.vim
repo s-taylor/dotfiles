@@ -156,6 +156,10 @@ let g:lightline = {
   \     ],
   \     'right': [ [ 'filetype' ] ]
   \   },
+  \   'inactive': {
+  \     'left':[ [ 'readonly', 'relativepath', 'modified' ] ],
+  \     'right': [ [ 'filetype' ] ]
+  \   },
   \   'component': {
   \     'lineinfo': ' %3l:%-2v',
   \   },
@@ -176,7 +180,7 @@ let g:lightline.subseparator = {
 set showtabline=2 " Show tabline
 let g:lightline#bufferline#show_number = 2 " Show ordinal numbers
 let g:lightline#bufferline#unicode_symbols = 1 " Use unicode symbols
-let g:lightline#bufferline#filename_modifier = ':t' "Show filename only
+"let g:lightline#bufferline#filename_modifier = ':t' "Show filename only
 
 let g:lightline.tabline = { 'left': [ ['buffers'] ], 'right': [ ['close'] ] }
 let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
