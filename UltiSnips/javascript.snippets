@@ -163,6 +163,36 @@ endsnippet
 #########
 # REACT #
 #########
+snippet class "React Component - Typescript"
+import * as React from 'react';
+
+interface Props {
+
+}
+
+class ${1:ComponentName} extends React.Component<Props> {
+  constructor(props) {
+    super(props);
+    this.state = { ... };
+  }
+
+  static defaultProps = {
+
+	}
+
+  // ES7 property initializer syntax
+  method = () => { ... }
+
+  render() {
+    return (
+      <p>Hello World</p>$0
+    );
+  }
+}
+
+export default $1;
+endsnippet
+
 snippet class "React Component - ES6 Class"
 import React, { Component, PropTypes } from 'react';
 
