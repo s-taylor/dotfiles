@@ -19,8 +19,8 @@ brew install reattach-to-user-namespace
 brew tap neovim/neovim
 brew install neovim
 
-# install yarn
-brew install yarn
+# install yarn (don't install node, or nvm prefix issue)
+brew install yarn --without-node
 
 # install silver searcher (Ag)
 brew install mercurial
