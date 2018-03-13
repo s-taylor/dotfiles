@@ -25,6 +25,10 @@ snippet ca "console.log(args)"
 console.log('$1 args', Array.prototype.slice.call(arguments));$0
 endsnippet
 
+snippet co "console.log(object)"
+console.log('$1', JSON.stringify($1, null, 2));$0
+endsnippet
+
 snippet re "require" b
 const `!p
 snip.rv = formatVariableName(t[1])
