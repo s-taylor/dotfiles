@@ -10,6 +10,9 @@ Plug 'othree/yajs.vim', { 'tag': '1.6', 'for': 'javascript' }
 Plug 'HerringtonDarkholme/yats.vim', { 'for': 'typescript' }
 Plug 'Shougo/vimproc.vim', { 'for': 'typescript', 'do': 'make -f make_mac.mak' } "required by tsuquyomi
 
+" Styled Components
+Plug 'styled-components/vim-styled-components'
+
 " Vim Markdown
 Plug 'godlygeek/tabular', { 'for': 'markdown' }
 
