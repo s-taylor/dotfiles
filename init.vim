@@ -294,7 +294,7 @@ cnoremap <M-k> <Up>
 cnoremap <M-l> <Right>
 
 " Map Esc to jj in insert mode
-inoremap jj <Esc>
+"inoremap jj <Esc>
 
 " provide hjkl movements in Insert mode via the <Alt> modifier key
 inoremap <M-h> <C-o>h
