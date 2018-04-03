@@ -90,9 +90,9 @@
 
 ## Allow Python 2/3 Plugins
 
-1. `sudo pip2 install --upgrade neovim`
+1. `pip2 install --user --upgrade neovim`
 1. `brew install python3`
-1. `sudo pip3 install --upgrade neovim`
+1. `pip3 install --user --upgrade neovim`
 
 Refer [here](https://neovim.io/doc/user/provider.html#provider-python)
 
