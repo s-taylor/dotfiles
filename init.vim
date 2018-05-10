@@ -4,11 +4,11 @@ call plug#begin('~/.vim/plugged')
 Plug 'w0rp/ale'
 
 " Javascript syntax highlighting
-Plug 'othree/yajs.vim', { 'tag': '1.6', 'for': 'javascript' }
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 
 " Typescript
 Plug 'HerringtonDarkholme/yats.vim', { 'for': 'typescript' }
-Plug 'Shougo/vimproc.vim', { 'for': 'typescript', 'do': 'make -f make_mac.mak' } "required by tsuquyomi
 
 " Styled Components
 Plug 'styled-components/vim-styled-components'
@@ -46,10 +46,15 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'morhetz/gruvbox'
 
 " YouCompleteMe (with post install hook to compile for JS)
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --all' }
+"Plug 'Valloric/YouCompleteMe', { 'do': './install.py --all' }
 
-" UltiSnip
-Plug 'SirVer/ultisnips'
+" Deoplete
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet-snippets'
+Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'], 'do': 'npm install' }
+Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'], 'do': 'npm install -g tern' }
+Plug 'mhartington/nvim-typescript', { 'for': 'typescript' }
 
 " CSS colors
 Plug 'ap/vim-css-color'
@@ -118,6 +123,16 @@ let g:ale_fixers = {
 \}
 
 let g:ale_fix_on_save = 1
+
+" --------------
+" vim-javascript
+" --------------
+let g:javascript_plugin_flow = 1 " Enable flow support
+
+" --------------
+" vim-jsx
+" --------------
+let g:jsx_ext_required = 0 " Don't require .jsx extension
 
 " --------------
 " Nerdtree config
@@ -206,18 +221,18 @@ nmap <Leader>0 <Plug>lightline#bufferline#go(10)
 " --------------
 " File search (excluding git ignore)
 nnoremap <Leader>p :GFiles<CR>
-nnoremap <C-p> :GFiles<CR>
 nnoremap <Leader>b :Buffers<CR>
-nnoremap <Leader>f :Ag 
+nnoremap <Leader>f :Files<CR>
+nnoremap <Leader>a :Ag 
 
 " --------------
 " Nerd Commenter
 " --------------
 " Add spaces after comment delimiters by default
-let g:NERDSpaceDelims = 1
+ let g:NERDSpaceDelims = 1
 
 " Align line-wise comment delimiters flush left instead of following code indentation
-let g:NERDDefaultAlign = 'start'
+" let g:NERDDefaultAlign = 'start'
 
 " --------------
 " Git Gutter
@@ -226,12 +241,28 @@ let g:NERDDefaultAlign = 'start'
 let g:gitgutter_map_keys = 0
 
 " --------------
-" Ultisnip
+" Deoplete
 " --------------
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger='<C-s>'
-let g:UltiSnipsJumpForwardTrigger='<C-j>'
-let g:UltiSnipsJumpBackwardTrigger='<C-k>'
+let g:deoplete#enable_at_startup = 1
+
+" Use ultisnip snippets
+call deoplete#custom#source('ultisnips', 'matchers', ['matcher_fuzzy'])
+
+" key bindings
+imap <expr><S-TAB>
+      \ pumvisible() ? "\<C-p>" : "\<S-TAB>"
+
+imap <expr><TAB>
+      \ pumvisible() ? "\<C-n>" : "\<TAB>"
+
+" --------------
+" Neosnippet
+" --------------
+imap <C-s>     <Plug>(neosnippet_expand_or_jump)
+smap <C-s>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-s>     <Plug>(neosnippet_expand_target)
+
+let g:neosnippet#snippets_directory='~/Projects/personal/dotfiles/Neosnippet'
 
 " --------
 " vim-bbye
