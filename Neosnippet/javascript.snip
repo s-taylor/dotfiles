@@ -19,6 +19,36 @@ snippet co
 abbr console.log(object)
   console.log('${1:#:object}', JSON.stringify($1, null, 2));${0}
 
+snippet add
+abbr storybook .add
+  .add('<${1:#:component_name}/>', () => (
+    <div>
+      <${1}/>
+    </div>
+  ));${0}
+
+#########
+# MOCHA #
+#########
+
+snippet de
+abbr describe block
+  describe('${1:#:description}', () => {
+    ${0:TARGET}
+  });
+
+snippet it
+abbr it block
+  it('${1:#:statement}', () => {
+    ${0:TARGET}
+  });
+
+snippet ita
+abbr it block (async)
+  it('${1:#:statement}', async () => {
+    ${0:TARGET}
+  });
+
 # DEFAULT JAVASCRIPT SNIPPETS
 
 snippet :f
