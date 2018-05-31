@@ -5,27 +5,45 @@
 
 snippet cl
 abbr console.log(var)
-  console.log('${1:#:variable}', $1);${0}
+  console.log('${1:#:variable}', $1);
+  ${0}
 
 snippet cm
 abbr console.log(message)
-  console.log('${1:#:message}');${0}
+  console.log('${1:#:message}');
+  ${0}
 
 snippet ca
 abbr console.log(args)
-  console.log('args', Array.prototype.slice.call(arguments));${0}
+  console.log('args', Array.prototype.slice.call(arguments));
+  ${0}
 
 snippet co
 abbr console.log(object)
-  console.log('${1:#:object}', JSON.stringify($1, null, 2));${0}
+  console.log('${1:#:object}', JSON.stringify($1, null, 2));
+  ${0}
 
 snippet add
 abbr storybook .add
   .add('<${1:#:component_name}/>', () => (
     <div>
-      <${1}/>
+      <$1${0}/>
     </div>
-  ));${0}
+  ));
+
+###############
+# CHAI ENZYME #
+###############
+
+snippet desc
+abbr chai descendants
+  expect(${1:wrapper}).to.have.exactly(${2:1}).descendants(${3:#:component_name});
+  ${0}
+
+snippet find
+abbr expect with find
+  expect(wrapper.find('${1:#:component_name}'))
+  ${0};
 
 #########
 # MOCHA #
@@ -48,6 +66,20 @@ abbr it block (async)
   it('${1:#:statement}', async () => {
     ${0:TARGET}
   });
+
+###########
+# ES LINT #
+###########
+snippet disable
+abbr eslint disable rule on line
+  // eslint-disable-next-line ${1:#:rule}${0}
+  endsnippet
+
+snippet disableblock
+abbr eslint disable rule block
+  /* eslint-disable ${1:#:rule} */
+    ${0}
+  /* eslint-enable $1 */
 
 # DEFAULT JAVASCRIPT SNIPPETS
 
