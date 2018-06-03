@@ -5,23 +5,19 @@
 
 snippet cl
 abbr console.log(var)
-  console.log('${1:#:variable}', $1);
-  ${0}
+  console.log('${1:#:variable}', $1);${0}
 
 snippet cm
 abbr console.log(message)
-  console.log('${1:#:message}');
-  ${0}
+  console.log('${1:#:message}');${0}
 
 snippet ca
 abbr console.log(args)
-  console.log('args', Array.prototype.slice.call(arguments));
-  ${0}
+  console.log('args', Array.prototype.slice.call(arguments));${0}
 
 snippet co
 abbr console.log(object)
-  console.log('${1:#:object}', JSON.stringify($1, null, 2));
-  ${0}
+  console.log('${1:#:object}', JSON.stringify($1, null, 2));${0}
 
 snippet add
 abbr storybook .add
@@ -37,13 +33,11 @@ abbr storybook .add
 
 snippet desc
 abbr chai descendants
-  expect(${1:wrapper}).to.have.exactly(${2:1}).descendants(${3:#:component_name});
-  ${0}
+  expect(${1:wrapper}).to.have.exactly(${2:1}).descendants(${3:#:component_name});${0}
 
 snippet find
 abbr expect with find
-  expect(wrapper.find('${1:#:component_name}'))
-  ${0};
+  expect(wrapper.find('${1:#:component_name}'))${0};
 
 #########
 # MOCHA #
