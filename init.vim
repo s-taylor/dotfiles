@@ -15,6 +15,7 @@ Plug 'styled-components/vim-styled-components'
 
 " Vim Markdown
 Plug 'godlygeek/tabular', { 'for': 'markdown' }
+Plug 'plasticboy/vim-markdown'
 
 " Editor config for vim
 Plug 'editorconfig/editorconfig-vim'
@@ -100,14 +101,6 @@ let g:ycm_path_to_python_interpreter = '/usr/bin/python'
 let mapleader = "\<Space>"
 
 " --------------
-" YATS (typescript syntax)
-" --------------
-" Set .tsx files to typescript filetype (YATS doesn't officially support .tsx)
-augroup filetypedetect
-    au BufRead,BufNewFile *.tsx set filetype=typescript
-augroup END
-
-" --------------
 " Ale
 " --------------
 let g:ale_sign_error = '✘'
@@ -134,6 +127,20 @@ let g:javascript_plugin_flow = 1 " Enable flow support
 " vim-jsx
 " --------------
 let g:jsx_ext_required = 0 " Don't require .jsx extension
+
+" --------------
+" YATS (typescript syntax)
+" --------------
+" Set .tsx files to typescript filetype (YATS doesn't officially support .tsx)
+augroup filetypedetect
+    au BufRead,BufNewFile *.tsx set filetype=typescript
+augroup END
+
+" --------------
+" Markdown
+" --------------
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_fenced_languages = ['js=javascript']
 
 " --------------
 " Nerdtree config
