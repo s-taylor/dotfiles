@@ -274,10 +274,13 @@ nnoremap <C-q> :Bdelete<CR>
 " Keyboard shortcuts
 " -----------------
 
-" Insert a blank line below without entering insert mode
-nnoremap <leader>o o<Esc>
+" https://stackoverflow.com/questions/16359878/vim-how-to-map-shift-enter
+autocmd CmdwinEnter * nnoremap <CR> <CR>
+autocmd BufReadPost quickfix nnoremap <CR> <CR>
 " Insert a blank line above without entering insert mode
-nnoremap <leader>O O<Esc>
+nnoremap <S-Enter> O<Esc>
+" Insert a blank line below without entering insert mode
+nnoremap <CR> o<Esc>
 
 " Save file
 nnoremap <leader>w :w<CR>
