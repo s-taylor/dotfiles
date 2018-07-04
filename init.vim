@@ -309,6 +309,10 @@ vnoremap x "_d
 
 " Replace text with clipboard
 vnoremap p "_dP
+
+" Insert single character
+nnoremap s :exec "normal i".nr2char(getchar())."\e"<CR>
+nnoremap S :exec "normal a".nr2char(getchar())."\e"<CR>
 "
 " Reload .vimrc
 nnoremap <leader>! :so $MYVIMRC<CR>
