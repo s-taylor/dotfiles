@@ -46,3 +46,7 @@ brew install fd
 
 # install mas
 brew install mas
+
+# install youtube-dl
+brew install youtube-dl
+brew install ffmpeg
