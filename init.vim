@@ -231,7 +231,8 @@ nmap <Leader>0 <Plug>lightline#bufferline#go(10)
 " Fuzzy Finder (FZF)
 " --------------
 " File search (excluding git ignore)
-nnoremap <Leader>p :GFiles<CR>
+nnoremap <Leader>p :Files<CR>
+nnoremap <Leader>g :GFiles<CR>
 nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>a :Ag 
