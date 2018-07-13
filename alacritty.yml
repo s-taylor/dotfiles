@@ -83,7 +83,7 @@ render_timer: false
 
 # Use custom cursor colors. If true, display the cursor in the cursor.foreground
 # and cursor.background colors, otherwise invert the colors of the cursor.
-custom_cursor_colors: false
+custom_cursor_colors: true
 
 # Colors (Gruvbox dark)
 colors:
@@ -93,6 +93,10 @@ colors:
     background: '0x282828'
     # soft contrast: background = '0x32302f'
     foreground: '0xebdbb2'
+
+  cursor:
+    foreground: '0xebdbb2'
+    background: '0x458588'
 
   # Normal colors
   normal:
