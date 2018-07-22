@@ -51,3 +51,6 @@ brew install mas
 brew install youtube-dl
 brew install ffmpeg
 brew install libav
+
+# install blueutil
+brew install blueutil
