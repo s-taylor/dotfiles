@@ -19,13 +19,26 @@ snippet co
 abbr console.log(object)
   console.log('${1:#:object}', JSON.stringify($1, null, 2));${0}
 
+#############
+# STORYBOOK #
+#############
+
 snippet add
 abbr storybook .add
   .add('<${1:#:component_name}/>', () => (
     <div>
+      <Scenario>$1</Scenario>
       <$1${0}/>
     </div>
   ));
+
+
+snippet storiesOf
+abbr storiesOf(...)
+  import { storiesOf } from '@storybook/react';
+  import { Scenario } from './.configs/stories';
+
+  storiesOf('${1:#:description}', module)${0};
 
 ###############
 # CHAI ENZYME #
@@ -38,6 +51,10 @@ abbr chai descendants
 snippet find
 abbr expect with find
   expect(wrapper.find('${1:#:component_name}'))${0};
+
+snippet props
+abbr expect with find
+  expect(wrapper.find('${1:#:component_name}')).to.${2:#:have}.props(${3:#:expected});${0};
 
 #########
 # MOCHA #
