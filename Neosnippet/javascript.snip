@@ -19,6 +19,10 @@ snippet co
 abbr console.log(object)
   console.log('${1:#:object}', JSON.stringify($1, null, 2));${0}
 
+snippet com
+abbr console.log(object methods)
+  console.log('${1:#:object} methods:', Object.getOwnPropertyNames($1));${0}
+
 #############
 # STORYBOOK #
 #############
@@ -54,7 +58,7 @@ abbr expect with find
 
 snippet props
 abbr expect with find
-  expect(wrapper.find('${1:#:component_name}')).to.${2:#:have}.props(${3:#:expected});${0};
+  expect(wrapper.find('${1:#:component_name}')).to.${2:have}.props(${3:#:expected});${0};
 
 #########
 # MOCHA #
@@ -82,9 +86,8 @@ abbr it block (async)
 # ES LINT #
 ###########
 snippet disable
-abbr eslint disable rule on line
+abbr eslint disable rule on next line
   // eslint-disable-next-line ${1:#:rule}${0}
-  endsnippet
 
 snippet disableblock
 abbr eslint disable rule block
