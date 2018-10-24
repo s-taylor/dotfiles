@@ -244,7 +244,7 @@ nnoremap <Leader>a :Ag
  let g:NERDSpaceDelims = 1
 
 " Align line-wise comment delimiters flush left instead of following code indentation
-" let g:NERDDefaultAlign = 'start'
+let g:NERDDefaultAlign = 'left'
 
 " --------------
 " Git Gutter
@@ -390,6 +390,12 @@ endif
 
 " Resize splits when the window is resized
 au VimResized * exe "normal! \<c-w>="
+
+" -----------------
+" Performance Tweaks
+" -----------------
+set lazyredraw
+set nocursorline
 
 " -----------------
 " Preferences
