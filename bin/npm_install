@@ -1,0 +1,3 @@
+#!/bin/bash
+
+npm install -g fkill-cli np npm-check tern git-open
