@@ -54,3 +54,6 @@ brew install libav
 
 # install blueutil
 brew install blueutil
+
+# install watch
+brew install watch
