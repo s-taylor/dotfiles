@@ -1,9 +1,14 @@
 #!/bin/bash
 
+mas install 497799835 # Xcode
 mas install 923920635 # Current
 mas install 407963104 # Pixelmator
 mas install 918858936 # Airmail 3
-mas install 775737590 # iA Writer
-mas install 824183456 # Affinity
-mas install 926036361 # LastPass
 mas install 441258766 # Magnet
+mas install 443987910 # 1Password
+mas install 803453959 # Slack
+mas install 903733783 # Tagr
+mas install 937984704 # Amphetamine
+mas install 510620098 # MediaInfo
+mas install 1013897218 # App Cleaner
+# mas install 414030210 # LimeChat
