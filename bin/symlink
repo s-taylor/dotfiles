@@ -14,3 +14,10 @@ mkdir ~/.config/
 mkdir ~/.config/nvim
 ln -s $PWD/init.vim ~/.config/nvim/init.vim
 ln -s $PWD/UltiSnips ~/.config/nvim/UltiSnips
+
+# Symlink for Alacritty
+mkdir ~/.config/
+mkdir ~/.config/alacritty
+rm ~/.alacritty.yml
+rm ~/.config/alacritty.yml
+ln -s $PWD/alacritty.yml ~/.config/alacritty/alacritty.yml

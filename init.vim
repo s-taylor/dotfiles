@@ -8,7 +8,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 
 " Typescript
-Plug 'HerringtonDarkholme/yats.vim', { 'for': 'typescript', 'do': ':!install.sh \| UpdateRemotePlugins' }
+Plug 'HerringtonDarkholme/yats.vim', { 'for': 'typescript', 'do': './install.sh' }
 
 " Styled Components
 Plug 'styled-components/vim-styled-components'
