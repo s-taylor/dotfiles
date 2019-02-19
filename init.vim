@@ -115,8 +115,14 @@ highlight link ALEWarningSign GruvboxYellowSign
 let g:ale_lint_on_text_changed = 'never'
 
 let g:ale_fixers = {
-\   'javascript': ['eslint'],
-\   'typescript': ['tslint', 'eslint']
+\  'javascript': ['eslint'],
+\  'javascript.jsx': ['eslint'],
+\  'typescript': ['tslint', 'eslint']
+\}
+
+let g:ale_linters_ignore = {
+\  'javascript': ['tsserver'],
+\  'javascript.jsx': ['tsserver'],
 \}
 
 let g:ale_fix_on_save = 1

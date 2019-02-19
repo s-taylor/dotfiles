@@ -69,3 +69,4 @@ gum () {
 har () {
   git remote add "$1" git@heroku.com:"$2".git;
 }
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
