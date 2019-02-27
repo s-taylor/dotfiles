@@ -10,7 +10,7 @@ ln -s $PWD/vscode/settings.json ~/Library/Application\ Support/Code/User/setting
 ln -s $PWD/vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
 ln -s $PWD/vscode/snippets ~/Library/Application\ Support/Code/User/snippets
 
-# Initial settings
+# Initial move to dotfiles
 # mv ~/Library/Application\ Support/Code/User/settings.json ~/Projects/personal/dotfiles/vscode
 # mv ~/Library/Application\ Support/Code/User/keybindings.json ~/Projects/personal/dotfiles/vscode
 # mv ~/Library/Application\ Support/Code/User/snippets/ ~/Projects/personal/dotfiles/vscode
