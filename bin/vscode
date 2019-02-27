@@ -1,0 +1,16 @@
+#!/bin/bash
+
+VSCODE="~/Library/Application\ Support/Code/User"
+
+rm $VSCODE/settings.json
+rm $VSCODE/keybindings.json
+rm -rf $VSCODE/snippets
+
+ln -s $PWD/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+ln -s $PWD/vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
+ln -s $PWD/vscode/snippets ~/Library/Application\ Support/Code/User/snippets
+
+# Initial settings
+# mv ~/Library/Application\ Support/Code/User/settings.json ~/Projects/personal/dotfiles/vscode
+# mv ~/Library/Application\ Support/Code/User/keybindings.json ~/Projects/personal/dotfiles/vscode
+# mv ~/Library/Application\ Support/Code/User/snippets/ ~/Projects/personal/dotfiles/vscode

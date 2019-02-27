@@ -1,8 +1,29 @@
 // Place your key bindings in this file to override the defaults
 [
-    { "key": "ctrl+\\", "command": "workbench.action.splitEditorRight" },
-    { "key": "ctrl+-", "command": "workbench.action.splitEditorDown" },
-    { "key": "ctrl+l", "command": "workbench.action.focusRightGroup" },
-    { "key": "ctrl+h", "command": "workbench.action.focusLeftGroup" },
-    { "key": "ctrl+q", "command": "workbench.action.closeActiveEditor" },
+    {
+        "key": "ctrl+\\",
+        "command": "workbench.action.splitEditorRight"
+    },
+    {
+        "key": "ctrl+-",
+        "command": "workbench.action.splitEditorDown"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.focusRightGroup"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "workbench.action.focusLeftGroup"
+    },
+    {
+        "key": "ctrl+q",
+        "command": "workbench.action.closeActiveEditor"
+    },
+    // Vim Extension Bindings (can't be configured in settings)
+    {
+        "key": "shift+tab",
+        "command": "workbench.action.previousEditor",
+        "when": "editorTextFocus"
+    },
 ]

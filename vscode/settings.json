@@ -1,0 +1,51 @@
+{
+    "workbench.colorTheme": "Gruvbox Dark (Hard)",
+    "files.autoSave": "onFocusChange",
+    "javascript.validate.enable": false,
+    "editor.formatOnSave": true,
+    "eslint.autoFixOnSave": true,
+    "window.zoomLevel": 0,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "editor.lineNumbers": "relative",
+    "vim.overrideCopy": true,
+    "vim.insertModeKeyBindings": [],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<tab>"
+            ],
+            "commands": [
+                "workbench.action.nextEditor"
+            ]
+        },
+        {
+            "before": [
+                "<enter>",
+            ],
+            "after": [
+                "o",
+                "<escape>"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "c",
+                "i",
+            ],
+            "commands": [
+                "editor.action.commentLine"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "p",
+            ],
+            "commands": [
+                "workbench.action.quickOpen"
+            ]
+        },
+    ],
+    "vim.leader": "<space>",
+}
