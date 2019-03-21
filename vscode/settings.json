@@ -4,11 +4,21 @@
     "javascript.validate.enable": false,
     "editor.formatOnSave": true,
     "eslint.autoFixOnSave": true,
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 1,
     "typescript.updateImportsOnFileMove.enabled": "always",
     "editor.lineNumbers": "relative",
     "vim.overrideCopy": true,
-    "vim.insertModeKeyBindings": [],
+    // "vim.insertModeKeyBindings": [
+    //     {
+    //         "before": [
+    //             "<C-s>"
+    //         ],
+    //         "commands": [
+    //             "insertSnippet",
+    //             "jumpToNextSnippetPlaceholder",
+    //         ],
+    //     },
+    // ],
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": [
@@ -40,6 +50,16 @@
         {
             "before": [
                 "<leader>",
+                "c",
+                "c",
+            ],
+            "commands": [
+                "editor.action.commentLine"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
                 "p",
             ],
             "commands": [
@@ -48,4 +68,6 @@
         },
     ],
     "vim.leader": "<space>",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 }
