@@ -59,7 +59,7 @@ Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'], 'do': 'npm install' }
 Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'], 'do': 'npm install -g tern' }
-Plug 'mhartington/nvim-typescript', { 'for': 'typescript' }
+Plug 'mhartington/nvim-typescript', { 'for': 'typescript', 'do': './install.sh' }
 
 " CSS colors
 Plug 'ap/vim-css-color'
@@ -142,7 +142,7 @@ let g:jsx_ext_required = 0 " Don't require .jsx extension
 " --------------
 " Set .tsx files to typescript filetype (YATS doesn't officially support .tsx)
 augroup filetypedetect
-    au BufRead,BufNewFile *.tsx set filetype=typescript
+  au BufRead,BufNewFile *.tsx set filetype=typescript
 augroup END
 
 " --------------
