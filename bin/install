@@ -57,3 +57,6 @@ brew install blueutil
 
 # install watch
 brew install watch
+
+# install nmap
+brew install nmap
