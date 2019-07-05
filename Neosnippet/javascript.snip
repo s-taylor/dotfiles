@@ -23,6 +23,10 @@ snippet com
 abbr console.log(object methods)
   console.log('${1:#:object} methods:', Object.getOwnPropertyNames($1));${0}
 
+snippet sleep
+abbr sleep(ms)
+  const sleep = ms => new Promise(r => setTimeout(r, ms));
+
 #############
 # STORYBOOK #
 #############
@@ -94,6 +98,18 @@ abbr eslint disable rule block
   /* eslint-disable ${1:#:rule} */
     ${0}
   /* eslint-enable $1 */
+
+###########
+# PROMISE #
+###########
+snippet pt
+abbr pass through
+  .then(${1:#:res} => {
+    console.log('$1', $1);
+    return res;
+  })${0}
+
+# ---------------------------
 
 # DEFAULT JAVASCRIPT SNIPPETS
 
