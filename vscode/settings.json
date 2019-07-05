@@ -4,7 +4,7 @@
     "javascript.validate.enable": false,
     "editor.formatOnSave": true,
     "eslint.autoFixOnSave": true,
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 0,
     "typescript.updateImportsOnFileMove.enabled": "always",
     "editor.lineNumbers": "relative",
     "vim.overrideCopy": true,
@@ -70,4 +70,5 @@
     "vim.leader": "<space>",
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "editor.tabSize": 2,
 }
