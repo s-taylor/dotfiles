@@ -11,7 +11,7 @@ Plug 'mxw/vim-jsx'
 Plug 'HerringtonDarkholme/yats.vim', { 'for': 'typescript', 'do': './install.sh' }
 
 " Styled Components
-Plug 'styled-components/vim-styled-components'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
 " Graph QL
 Plug 'jparise/vim-graphql'
