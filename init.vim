@@ -59,9 +59,6 @@ Plug 'ap/vim-css-color'
 " Bbye (Buffer Bye)
 Plug 'moll/vim-bbye'
 
-" vim-node
-Plug 'moll/vim-node', { 'for': 'javascript' }
-
 " Surround
 Plug 'tpope/vim-surround'
 
