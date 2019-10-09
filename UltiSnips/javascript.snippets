@@ -1,14 +1,3 @@
-global !p
-def formatVariableName(path):
-  lastPart = path.split('/')[-1]
-  if lastPart == 'underscore' or lastPart == 'lodash':
-    return '_'
-  elif lastPart == 'jquery':
-    return '$'
-  else:
-    return re.sub(r'[_\-]', '', lastPart.title())
-endglobal
-
 snippet cl "console.log('var', var)" b
 console.log('$1', $1);$0
 endsnippet
@@ -30,18 +19,14 @@ console.log('$1', JSON.stringify($1, null, 2));$0
 endsnippet
 
 snippet re "require" b
-const `!p
-snip.rv = formatVariableName(t[1])
-` = require('${1}');$0
+const $2 = require('$1');$0
 endsnippet
 
-snippet im "require" b
-import `!p
-snip.rv = formatVariableName(t[1])
-` from '${1}';$0
+snippet im "import" b
+import $2 from '$1';$0
 endsnippet
 
-snippet for "for (...) {...}" b
+snippet for "for (array)" b
 for (var i = 0; ${1:myArray}.length < i; i++) {
   $0
 }
