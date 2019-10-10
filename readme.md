@@ -90,16 +90,17 @@
 
 ## Allow Python 2/3 Plugins
 
-1. `pip2 install --user --upgrade neovim`
+1. `python2 -m pip install --user --upgrade pynvim`
 1. `brew install python3`
-1. `pip3 install --user --upgrade neovim`
+1. `python3 -m pip install --user --upgrade pynvim`
 
 Refer [here](https://neovim.io/doc/user/provider.html#provider-python)
 
 ## Keyboard ctrl + h doesn't work
 
 Run the commands
-```
+
+```sh
 infocmp $TERM | sed 's/kbs=^[hH]/kbs=\\177/' > $TERM.ti
 $TERM.ti
 ```
@@ -109,31 +110,25 @@ And [here](https://github.com/neovim/neovim/issues/2048)
 
 ## Install Ruby Gem
 
-`gem install neovim`
+```sh
+gem install neovim
+```
+
+If you get a "You don't have write permission..." error
+Refer [here](https://github.com/rbenv/rbenv/issues/938#issuecomment-285342541)
+
+You may need to install `rbenv` (a ruby version manager), as well as install a ruby version and set it as the global default? Refer link above.
+
+## Install Node Module
+
+```sh
+npm install -g neovim
+```
 
 ## Confirm all is OK
 
 1. nvim -u NORC
 1. :CheckHealth
-
-## YouCompleteMe
-
-**NOTE:** This is only necessary if PlugInstall post install hook fails
-
-1. `brew install cmake`
-1. `cd ~/.vim/plugged/YouCompleteMe`
-1. `./install.py --tern-completer`
-
---tern-completer is for javascript support see https://github.com/Valloric/YouCompleteMe
-
-You must also configure a .tern-project file in each directory or ~/.tern-config
-Refer https://github.com/Valloric/YouCompleteMe#configuring-tern-for-node-support
-
-Snippets are saved in the dotfiles repo, so you should create a symlink for this
-`ln -s [DOTFILES_PATH]/UltiSnips ~/.vim/UltiSnips`
-
-Getting this error `YouCompleteme unavailable : no module named future` ?
-[Github Issue Link](https://github.com/Valloric/YouCompleteMe/issues/2271)
 
 ---
 
