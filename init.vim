@@ -127,14 +127,6 @@ let g:javascript_plugin_flow = 1 " Enable flow support
 let g:jsx_ext_required = 0 " Don't require .jsx extension
 
 " --------------
-" YATS (typescript syntax)
-" --------------
-" Set .tsx files to typescript filetype (YATS doesn't officially support .tsx)
-augroup filetypedetect
-  au BufRead,BufNewFile *.tsx set filetype=typescript
-augroup END
-
-" --------------
 " Markdown
 " --------------
 let g:vim_markdown_folding_disabled = 1
