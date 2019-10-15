@@ -14,6 +14,7 @@ mkdir ~/.config/
 mkdir ~/.config/nvim
 ln -s $PWD/init.vim ~/.config/nvim/init.vim
 ln -s $PWD/UltiSnips ~/.config/nvim/UltiSnips
+ln -s $PWD/coc-settings.json ~/.config/nvim/coc-settings.json
 
 # Symlink for Alacritty
 mkdir ~/.config/
