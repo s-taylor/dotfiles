@@ -13,9 +13,6 @@ Plug 'HerringtonDarkholme/yats.vim', { 'for': 'typescript', 'do': './install.sh'
 " Styled Components
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
-" Graph QL
-Plug 'jparise/vim-graphql'
-
 " Vim Markdown
 Plug 'godlygeek/tabular', { 'for': 'markdown' }
 Plug 'plasticboy/vim-markdown'
