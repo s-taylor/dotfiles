@@ -2,7 +2,7 @@ snippet cl "console.log('var', var)" b
 console.log('$1', $1);$0
 endsnippet
 
-snippet cy "console.log('<yank>', <yank>)"
+snippet cy "console.log('<yank>', <yank>)" b
 console.log('${1:`!v @"`}', $1);$0
 endsnippet
 
@@ -10,11 +10,11 @@ snippet cm "console.log(message)" b
 console.log('$1');$0
 endsnippet
 
-snippet ca "console.log(args)"
+snippet ca "console.log(args)" b
 console.log('$1 args', Array.prototype.slice.call(arguments));$0
 endsnippet
 
-snippet co "console.log(object)"
+snippet co "console.log(object)" b
 console.log('$1', JSON.stringify($1, null, 2));$0
 endsnippet
 
@@ -315,5 +315,16 @@ endsnippet
 snippet test "ava test" b
 test('${1:Test Description}', (t) => {
   $0
+});
+endsnippet
+
+#########
+# SINON #
+#########
+snippet sandbox "sandbox" b
+const sandbox = sinon.createSandbox();
+
+afterEach(() => {
+	sandbox.restore();
 });
 endsnippet
