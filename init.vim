@@ -257,7 +257,7 @@ set nobackup
 set nowritebackup
 
 " Better display for messages
-set cmdheight=2
+" set cmdheight=2
 
 " You will have bad experience for diagnostic messages when it's default 4000.
 set updatetime=300
@@ -371,9 +371,9 @@ nmap <leader>rn <Plug>(coc-rename)
 " nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 
-" ----
+" --------------------------------
 " Conquer of Completion - Snippets
-" ----
+" --------------------------------
 
 " Use <C-s> for trigger snippet expand.
 imap <C-s> <Plug>(coc-snippets-expand)
@@ -389,6 +389,11 @@ let g:coc_snippet_prev = '<c-k>'
 
 " Use <C-j> for both expand and jump (make expand higher priority.)
 " imap <C-j> <Plug>(coc-snippets-expand-jump)
+
+" --------------------------------
+" Conquer of Completion - Typescript
+" --------------------------------
+autocmd FileType typescript,typescript.tsx nnoremap <leader>r :CocCommand tsserver.restart<CR>
 
 " -----------------
 " Keyboard shortcuts
@@ -462,7 +467,7 @@ inoremap <M-k> <C-o>k
 inoremap <M-l> <C-o>l
 
 " toggle between relative and absolute line numbers
-nnoremap <leader>r :set rnu!<CR>
+" nnoremap <leader>r :set rnu!<CR>
 
 " -----------------
 " Config
