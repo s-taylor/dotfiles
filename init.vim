@@ -53,8 +53,8 @@ Plug 'morhetz/gruvbox'
 " Conquer of Completion
 Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
 
-" CSS colors
-Plug 'ap/vim-css-color'
+" Nvim Colorizer
+Plug 'norcalli/nvim-colorizer.lua'
 
 " Bbye (Buffer Bye)
 Plug 'moll/vim-bbye'
@@ -87,10 +87,102 @@ let g:python3_host_prog = '/usr/local/bin/python3'
 " fix YouCompleteMe python path issue
 let g:ycm_path_to_python_interpreter = '/usr/bin/python'
 
+" -----------------
+" Config
+" -----------------
+" Enable true colour in vim
+if has("termguicolors")
+  set termguicolors
+endif
+
+" Resolve issue with <C-h>
+" see https://github.com/neovim/neovim/issues/2048
+if has('nvim')
+  nmap <BS> <C-W>h
+endif
+
+" Set colorscheme default
+colorscheme gruvbox
+set background=dark
+
+" Default to using System Clipboard
+set clipboard^=unnamed,unnamedplus
+
+" Fix Delete key OSX
+set backspace=indent,eol,start
+
+" Enable syntax highlighting
+syntax enable
+
+" Use the same symbols as TextMate for tabstops and EOLs
+if has('mac')
+  set listchars=tab:▸\ ,eol:¬,trail:·
+  set list
+endif
+
+" Resize splits when the window is resized
+au VimResized * exe "normal! \<c-w>="
+
+" -----------------
+" Performance Tweaks
+" -----------------
+set lazyredraw
+set nocursorline
+
+" -----------------
+" Preferences
+" -----------------
+" No backups
+set nobackup
+set noswapfile
+set nowb
+
+" Add line numbers to vim
+set number
+
+" Set line numbers to relative
+set rnu
+
+" Tabs are 2 spaces
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+
+" Show command input (shows line count in visual mode)
+set showcmd
+
+" Don't close buffer when editing another file (:e <file>)
+set hidden
+
+" Add mouse support in neovim
+set mouse=a
+
+"testing stuff from - http://nvie.com/posts/how-i-boosted-my-vim/
+set nowrap          " don't wrap lines
+set autoindent      " always set autoindenting on
+set copyindent      " copy the previous indentation on autoindenting
+set showmatch       " set show matching parenthesis
+set ignorecase      " ignore case when searching
+set smartcase       " ignore case if search pattern is all lowercase, case-sensitive otherwise
+set smarttab        " insert tabs on the start of a line according to shiftwidth, not tabstop
+set hlsearch        " highlight search terms
+set incsearch       " show search matches as you type
+set history=1000    " remember more commands and search history
+set undolevels=1000 " use many muchos levels of undo
+set wildignore=*.swp,*.bak,*.pyc,*.class
+set title           " change the terminal's title
+set visualbell      " don't beep
+set noerrorbells    " don't beep
+
 " --------------
 " Remap leader key to ;
 " --------------
 let mapleader = "\<Space>"
+
+" -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+" PLUGINS
+" -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 " --------------
 " Ale
@@ -243,6 +335,11 @@ let g:gitgutter_map_keys = 0
 " vim-bbye
 " --------
 nnoremap <C-q> :Bdelete<CR>
+
+" --------------
+" Nvim Colorizer
+" --------------
+lua require'colorizer'.setup()
 
 " ----
 " Conquer of Completion (coc.vim)
@@ -472,90 +569,3 @@ inoremap <M-l> <C-o>l
 " toggle between relative and absolute line numbers
 " nnoremap <leader>r :set rnu!<CR>
 
-" -----------------
-" Config
-" -----------------
-" Enable true colour in vim
-if has("termguicolors")
-  set termguicolors
-endif
-
-" Resolve issue with <C-h>
-" see https://github.com/neovim/neovim/issues/2048
-if has('nvim')
-  nmap <BS> <C-W>h
-endif
-
-" Set colorscheme default
-colorscheme gruvbox
-set background=dark
-
-" Default to using System Clipboard
-set clipboard^=unnamed,unnamedplus
-
-" Fix Delete key OSX
-set backspace=indent,eol,start
-
-" Enable syntax highlighting
-syntax enable
-
-" Use the same symbols as TextMate for tabstops and EOLs
-if has('mac')
-  set listchars=tab:▸\ ,eol:¬,trail:·
-  set list
-endif
-
-" Resize splits when the window is resized
-au VimResized * exe "normal! \<c-w>="
-
-" -----------------
-" Performance Tweaks
-" -----------------
-set lazyredraw
-set nocursorline
-
-" -----------------
-" Preferences
-" -----------------
-" No backups
-set nobackup
-set noswapfile
-set nowb
-
-" Add line numbers to vim
-set number
-
-" Set line numbers to relative
-set rnu
-
-" Tabs are 2 spaces
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
-set expandtab
-
-" Show command input (shows line count in visual mode)
-set showcmd
-
-" Don't close buffer when editing another file (:e <file>)
-set hidden
-
-" Add mouse support in neovim
-set mouse=a
-
-"testing stuff from - http://nvie.com/posts/how-i-boosted-my-vim/
-set nowrap          " don't wrap lines
-set autoindent      " always set autoindenting on
-set copyindent      " copy the previous indentation on autoindenting
-set showmatch       " set show matching parenthesis
-set ignorecase      " ignore case when searching
-set smartcase       " ignore case if search pattern is all lowercase, case-sensitive otherwise
-set smarttab        " insert tabs on the start of a line according to shiftwidth, not tabstop
-set hlsearch        " highlight search terms
-set incsearch       " show search matches as you type
-set history=1000    " remember more commands and search history
-set undolevels=1000 " use many muchos levels of undo
-set wildignore=*.swp,*.bak,*.pyc,*.class
-set title           " change the terminal's title
-set visualbell      " don't beep
-set noerrorbells    " don't beep
