@@ -1,6 +1,10 @@
 {
   "tsserver.npm": "/Users/simontaylor/.nvm/versions/node/v12.11.1/bin/npm",
+  "tsserver.log": "normal",
   "snippets.extends": {
-    "typescriptreact": ["javascript"]
-  }
+    "javascriptreact": ["javascript"],
+    "typescriptreact": ["javascript"],
+    "typescript": ["javascript"]
+  },
+  "suggest.timeout": 5000
 }

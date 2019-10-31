@@ -52,6 +52,8 @@ Plug 'morhetz/gruvbox'
 
 " Conquer of Completion
 Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
+Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
 
 " Nvim Colorizer
 Plug 'norcalli/nvim-colorizer.lua'
