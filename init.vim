@@ -18,14 +18,14 @@ Plug 'jparise/vim-graphql'
 
 " Vim Markdown
 Plug 'godlygeek/tabular', { 'for': 'markdown' }
-Plug 'plasticboy/vim-markdown'
+Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 
 " Editor config for vim
 Plug 'editorconfig/editorconfig-vim'
 
 " Nerdtree File Browser
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'Xuyuanp/nerdtree-git-plugin'
+" Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+" Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Nerd Commenter
 Plug 'scrooloose/nerdcommenter'
@@ -54,6 +54,7 @@ Plug 'morhetz/gruvbox'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
 Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
+Plug 'weirongxu/coc-explorer', {'do': 'yarn install --frozen-lockfile'}
 
 " Nvim Colorizer
 Plug 'norcalli/nvim-colorizer.lua'
@@ -63,6 +64,7 @@ Plug 'moll/vim-bbye'
 
 " Surround
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat' " Allows repeating surround commands
 
 " FZF - fuzzy file search
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
@@ -200,7 +202,7 @@ let g:ale_lint_on_text_changed = 'never'
 let g:ale_fixers = {
 \  'javascript': ['eslint'],
 \  'javascript.jsx': ['eslint'],
-\  'typescript': ['tslint', 'eslint']
+\  'typescript': ['eslint']
 \}
 
 let g:ale_linters_ignore = {
@@ -496,6 +498,11 @@ let g:coc_snippet_prev = '<c-k>'
 " Conquer of Completion - Typescript
 " --------------------------------
 autocmd FileType typescript,typescript.tsx nnoremap <leader>r :CocCommand tsserver.restart<CR>
+
+" --------------------------------
+" Conquer of Completion - explorer
+" --------------------------------
+nnoremap <C-n> :CocCommand explorer<CR>
 
 " -----------------
 " Keyboard shortcuts
