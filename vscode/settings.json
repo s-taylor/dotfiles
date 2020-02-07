@@ -1,74 +1,27 @@
 {
-    "workbench.colorTheme": "Gruvbox Dark (Hard)",
     "files.autoSave": "onFocusChange",
-    "javascript.validate.enable": false,
     "editor.formatOnSave": true,
-    "eslint.autoFixOnSave": true,
-    "window.zoomLevel": 0,
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "editor.lineNumbers": "relative",
-    "vim.overrideCopy": true,
-    // "vim.insertModeKeyBindings": [
-    //     {
-    //         "before": [
-    //             "<C-s>"
-    //         ],
-    //         "commands": [
-    //             "insertSnippet",
-    //             "jumpToNextSnippetPlaceholder",
-    //         ],
-    //     },
-    // ],
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "<tab>"
-            ],
-            "commands": [
-                "workbench.action.nextEditor"
-            ]
-        },
-        {
-            "before": [
-                "<enter>",
-            ],
-            "after": [
-                "o",
-                "<escape>"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "c",
-                "i",
-            ],
-            "commands": [
-                "editor.action.commentLine"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "c",
-                "c",
-            ],
-            "commands": [
-                "editor.action.commentLine"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "p",
-            ],
-            "commands": [
-                "workbench.action.quickOpen"
-            ]
-        },
-    ],
-    "vim.leader": "<space>",
     "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "editor.tabSize": 2,
+    "eslint.autoFixOnSave": true,
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        {
+            "language": "typescript",
+            "autoFix": true
+        },
+        {
+            "language": "typescriptreact",
+            "autoFix": true
+        }
+    ],
+    "javascript.validate.enable": false,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "workbench.colorTheme": "Gruvbox Dark (Medium)",
+    "window.zoomLevel": 0,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
 }
