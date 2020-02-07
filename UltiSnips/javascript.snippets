@@ -328,3 +328,15 @@ afterEach(() => {
 	sandbox.restore();
 });
 endsnippet
+
+
+############
+# CODECEPT #
+############
+snippet grabHTML "log HTML from selector" b
+console.log('$1', await I.grabHTMLFrom($1));$0
+endsnippet
+
+snippet logHTML "log HTML from selector" b
+console.log('$1', await I.grabHTMLFrom($1));$0
+endsnippet
