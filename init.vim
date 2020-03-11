@@ -3,29 +3,32 @@ call plug#begin('~/.vim/plugged')
 " Ale, Asynchronous lint engine
 Plug 'w0rp/ale'
 
-" Javascript syntax highlighting
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
+" Add polyglot
+Plug 'sheerun/vim-polyglot'
 
-" Typescript
-Plug 'HerringtonDarkholme/yats.vim', { 'for': 'typescript', 'do': './install.sh' }
+" " Javascript syntax highlighting
+" Plug 'pangloss/vim-javascript'
+" Plug 'mxw/vim-jsx'
 
-" Styled Components
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+" " Typescript
+" Plug 'HerringtonDarkholme/yats.vim', { 'for': 'typescript', 'do': './install.sh' }
+
+" " Styled Components
+" Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
 " Graph QL
 Plug 'jparise/vim-graphql'
 
-" Vim Markdown
-Plug 'godlygeek/tabular', { 'for': 'markdown' }
-Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
+" " Vim Markdown
+" Plug 'godlygeek/tabular', { 'for': 'markdown' }
+" Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 
 " Editor config for vim
 Plug 'editorconfig/editorconfig-vim'
 
 " Nerdtree File Browser
-" Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-" Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Nerd Commenter
 Plug 'scrooloose/nerdcommenter'
@@ -54,7 +57,8 @@ Plug 'morhetz/gruvbox'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
 Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
-Plug 'weirongxu/coc-explorer', {'do': 'yarn install --frozen-lockfile'}
+" > Too slow at the moment!
+" Plug 'weirongxu/coc-explorer', {'do': 'yarn install --frozen-lockfile'}
 
 " Nvim Colorizer
 Plug 'norcalli/nvim-colorizer.lua'
@@ -202,7 +206,8 @@ let g:ale_lint_on_text_changed = 'never'
 let g:ale_fixers = {
 \  'javascript': ['eslint'],
 \  'javascript.jsx': ['eslint'],
-\  'typescript': ['eslint']
+\  'typescript': ['eslint'],
+\  'typescriptreact': ['eslint']
 \}
 
 let g:ale_linters_ignore = {
@@ -502,7 +507,7 @@ autocmd FileType typescript,typescript.tsx nnoremap <leader>r :CocCommand tsserv
 " --------------------------------
 " Conquer of Completion - explorer
 " --------------------------------
-nnoremap <C-n> :CocCommand explorer<CR>
+" nnoremap <C-n> :CocCommand explorer<CR>
 
 " -----------------
 " Keyboard shortcuts
