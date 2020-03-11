@@ -516,6 +516,16 @@ autocmd FileType typescript,typescript.tsx nnoremap <leader>r :CocCommand tsserv
 " https://stackoverflow.com/questions/16359878/vim-how-to-map-shift-enter
 autocmd CmdwinEnter * nnoremap <CR> <CR>
 autocmd BufReadPost quickfix nnoremap <CR> <CR>
+
+"auto-center on movement commands
+nmap G Gzz
+nmap n nzz
+nmap N Nzz
+nmap } }zz
+nmap { {zz
+nmap <C-d> <C-d>zz
+nmap <C-u> <C-u>zz
+
 " Insert a blank line above without entering insert mode
 nnoremap <S-Enter> O<Esc>
 " Insert a blank line below without entering insert mode
@@ -565,21 +575,7 @@ vnoremap * "fy/<C-R>f<CR>N
 " Replace selected text
 vnoremap <leader>f "fy:%sno/<C-R>f/<C-R>f/gc<Left><Left><Left>
 
-" provide hjkl movements in Command-line mode via the <Alt> modifier key
-cnoremap <M-h> <Left>
-cnoremap <M-j> <Down>
-cnoremap <M-k> <Up>
-cnoremap <M-l> <Right>
-
-" Map Esc to jj in insert mode
-"inoremap jj <Esc>
-
-" provide hjkl movements in Insert mode via the <Alt> modifier key
-inoremap <M-h> <C-o>h
-inoremap <M-j> <C-o>j
-inoremap <M-k> <C-o>k
-inoremap <M-l> <C-o>l
-
 " toggle between relative and absolute line numbers
 " nnoremap <leader>r :set rnu!<CR>
+
 
