@@ -88,12 +88,17 @@ if &term =~ '^screen'
     execute "set <xLeft>=\e[1;*D"
 endif
 
-" Link python executables
-let g:python_host_prog = '/usr/local/bin/python2'
-let g:python3_host_prog = '/usr/local/bin/python3'
+" Set python path
+if has('unix')
+  let g:python_host_prog  = '/usr/bin/python'
+  let g:python3_host_prog = '/usr/bin/python3'
+else
+  let g:python_host_prog = '/usr/local/bin/python2'
+  let g:python3_host_prog = '/usr/local/bin/python3'
+endif
 
 " fix YouCompleteMe python path issue
-let g:ycm_path_to_python_interpreter = '/usr/bin/python'
+" let g:ycm_path_to_python_interpreter = '/usr/bin/python'
 
 " -----------------
 " Config
