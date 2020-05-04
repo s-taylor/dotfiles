@@ -71,7 +71,8 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat' " Allows repeating surround commands
 
 " FZF - fuzzy file search
-Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -328,7 +329,7 @@ nnoremap <Leader>p :Files<CR>
 nnoremap <Leader>g :GFiles<CR>
 nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>f :Files<CR>
-nnoremap <Leader>a :Ag 
+nnoremap <Leader>t :Rg 
 
 " --------------
 " Nerd Commenter
