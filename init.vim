@@ -90,12 +90,12 @@ if &term =~ '^screen'
 endif
 
 " Set python path
-if has('unix')
-  let g:python_host_prog  = '/usr/bin/python'
-  let g:python3_host_prog = '/usr/bin/python3'
-else
+if has('mac')
   let g:python_host_prog = '/usr/local/bin/python2'
   let g:python3_host_prog = '/usr/local/bin/python3'
+else
+  let g:python_host_prog  = '/usr/bin/python'
+  let g:python3_host_prog = '/usr/bin/python3'
 endif
 
 " fix YouCompleteMe python path issue
