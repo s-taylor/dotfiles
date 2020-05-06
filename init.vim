@@ -4,17 +4,17 @@ call plug#begin('~/.vim/plugged')
 Plug 'w0rp/ale'
 
 " Add polyglot
-Plug 'sheerun/vim-polyglot'
+" Plug 'sheerun/vim-polyglot'
 
 " " Javascript syntax highlighting
-" Plug 'pangloss/vim-javascript'
-" Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 
 " " Typescript
-" Plug 'HerringtonDarkholme/yats.vim', { 'for': 'typescript', 'do': './install.sh' }
+Plug 'HerringtonDarkholme/yats.vim'
 
 " " Styled Components
-" Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
 " Graph QL
 Plug 'jparise/vim-graphql'
@@ -54,7 +54,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'morhetz/gruvbox'
 
 " Conquer of Completion
-Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
 " > Too slow at the moment!
@@ -97,9 +97,6 @@ else
   let g:python_host_prog  = '/usr/bin/python'
   let g:python3_host_prog = '/usr/bin/python3'
 endif
-
-" fix YouCompleteMe python path issue
-" let g:ycm_path_to_python_interpreter = '/usr/bin/python'
 
 " -----------------
 " Config
