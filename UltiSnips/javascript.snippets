@@ -136,6 +136,26 @@ it('${1:statement}', async () => {
 });
 endsnippet
 
+########
+# CHAI #
+########
+snippet et "expect throw"
+expect(() => ${1:<function>}).to.throw(${2:<error>}, ${3:<message>});
+endsnippet
+
+snippet ent "expect NOT throw"
+expect(() => ${1:<function>}).to.not.throw();
+endsnippet
+
+
+snippet er "expect reject"
+await expect(${1:<function>}).to.be.rejectedWith(${2:<error>}, ${3:<message>});
+endsnippet
+
+snippet enr "expect NOT reject"
+await expect(${1:<function>}).to.not.be.rejected();
+endsnippet
+
 ############
 # PROMISES #
 ############
