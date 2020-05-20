@@ -1,5 +1,5 @@
 {
-  "tsserver.npm": "/Users/simontaylor/.nvm/versions/node/v12.11.1/bin/npm",
+  "tsserver.npm": "/home/simontaylor/.nvm/versions/node/v12.16.3/bin/npm ",
   "tsserver.log": "normal",
   "snippets.extends": {
     "javascriptreact": ["javascript"],

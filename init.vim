@@ -115,6 +115,7 @@ endif
 " Set colorscheme default
 colorscheme gruvbox
 set background=dark
+let g:gruvbox_contrast_dark='hard'
 
 " Default to using System Clipboard
 set clipboard^=unnamed,unnamedplus
