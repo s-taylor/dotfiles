@@ -521,14 +521,20 @@ autocmd FileType typescript,typescript.tsx nnoremap <leader>r :CocCommand tsserv
 autocmd CmdwinEnter * nnoremap <CR> <CR>
 autocmd BufReadPost quickfix nnoremap <CR> <CR>
 
+" rebind colon to be accessible without shift
+nnoremap ; :
+nnoremap : ;
+vnoremap ; :
+vnoremap : ;
+
 "auto-center on movement commands
-nmap G Gzz
-nmap n nzz
-nmap N Nzz
-nmap } }zz
-nmap { {zz
-nmap <C-d> <C-d>zz
-nmap <C-u> <C-u>zz
+" nmap G Gzz
+" nmap n nzz
+" nmap N Nzz
+" nmap } }zz
+" nmap { {zz
+" nmap <C-d> <C-d>zz
+" nmap <C-u> <C-u>zz
 
 " Insert a blank line above without entering insert mode
 nnoremap <S-Enter> O<Esc>
