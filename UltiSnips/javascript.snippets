@@ -1,3 +1,9 @@
+# Ultinips manual
+# https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
+
+# Using visual block
+# http://vimcasts.org/episodes/ultisnips-visual-placeholder/
+
 snippet cl "console.log('var', var)" b
 console.log('$1', $1);$0
 endsnippet
@@ -140,23 +146,23 @@ endsnippet
 # CHAI #
 ########
 snippet et "expect throw"
-expect(() => ${1:<function>}).to.throw(${2:<error>}, ${3:<message>});
+expect(() => ${1:${VISUAL:<function>}}).to.throw(${2:<error>}, ${3:<message>});
 endsnippet
 
 snippet ent "expect NOT throw"
-expect(() => ${1:<function>}).to.not.throw;
+expect(() => ${1:${VISUAL:<function>}}).to.not.throw;
 endsnippet
 
 
-########
+####################
 # CHAI AS PROMISED #
-########
+####################
 snippet er "expect reject"
-await expect(${1:<function>}).to.be.rejectedWith(${2:<error>}, ${3:<message>});
+await expect(${1:${VISUAL:<function>}}).to.be.rejectedWith(${2:<error>}, ${3:<message>});
 endsnippet
 
 snippet enr "expect NOT reject"
-await expect(${1:<function>}).to.not.be.rejected;
+await expect(${1:${VISUAL:<function>}}).to.not.be.rejected;
 endsnippet
 
 ############
