@@ -521,12 +521,6 @@ autocmd FileType typescript,typescript.tsx nnoremap <leader>r :CocCommand tsserv
 autocmd CmdwinEnter * nnoremap <CR> <CR>
 autocmd BufReadPost quickfix nnoremap <CR> <CR>
 
-" rebind colon to be accessible without shift
-nnoremap ; :
-nnoremap : ;
-vnoremap ; :
-vnoremap : ;
-
 "auto-center on movement commands
 " nmap G Gzz
 " nmap n nzz
