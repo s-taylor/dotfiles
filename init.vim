@@ -187,6 +187,9 @@ set title           " change the terminal's title
 set visualbell      " don't beep
 set noerrorbells    " don't beep
 
+" set indentation based on filetype
+filetype plugin indent on
+
 " --------------
 " Remap leader key to ;
 " --------------
