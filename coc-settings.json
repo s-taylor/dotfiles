@@ -1,11 +1,13 @@
 {
-  "tsserver.npm": "/home/simontaylor/.nvm/versions/node/v12.16.3/bin/npm ",
+  "tsserver.npm": "/home/simontaylor/.nvm/versions/node/v14.6.0/bin/npm ",
   "tsserver.log": "normal",
+  "snippets.priority": 200,
   "snippets.extends": {
     "javascriptreact": ["javascript"],
     "typescriptreact": ["javascript"],
     "typescript": ["javascript"]
   },
+  "snippets.loadFromExtensions": false,
   "explorer.quitOnOpen": true,
   "explorer.icon.enableNerdfont": true,
   "suggest.timeout": 5000
