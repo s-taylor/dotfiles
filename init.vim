@@ -94,7 +94,7 @@ if has('mac')
   let g:python_host_prog = '/usr/local/bin/python2'
   let g:python3_host_prog = '/usr/local/bin/python3'
 else
-  let g:python_host_prog  = '/usr/bin/python'
+  let g:python_host_prog  = '/usr/bin/python2'
   let g:python3_host_prog = '/usr/bin/python3'
 endif
 
@@ -360,7 +360,7 @@ lua require'colorizer'.setup()
 " ----
 " Conquer of Completion (coc.vim)
 " ----
-let g:coc_node_path = '/home/simontaylor/.nvm/versions/node/v12.16.3/bin/node'
+let g:coc_node_path = '/home/staylor/.nvm/versions/node/v14.15.0/bin/node'
 
 " Install these plugins
 " :CocInstall coc-tsserver
