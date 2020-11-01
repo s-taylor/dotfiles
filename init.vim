@@ -3,23 +3,20 @@ call plug#begin('~/.vim/plugged')
 " Ale, Asynchronous lint engine
 Plug 'w0rp/ale'
 
-" Add polyglot
-" Plug 'sheerun/vim-polyglot'
-
-" " Javascript syntax highlighting
+" Javascript syntax highlighting
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 
-" " Typescript
+" Typescript
 Plug 'HerringtonDarkholme/yats.vim'
 
-" " Styled Components
+" Styled Components
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
 " Graph QL
 Plug 'jparise/vim-graphql'
 
-" " Vim Markdown
+" Vim Markdown
 " Plug 'godlygeek/tabular', { 'for': 'markdown' }
 " Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 
@@ -357,9 +354,9 @@ nnoremap <C-q> :Bdelete<CR>
 " --------------
 lua require'colorizer'.setup()
 
-" ----
+" -------------------------------
 " Conquer of Completion (coc.vim)
-" ----
+" -------------------------------
 let g:coc_node_path = '/home/staylor/.nvm/versions/node/v14.15.0/bin/node'
 
 " Install these plugins
@@ -512,11 +509,6 @@ let g:coc_snippet_prev = '<c-k>'
 " --------------------------------
 autocmd FileType typescript,typescript.tsx nnoremap <leader>r :CocCommand tsserver.restart<CR>
 
-" --------------------------------
-" Conquer of Completion - explorer
-" --------------------------------
-" nnoremap <C-n> :CocCommand explorer<CR>
-
 " -----------------
 " Keyboard shortcuts
 " -----------------
@@ -524,15 +516,6 @@ autocmd FileType typescript,typescript.tsx nnoremap <leader>r :CocCommand tsserv
 " https://stackoverflow.com/questions/16359878/vim-how-to-map-shift-enter
 autocmd CmdwinEnter * nnoremap <CR> <CR>
 autocmd BufReadPost quickfix nnoremap <CR> <CR>
-
-"auto-center on movement commands
-" nmap G Gzz
-" nmap n nzz
-" nmap N Nzz
-" nmap } }zz
-" nmap { {zz
-" nmap <C-d> <C-d>zz
-" nmap <C-u> <C-u>zz
 
 " Insert a blank line above without entering insert mode
 nnoremap <S-Enter> O<Esc>
@@ -585,5 +568,3 @@ vnoremap <leader>f "fy:%sno/<C-R>f/<C-R>f/gc<Left><Left><Left>
 
 " toggle between relative and absolute line numbers
 " nnoremap <leader>r :set rnu!<CR>
-
-
