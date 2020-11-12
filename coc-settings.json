@@ -1,5 +1,5 @@
 {
-  "tsserver.npm": "/home/simontaylor/.nvm/versions/node/v14.6.0/bin/npm ",
+  "tsserver.npm": "/home/staylor/.nvm/versions/node/v14.15.0/bin/node",
   "tsserver.log": "normal",
   "snippets.priority": 200,
   "snippets.extends": {

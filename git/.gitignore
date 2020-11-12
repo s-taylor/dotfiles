@@ -2,3 +2,6 @@
 *.sw?
 .tern-port
 .tern-project
+.yalc
+yalc.lock
+yalc.sig
