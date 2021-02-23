@@ -1,3 +1,4 @@
 #!/bin/bash
 
 npm install -g npm fkill-cli np npm-check tern git-open neovim jay-repl yarn
+npx npm-merge-driver install --global
