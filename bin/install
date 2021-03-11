@@ -13,7 +13,7 @@ brew install ruby
 
 # install Tmux
 brew install tmux
-brew install reattach-to-user-namespace
+# brew install reattach-to-user-namespace
 
 # install neovim
 brew tap neovim/neovim
