@@ -357,7 +357,7 @@ lua require'colorizer'.setup()
 " -------------------------------
 " Conquer of Completion (coc.vim)
 " -------------------------------
-let g:coc_node_path = '/home/staylor/.nvm/versions/node/v14.15.0/bin/node'
+let g:coc_node_path = '/home/staylor/.nvm/versions/node/v14.16.0/bin/node'
 
 " Install these plugins
 " :CocInstall coc-tsserver
