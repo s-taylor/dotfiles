@@ -86,13 +86,13 @@ if &term =~ '^screen'
     execute "set <xLeft>=\e[1;*D"
 endif
 
-" Set python path
+" Set python path (python 2 is EOL)
 if has('mac')
-  let g:python_host_prog = '/usr/local/bin/python2'
+  " let g:python_host_prog = '/usr/local/bin/python2'
   let g:python3_host_prog = '/usr/local/bin/python3'
 else
-  let g:python_host_prog  = '/usr/bin/python2'
-  let g:python3_host_prog = '/usr/bin/python3'
+  " let g:python_host_prog  = '/usr/bin/python2'
+  let g:python3_host_prog = '/home/linuxbrew/.linuxbrew/bin/python3'
 endif
 
 " -----------------
