@@ -60,3 +60,6 @@ brew install watch
 
 # install nmap
 brew install nmap
+
+# install exa
+brew install exa
