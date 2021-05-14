@@ -24,11 +24,11 @@ Plug 'jparise/vim-graphql'
 Plug 'editorconfig/editorconfig-vim'
 
 " Nerdtree File Browser
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Nerd Commenter
-Plug 'scrooloose/nerdcommenter'
+Plug 'preservim/nerdcommenter'
 
 " Lightline
 Plug 'itchyny/lightline.vim'
