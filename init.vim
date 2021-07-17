@@ -3,32 +3,22 @@ call plug#begin('~/.vim/plugged')
 " Ale, Asynchronous lint engine
 Plug 'w0rp/ale'
 
-" Javascript syntax highlighting
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-
-" Typescript
-Plug 'HerringtonDarkholme/yats.vim'
-
-" Styled Components
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-
-" Graph QL
-Plug 'jparise/vim-graphql'
-
-" Vim Markdown
-" Plug 'godlygeek/tabular', { 'for': 'markdown' }
-" Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
+" nvim-treesitter
+" source: https://github.com/nvim-treesitter/nvim-treesitter
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 
 " Editor config for vim
 Plug 'editorconfig/editorconfig-vim'
 
 " Nerdtree File Browser
-Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'Xuyuanp/nerdtree-git-plugin'
+" Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
+" Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Nerd Commenter
 Plug 'preservim/nerdcommenter'
+
+Plug 'kyazdani42/nvim-web-devicons' " for file icons
+Plug 'kyazdani42/nvim-tree.lua'
 
 " Lightline
 Plug 'itchyny/lightline.vim'
@@ -54,8 +44,6 @@ Plug 'morhetz/gruvbox'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
-" > Too slow at the moment!
-" Plug 'weirongxu/coc-explorer', {'do': 'yarn install --frozen-lockfile'}
 
 " Nvim Colorizer
 Plug 'norcalli/nvim-colorizer.lua'
@@ -237,31 +225,44 @@ let g:jsx_ext_required = 0 " Don't require .jsx extension
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_fenced_languages = ['js=javascript']
 
+" ---------
+" nvim-tree
+" ---------
+nnoremap <C-n> :NvimTreeToggle<CR>
+nnoremap <leader>r :NvimTreeRefresh<CR>
+nnoremap <leader>n :NvimTreeFindFile<CR>
+
+let g:nvim_tree_show_icons = {
+    \ 'git': 1,
+    \ 'folders': 1,
+    \ 'files': 1,
+    \ }
+
 " --------------
 " Nerdtree config
 " --------------
 
-" shortcut to open NERDTree
-nnoremap <C-n> :NERDTreeToggle<CR>
+" " shortcut to open NERDTree
+" nnoremap <C-n> :NERDTreeToggle<CR>
 
-" Close after opening a file
-let NERDTreeQuitOnOpen = 1
+" " Close after opening a file
+" let NERDTreeQuitOnOpen = 1
 
-augroup nerdtree_bindings
-  autocmd! 
+" augroup nerdtree_bindings
+"   autocmd! 
 
-  " close vim if the only window left open is a NERDTree
-  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+"   " close vim if the only window left open is a NERDTree
+"   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-  " prevent buffer next, previous and delete when focused on Nerdtree
-  autocmd FileType nerdtree nnoremap <buffer> <Tab> <nop>
-  autocmd FileType nerdtree nnoremap <buffer> <S-Tab> <nop>
-  autocmd FileType nerdtree nnoremap <buffer> <C-p> <nop>
-  autocmd FileType nerdtree nnoremap <buffer> <Leader>p <nop>
+"   " prevent buffer next, previous and delete when focused on Nerdtree
+"   autocmd FileType nerdtree nnoremap <buffer> <Tab> <nop>
+"   autocmd FileType nerdtree nnoremap <buffer> <S-Tab> <nop>
+"   autocmd FileType nerdtree nnoremap <buffer> <C-p> <nop>
+"   autocmd FileType nerdtree nnoremap <buffer> <Leader>p <nop>
 
-  " exit nerd tree with control + q
-  autocmd FileType nerdtree nnoremap <buffer> <C-q> :NERDTreeToggle<CR>
-augroup END
+"   " exit nerd tree with control + q
+"   autocmd FileType nerdtree nnoremap <buffer> <C-q> :NERDTreeToggle<CR>
+" augroup END
 
 " ---------
 " Lightline
