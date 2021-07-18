@@ -12,8 +12,9 @@ ln -s $PWD/.tmux.conf ~/.tmux.conf
 # Symlink for Neovim
 mkdir ~/.config/
 mkdir ~/.config/nvim
-ln -s $PWD/init.vim ~/.config/nvim/init.vim
-ln -s $PWD/UltiSnips ~/.config/nvim/UltiSnips
+ln -s $PWD/vim/init.vim ~/.config/nvim/init.vim
+ln -s $PWD/vim/init ~/.config/nvim/init
+ln -s $PWD/vim/UltiSnips ~/.config/nvim/UltiSnips
 
 # Symlink coc snippets
 rm -rf ~/.config/coc/ultisnips
